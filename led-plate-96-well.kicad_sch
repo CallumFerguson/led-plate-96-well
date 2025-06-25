@@ -3,7 +3,7 @@
 	(generator "eeschema")
 	(generator_version "9.0")
 	(uuid "3e5014cb-2c74-4f2a-856e-45dcd879a326")
-	(paper "A4")
+	(paper "A2")
 	(lib_symbols
 		(symbol "A000053:A000053"
 			(pin_names
@@ -1066,6 +1066,546 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "PCM_JLCPCB-Resistors:1206,100mΩ"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 1.778 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "100mΩ"
+				(at 0 0 90)
+				(do_not_autoplace)
+				(effects
+					(font
+						(size 0.8 0.8)
+					)
+				)
+			)
+			(property "Footprint" "PCM_JLCPCB:R_1206"
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2205311900_UNI-ROYAL-Uniroyal-Elec-1206W4F100LT5E_C25334.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "250mW Thick Film Resistors 200V ±800ppm/°C ±1% 100mΩ 1206 Chip Resistor - Surface Mount ROHS"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "LCSC" "C25334"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Stock" "413681"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Price" "0.008USD"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Process" "SMT"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Minimum Qty" "15"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Attrition Qty" "10"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Class" "Basic Component"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Category" "Resistors,Chip Resistor - Surface Mount"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Part" "1206W4F100LT5E"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Resistance" "100mΩ"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Power(Watts)" "250mW"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Type" "Thick Film Resistors"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Overload Voltage (Max)" "200V"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Operating Temperature Range" "-55°C~+155°C"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Tolerance" "±1%"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Temperature Coefficient" "±800ppm/°C"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "1206,100mΩ_0_1"
+				(rectangle
+					(start -1.016 2.54)
+					(end 1.016 -2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "1206,100mΩ_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "PCM_JLCPCB-Resistors:1206,10kΩ"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 1.778 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "10kΩ"
+				(at 0 0 90)
+				(do_not_autoplace)
+				(effects
+					(font
+						(size 0.8 0.8)
+					)
+				)
+			)
+			(property "Footprint" "PCM_JLCPCB:R_1206"
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2206010145_UNI-ROYAL-Uniroyal-Elec-1206W4F1002T5E_C17902.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "250mW Thick Film Resistors 200V ±100ppm/°C ±1% 10kΩ 1206 Chip Resistor - Surface Mount ROHS"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "LCSC" "C17902"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Stock" "2301652"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Price" "0.006USD"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Process" "SMT"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Minimum Qty" "15"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Attrition Qty" "10"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Class" "Basic Component"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Category" "Resistors,Chip Resistor - Surface Mount"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Part" "1206W4F1002T5E"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Resistance" "10kΩ"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Power(Watts)" "250mW"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Type" "Thick Film Resistors"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Overload Voltage (Max)" "200V"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Operating Temperature Range" "-55°C~+155°C"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Tolerance" "±1%"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Temperature Coefficient" "±100ppm/°C"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "1206,10kΩ_0_1"
+				(rectangle
+					(start -1.016 2.54)
+					(end 1.016 -2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "1206,10kΩ_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "RAPC722X:RAPC722X"
 			(pin_names
 				(offset 1.016)
@@ -1467,6 +2007,281 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "WST2N7002:WST2N7002"
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 2.794 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "WST2N7002"
+				(at 7.62 -1.778 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://jlcpcb.com/partdetail/WinsokSemicon-WST2N7002/C86936"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "WST2N7002_0_1"
+				(polyline
+					(pts
+						(xy -2.286 1.905) (xy -2.286 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.286 0) (xy -5.08 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 2.286) (xy -1.778 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 0.508) (xy -1.778 -0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 -1.27) (xy -1.778 -2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 -1.778) (xy 0.762 -1.778) (xy 0.762 1.778) (xy -1.778 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 0) (xy -0.508 0.381) (xy -0.508 -0.381) (xy -1.524 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center -0.889 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 0 -1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy 0 0) (xy -1.778 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.381 0.381) (xy 1.143 0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.381) (xy 0.381 -0.254) (xy 1.143 -0.254) (xy 0.762 0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "WST2N7002_1_1"
+				(pin input line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:+24V"
 			(power)
 			(pin_numbers
@@ -1796,176 +2611,210 @@
 		)
 	)
 	(junction
-		(at 95.25 69.85)
+		(at 68.58 83.82)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0150280c-29e8-4772-8872-96edda535e40")
 	)
 	(junction
-		(at 86.36 69.85)
+		(at 228.6 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0e077fd2-da3d-4d85-94ee-46fc6d68dbd7")
+	)
+	(junction
+		(at 254 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2d17d95c-be56-4da2-85d3-9c14f0433c3e")
+	)
+	(junction
+		(at 254 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "373db38e-2ee4-40dc-aa3a-802cf2d38364")
+	)
+	(junction
+		(at 182.88 58.42)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3dad71a5-940e-4880-8aba-0662047a98fe")
+	)
+	(junction
+		(at 203.2 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "426bb671-cbbd-48a1-8fb5-c2f00a87b779")
+	)
+	(junction
+		(at 59.69 83.82)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "50ac9cf9-dc80-4843-9f8a-a47e73746598")
 	)
 	(junction
-		(at 107.95 104.14)
+		(at 241.3 119.38)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "765cea53-8928-44fe-b628-2adf581eaacb")
+		(uuid "61d3dab1-f2bc-4aff-814d-45a40db22c87")
 	)
 	(junction
-		(at 107.95 85.09)
+		(at 241.3 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7afa3d15-00e7-48ff-b08f-91efbc7957e4")
+	)
+	(junction
+		(at 154.94 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "aa15e068-92b2-44ad-ac87-9ee1e3c3d81b")
+	)
+	(junction
+		(at 228.6 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ab960654-01f4-4a81-8446-a3b7a0301d28")
+	)
+	(junction
+		(at 81.28 99.06)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b10004b9-f349-45ec-b343-27852a6de41d")
 	)
 	(junction
-		(at 92.71 74.93)
+		(at 182.88 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e0241aeb-1671-4625-bb51-dc4854644b09")
+	)
+	(junction
+		(at 66.04 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e7e0fe5f-b0dc-47a0-8c3e-6e60bf1dfe4f")
 	)
 	(junction
-		(at 85.09 74.93)
+		(at 58.42 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "eb486cf0-db9e-4c1a-bd48-72e0412cab68")
 	)
-	(junction
-		(at 99.06 69.85)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ef99c17c-2d44-4906-aa38-a89d755c14dd")
-	)
 	(no_connect
-		(at 140.97 72.39)
+		(at 114.3 86.36)
 		(uuid "11d4aa4f-8bd9-40cd-a823-a63f629412dd")
 	)
 	(no_connect
-		(at 140.97 80.01)
+		(at 114.3 93.98)
 		(uuid "144f1a06-76ff-498f-8936-b8e131f00e12")
 	)
 	(no_connect
-		(at 140.97 57.15)
+		(at 114.3 71.12)
 		(uuid "20c84f08-c16d-4607-8d29-63eabae65348")
 	)
 	(no_connect
-		(at 140.97 97.79)
+		(at 114.3 111.76)
 		(uuid "2f06f419-c120-48c8-abe5-763046a0d389")
 	)
 	(no_connect
-		(at 140.97 64.77)
+		(at 114.3 78.74)
 		(uuid "320bb28f-bc7f-4dbd-8486-b69d5ce4aba0")
 	)
 	(no_connect
-		(at 181.61 85.09)
+		(at 154.94 99.06)
 		(uuid "39518791-090f-4d54-af89-1dd3e7687341")
 	)
 	(no_connect
-		(at 140.97 74.93)
-		(uuid "3a600695-b624-4e4a-8ce1-b3218cc8fb34")
-	)
-	(no_connect
-		(at 140.97 90.17)
+		(at 114.3 104.14)
 		(uuid "45e69e86-f32b-4bcd-8d99-16a08a4796fb")
 	)
 	(no_connect
-		(at 140.97 92.71)
+		(at 114.3 106.68)
 		(uuid "472fd453-024a-470c-aaa1-7b44189ef81e")
 	)
 	(no_connect
-		(at 140.97 59.69)
+		(at 114.3 73.66)
 		(uuid "4f54812e-5c1e-49c6-b0b2-0dfc8529e581")
 	)
 	(no_connect
-		(at 140.97 87.63)
+		(at 114.3 101.6)
 		(uuid "5d51e93f-18e5-47ed-8594-8bd615c4308c")
 	)
 	(no_connect
-		(at 181.61 72.39)
-		(uuid "6350f961-93db-4ed7-a992-84caa6471df2")
-	)
-	(no_connect
-		(at 181.61 64.77)
+		(at 154.94 78.74)
 		(uuid "646ddefc-c9e3-40b0-b95d-eb809c2b8b6b")
 	)
 	(no_connect
-		(at 181.61 49.53)
+		(at 154.94 63.5)
 		(uuid "6aec0aeb-0e9d-4f79-86cb-8b4b085d4107")
 	)
 	(no_connect
-		(at 140.97 100.33)
+		(at 114.3 114.3)
 		(uuid "6cf8f8e8-73eb-4797-86f5-71a73a458737")
 	)
 	(no_connect
-		(at 181.61 67.31)
+		(at 154.94 81.28)
 		(uuid "7eb2a6f1-1a1d-4a5f-b8b4-82dbf1bc71a6")
 	)
 	(no_connect
-		(at 181.61 74.93)
+		(at 154.94 88.9)
 		(uuid "9093f3f8-e5a4-4368-a0e0-c5343e2bfbcb")
 	)
 	(no_connect
-		(at 140.97 69.85)
+		(at 114.3 83.82)
 		(uuid "9a0d150d-cfd6-4fc2-a2fa-4f303bca924e")
 	)
 	(no_connect
-		(at 181.61 77.47)
+		(at 154.94 91.44)
 		(uuid "a181d336-74d0-4326-926d-65f5ef3c4872")
 	)
 	(no_connect
-		(at 85.09 72.39)
+		(at 58.42 86.36)
 		(uuid "a8c4ba0c-9268-42d0-b69d-b17b9966d369")
 	)
 	(no_connect
-		(at 181.61 69.85)
+		(at 154.94 83.82)
 		(uuid "b1f3ae23-3ac3-4a13-a894-26ca5decf0c8")
 	)
 	(no_connect
-		(at 181.61 82.55)
+		(at 154.94 96.52)
 		(uuid "b3612553-8a7e-45ae-8850-d65d696b5a34")
 	)
 	(no_connect
-		(at 181.61 52.07)
+		(at 154.94 66.04)
 		(uuid "b5c0874f-3807-4169-a83f-2b0972e8b3bb")
 	)
 	(no_connect
-		(at 140.97 85.09)
+		(at 114.3 99.06)
 		(uuid "c29a4fb3-a7eb-4ef8-bf6c-dabf73e119e8")
 	)
 	(no_connect
-		(at 140.97 82.55)
+		(at 114.3 96.52)
 		(uuid "da41c4d2-444e-435b-b222-6cd4101aa6ad")
 	)
 	(no_connect
-		(at 140.97 67.31)
+		(at 114.3 81.28)
 		(uuid "dd55f466-9870-4763-af32-51f4369b4792")
 	)
 	(no_connect
-		(at 140.97 77.47)
+		(at 154.94 86.36)
+		(uuid "e11b26cf-06f6-488e-bf8b-90b85a7e51fb")
+	)
+	(no_connect
+		(at 114.3 91.44)
 		(uuid "ee6aa00c-de42-442c-b8db-69dc85a55782")
 	)
 	(no_connect
-		(at 140.97 95.25)
+		(at 114.3 109.22)
 		(uuid "f033f662-340c-444f-b172-52210be34f65")
 	)
 	(no_connect
-		(at 181.61 87.63)
+		(at 154.94 101.6)
 		(uuid "f1e4bb5d-84f9-4ab0-8767-86cad6a6c514")
 	)
 	(wire
 		(pts
-			(xy 67.31 35.56) (xy 67.31 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "07525464-6727-4c32-9beb-17bb3661ece2")
-	)
-	(wire
-		(pts
-			(xy 107.95 104.14) (xy 107.95 85.09)
+			(xy 81.28 99.06) (xy 81.28 132.08)
 		)
 		(stroke
 			(width 0)
@@ -1975,37 +2824,17 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 118.11) (xy 107.95 104.14)
+			(xy 182.88 69.85) (xy 182.88 119.38)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "202fb640-0325-4f73-8d2b-035f9c19a055")
+		(uuid "21d7b181-c7cc-4c2f-a33b-d07d378fccec")
 	)
 	(wire
 		(pts
-			(xy 99.06 69.85) (xy 99.06 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "22e9364c-26b1-451f-97a7-e8c91f7dca4c")
-	)
-	(wire
-		(pts
-			(xy 67.31 104.14) (xy 107.95 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "235c5a17-803e-4491-8eb2-085d62bbabfd")
-	)
-	(wire
-		(pts
-			(xy 134.62 36.83) (xy 186.69 36.83)
+			(xy 107.95 50.8) (xy 160.02 50.8)
 		)
 		(stroke
 			(width 0)
@@ -2015,7 +2844,7 @@
 	)
 	(wire
 		(pts
-			(xy 85.09 69.85) (xy 86.36 69.85)
+			(xy 58.42 83.82) (xy 59.69 83.82)
 		)
 		(stroke
 			(width 0)
@@ -2025,17 +2854,37 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 46.99) (xy 132.08 35.56)
+			(xy 241.3 119.38) (xy 254 119.38)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "495f9a9f-2804-48a1-9afd-3d6962a0131b")
+		(uuid "41e10ab4-ab19-4558-bb88-a6f02a6b2054")
 	)
 	(wire
 		(pts
-			(xy 115.57 69.85) (xy 134.62 69.85)
+			(xy 182.88 62.23) (xy 182.88 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "45feb629-0414-4c9e-9436-4a6e87377ff4")
+	)
+	(wire
+		(pts
+			(xy 203.2 119.38) (xy 228.6 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "489e9f7c-6886-405c-bd9f-8bab95e7593d")
+	)
+	(wire
+		(pts
+			(xy 88.9 83.82) (xy 107.95 83.82)
 		)
 		(stroke
 			(width 0)
@@ -2045,17 +2894,37 @@
 	)
 	(wire
 		(pts
-			(xy 72.39 46.99) (xy 76.2 46.99)
+			(xy 102.87 45.72) (xy 102.87 88.9)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "6bb76ce8-b6a6-476d-b095-4d1779d28227")
+		(uuid "5be1ac1f-62b7-4956-bbc6-84643c2037b9")
 	)
 	(wire
 		(pts
-			(xy 86.36 69.85) (xy 95.25 69.85)
+			(xy 241.3 66.04) (xy 254 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6157b67d-058f-4568-a782-603d79e7dc4a")
+	)
+	(wire
+		(pts
+			(xy 182.88 58.42) (xy 182.88 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e7627a6-aeec-41e9-b68d-460fd0eb54ae")
+	)
+	(wire
+		(pts
+			(xy 59.69 83.82) (xy 68.58 83.82)
 		)
 		(stroke
 			(width 0)
@@ -2065,17 +2934,37 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 35.56) (xy 67.31 35.56)
+			(xy 182.88 58.42) (xy 187.96 58.42)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "7cc77c47-6718-49c1-b497-aa44d9712ed5")
+		(uuid "784d3079-fc0d-4915-812b-30926a153a61")
 	)
 	(wire
 		(pts
-			(xy 107.95 85.09) (xy 107.95 77.47)
+			(xy 203.2 53.34) (xy 228.6 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "78ce874c-05c4-437c-a971-92457f56db86")
+	)
+	(wire
+		(pts
+			(xy 254 119.38) (xy 266.7 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "85cfc5ed-6fea-4da3-8ea8-035b64c52f30")
+	)
+	(wire
+		(pts
+			(xy 81.28 99.06) (xy 81.28 91.44)
 		)
 		(stroke
 			(width 0)
@@ -2085,7 +2974,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 69.85) (xy 99.06 69.85)
+			(xy 68.58 83.82) (xy 73.66 83.82)
 		)
 		(stroke
 			(width 0)
@@ -2095,7 +2984,7 @@
 	)
 	(wire
 		(pts
-			(xy 85.09 74.93) (xy 92.71 74.93)
+			(xy 58.42 88.9) (xy 66.04 88.9)
 		)
 		(stroke
 			(width 0)
@@ -2105,27 +2994,27 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 69.85) (xy 100.33 69.85)
+			(xy 228.6 66.04) (xy 241.3 66.04)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "999505af-4f13-43dc-811b-4f78b2c5d96f")
+		(uuid "91fcb1bc-5b02-4d82-8f09-89ac46a1c10b")
 	)
 	(wire
 		(pts
-			(xy 72.39 57.15) (xy 72.39 46.99)
+			(xy 182.88 119.38) (xy 203.2 119.38)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ad3b9158-e574-4b60-8b88-44a0ed9fa7a6")
+		(uuid "ad34b553-f466-4a3a-b628-913285a26c05")
 	)
 	(wire
 		(pts
-			(xy 181.61 118.11) (xy 107.95 118.11)
+			(xy 154.94 132.08) (xy 81.28 132.08)
 		)
 		(stroke
 			(width 0)
@@ -2135,7 +3024,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 74.93) (xy 95.25 74.93)
+			(xy 66.04 88.9) (xy 68.58 88.9)
 		)
 		(stroke
 			(width 0)
@@ -2145,7 +3034,7 @@
 	)
 	(wire
 		(pts
-			(xy 186.69 36.83) (xy 186.69 46.99)
+			(xy 160.02 50.8) (xy 160.02 60.96)
 		)
 		(stroke
 			(width 0)
@@ -2155,7 +3044,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 105.41) (xy 181.61 118.11)
+			(xy 154.94 119.38) (xy 154.94 132.08)
 		)
 		(stroke
 			(width 0)
@@ -2165,17 +3054,37 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 46.99) (xy 132.08 46.99)
+			(xy 154.94 119.38) (xy 182.88 119.38)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c2c882fc-6ac8-4a38-aeff-c2139dac3858")
+		(uuid "bbb91b04-445a-482d-b832-bdae53f41d84")
 	)
 	(wire
 		(pts
-			(xy 95.25 85.09) (xy 107.95 85.09)
+			(xy 203.2 63.5) (xy 203.2 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c1d95fa3-05a7-49f0-9220-feeb8fddffd0")
+	)
+	(wire
+		(pts
+			(xy 102.87 88.9) (xy 114.3 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3f01d5e-d6d9-4ac4-97f7-1cdc38330cde")
+	)
+	(wire
+		(pts
+			(xy 68.58 99.06) (xy 81.28 99.06)
 		)
 		(stroke
 			(width 0)
@@ -2185,7 +3094,7 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 69.85) (xy 134.62 36.83)
+			(xy 107.95 83.82) (xy 107.95 50.8)
 		)
 		(stroke
 			(width 0)
@@ -2195,17 +3104,17 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 57.15) (xy 72.39 57.15)
+			(xy 254 66.04) (xy 266.7 66.04)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e1fc3b10-fb24-4c83-99ca-54000c91637f")
+		(uuid "e33659be-fc4b-4bfb-a323-41251d91bbc0")
 	)
 	(wire
 		(pts
-			(xy 95.25 74.93) (xy 95.25 85.09)
+			(xy 68.58 88.9) (xy 68.58 99.06)
 		)
 		(stroke
 			(width 0)
@@ -2215,7 +3124,17 @@
 	)
 	(wire
 		(pts
-			(xy 186.69 46.99) (xy 181.61 46.99)
+			(xy 228.6 53.34) (xy 228.6 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ebcdde5f-a75e-49df-840c-7b74721a63fc")
+	)
+	(wire
+		(pts
+			(xy 160.02 60.96) (xy 154.94 60.96)
 		)
 		(stroke
 			(width 0)
@@ -2223,9 +3142,29 @@
 		)
 		(uuid "ede97e09-ca6f-4979-856a-a8eb6e1fdd9d")
 	)
+	(wire
+		(pts
+			(xy 228.6 119.38) (xy 241.3 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f13b9d81-40bc-4f32-a583-f1e99252024d")
+	)
+	(wire
+		(pts
+			(xy 182.88 45.72) (xy 102.87 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd938f2a-092f-4044-a6da-98956f62f3e9")
+	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 110.49 46.99 180)
+		(at 228.6 100.33 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2234,7 +3173,7 @@
 		(fields_autoplaced yes)
 		(uuid "0c66904c-b205-45eb-8dbc-0bff1da822d9")
 		(property "Reference" "D4"
-			(at 112.0775 39.37 0)
+			(at 236.22 101.9175 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2242,7 +3181,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 112.0775 41.91 0)
+			(at 233.68 101.9175 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2250,7 +3189,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_Luminus_MP-3030-1100_3.0x3.0mm"
-			(at 110.49 46.99 0)
+			(at 228.6 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2258,8 +3197,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8589014757038821376"
-			(at 110.49 46.99 0)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Togialed-TJ_S3030UG5W6TLC6BA5/C1322326"
+			(at 228.6 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2268,7 +3207,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 110.49 46.99 0)
+			(at 228.6 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2277,7 +3216,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 110.49 46.99 0)
+			(at 228.6 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2301,8 +3240,85 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:LED")
+		(at 266.7 85.09 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0cb2f46c-3f3a-4143-b28d-0ceaaec176fa")
+		(property "Reference" "D20"
+			(at 274.32 86.6775 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 271.78 86.6775 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_Luminus_MP-3030-1100_3.0x3.0mm"
+			(at 266.7 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Togialed-TJ_S3030UG5W6TLC6BA5/C1322326"
+			(at 266.7 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 266.7 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 266.7 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "bf090483-8ec5-4de4-ac6e-e7680bba3226")
+		)
+		(pin "1"
+			(uuid "82f881c7-a6cf-4d60-886a-c6c0bc2d718a")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/3e5014cb-2c74-4f2a-856e-45dcd879a326"
+					(reference "D20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Regulator_Switching:R-78E5.0-0.5")
-		(at 107.95 69.85 0)
+		(at 81.28 83.82 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2311,7 +3327,7 @@
 		(fields_autoplaced yes)
 		(uuid "125fe7ae-9c15-48db-82b7-18abf8ffbde5")
 		(property "Reference" "U1"
-			(at 107.95 63.5 0)
+			(at 81.28 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2319,7 +3335,7 @@
 			)
 		)
 		(property "Value" "R-78E5.0-0.5"
-			(at 107.95 66.04 0)
+			(at 81.28 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2327,7 +3343,7 @@
 			)
 		)
 		(property "Footprint" "Converter_DCDC:Converter_DCDC_RECOM_R-78E-0.5_THT"
-			(at 109.22 76.2 0)
+			(at 82.55 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2338,7 +3354,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.recom-power.com/pdf/Innoline/R-78Exx-0.5.pdf"
-			(at 107.95 69.85 0)
+			(at 81.28 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2347,7 +3363,7 @@
 			)
 		)
 		(property "Description" "500mA Step-Down DC/DC-Regulator, 7-28V input, 5V fixed Output Voltage, LM78xx replacement, -40°C to +85°C, SIP3"
-			(at 107.95 69.85 0)
+			(at 81.28 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2375,7 +3391,7 @@
 	)
 	(symbol
 		(lib_id "RAPC722X:RAPC722X")
-		(at 77.47 72.39 0)
+		(at 50.8 86.36 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2384,7 +3400,7 @@
 		(fields_autoplaced yes)
 		(uuid "1415fe3f-1376-4b87-927c-5c9d73c2c2aa")
 		(property "Reference" "J2"
-			(at 77.47 64.77 0)
+			(at 50.8 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2392,7 +3408,7 @@
 			)
 		)
 		(property "Value" "RAPC722X"
-			(at 77.47 67.31 0)
+			(at 50.8 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2400,7 +3416,7 @@
 			)
 		)
 		(property "Footprint" "RAPC722X:SWITCHCRAFT_RAPC722X"
-			(at 77.47 72.39 0)
+			(at 50.8 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2410,7 +3426,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 77.47 72.39 0)
+			(at 50.8 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2419,7 +3435,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 77.47 72.39 0)
+			(at 50.8 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2428,7 +3444,7 @@
 			)
 		)
 		(property "PARTREV" "A"
-			(at 77.47 72.39 0)
+			(at 50.8 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2438,7 +3454,7 @@
 			)
 		)
 		(property "STANDARD" "Manufacturer Recommendations"
-			(at 77.47 72.39 0)
+			(at 50.8 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2448,7 +3464,7 @@
 			)
 		)
 		(property "MAXIMUM_PACKAGE_HEIGHT" "11 mm"
-			(at 77.47 72.39 0)
+			(at 50.8 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2458,7 +3474,7 @@
 			)
 		)
 		(property "MANUFACTURER" "Switchcraft"
-			(at 77.47 72.39 0)
+			(at 50.8 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2487,16 +3503,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 95.25 46.99 180)
+		(at 266.7 115.57 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "2c033aea-9360-46ca-90d8-693d553b2f2a")
-		(property "Reference" "D2"
-			(at 96.8375 39.37 0)
+		(uuid "15842a44-6e64-490d-ab4c-876fb6b3d097")
+		(property "Reference" "D24"
+			(at 274.32 117.1575 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2504,7 +3520,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 96.8375 41.91 0)
+			(at 271.78 117.1575 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2512,7 +3528,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_Luminus_MP-3030-1100_3.0x3.0mm"
-			(at 95.25 46.99 0)
+			(at 266.7 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2520,8 +3536,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8589014757038821376"
-			(at 95.25 46.99 0)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Togialed-TJ_S3030UG5W6TLC6BA5/C1322326"
+			(at 266.7 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2530,7 +3546,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 95.25 46.99 0)
+			(at 266.7 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2539,7 +3555,392 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 95.25 46.99 0)
+			(at 266.7 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "b422475c-8270-497a-b091-5ecd59ef214f")
+		)
+		(pin "1"
+			(uuid "af58c906-5052-44db-9c58-53b7441bac43")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/3e5014cb-2c74-4f2a-856e-45dcd879a326"
+					(reference "D24")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 254 77.47 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "16bfc165-475c-4828-aa16-c41ba44ea83e")
+		(property "Reference" "D13"
+			(at 261.62 79.0575 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 259.08 79.0575 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_Luminus_MP-3030-1100_3.0x3.0mm"
+			(at 254 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Togialed-TJ_S3030UG5W6TLC6BA5/C1322326"
+			(at 254 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 254 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 254 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "f814b8c4-a78d-4a79-b8de-71d0078e3fbc")
+		)
+		(pin "1"
+			(uuid "6aadc268-01a8-490a-82cd-4a924c125be4")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/3e5014cb-2c74-4f2a-856e-45dcd879a326"
+					(reference "D13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 241.3 92.71 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1a9ff4be-604b-44ab-99f8-03d1a29141b2")
+		(property "Reference" "D9"
+			(at 248.92 94.2975 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 246.38 94.2975 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_Luminus_MP-3030-1100_3.0x3.0mm"
+			(at 241.3 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Togialed-TJ_S3030UG5W6TLC6BA5/C1322326"
+			(at 241.3 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 241.3 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 241.3 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "4dd1bb1a-c6dd-407d-a492-23bf95adb0fc")
+		)
+		(pin "1"
+			(uuid "11790863-c299-4287-b6ce-75ae3becb25e")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/3e5014cb-2c74-4f2a-856e-45dcd879a326"
+					(reference "D9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 266.7 77.47 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1f177b68-d2f2-4d16-92f8-28bd5dfe475b")
+		(property "Reference" "D19"
+			(at 274.32 79.0575 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 271.78 79.0575 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_Luminus_MP-3030-1100_3.0x3.0mm"
+			(at 266.7 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Togialed-TJ_S3030UG5W6TLC6BA5/C1322326"
+			(at 266.7 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 266.7 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 266.7 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "533c00fc-fe9d-4026-b8ff-1a2ccc30f6f8")
+		)
+		(pin "1"
+			(uuid "eb9d66ba-ba3e-4bd3-8f52-dcc8326325c3")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/3e5014cb-2c74-4f2a-856e-45dcd879a326"
+					(reference "D19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 241.3 115.57 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "293be933-ce34-465f-bb3d-f07207cc4798")
+		(property "Reference" "D12"
+			(at 248.92 117.1575 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 246.38 117.1575 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_Luminus_MP-3030-1100_3.0x3.0mm"
+			(at 241.3 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Togialed-TJ_S3030UG5W6TLC6BA5/C1322326"
+			(at 241.3 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 241.3 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 241.3 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "1dba100a-cd89-493d-835f-961385c6333c")
+		)
+		(pin "1"
+			(uuid "d7a55676-b008-47b9-9048-226ffae4a5f9")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/3e5014cb-2c74-4f2a-856e-45dcd879a326"
+					(reference "D12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 228.6 85.09 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2c033aea-9360-46ca-90d8-693d553b2f2a")
+		(property "Reference" "D2"
+			(at 236.22 86.6775 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 233.68 86.6775 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_Luminus_MP-3030-1100_3.0x3.0mm"
+			(at 228.6 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Togialed-TJ_S3030UG5W6TLC6BA5/C1322326"
+			(at 228.6 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 228.6 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 228.6 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2564,16 +3965,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 125.73 46.99 180)
+		(at 241.3 107.95 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "34493656-c1cc-4bea-a0d2-642175f067af")
-		(property "Reference" "D6"
-			(at 127.3175 39.37 0)
+		(uuid "2c5e62d3-2bcd-4608-ac7b-c85be61e8e74")
+		(property "Reference" "D11"
+			(at 248.92 109.5375 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2581,7 +3982,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 127.3175 41.91 0)
+			(at 246.38 109.5375 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2589,7 +3990,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_Luminus_MP-3030-1100_3.0x3.0mm"
-			(at 125.73 46.99 0)
+			(at 241.3 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2597,8 +3998,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8589014757038821376"
-			(at 125.73 46.99 0)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Togialed-TJ_S3030UG5W6TLC6BA5/C1322326"
+			(at 241.3 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2607,7 +4008,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 125.73 46.99 0)
+			(at 241.3 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2616,7 +4017,84 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 125.73 46.99 0)
+			(at 241.3 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "f6417de7-eadd-4876-b4d8-ba8c93c8f56c")
+		)
+		(pin "1"
+			(uuid "56b068bf-2e9f-414a-ad4f-863dd15eaeec")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/3e5014cb-2c74-4f2a-856e-45dcd879a326"
+					(reference "D11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 228.6 115.57 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "34493656-c1cc-4bea-a0d2-642175f067af")
+		(property "Reference" "D6"
+			(at 236.22 117.1575 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 233.68 117.1575 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_Luminus_MP-3030-1100_3.0x3.0mm"
+			(at 228.6 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Togialed-TJ_S3030UG5W6TLC6BA5/C1322326"
+			(at 228.6 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 228.6 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 228.6 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2640,8 +4118,85 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:LED")
+		(at 241.3 77.47 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3c538847-04af-4fa0-8a90-6389bcde9d36")
+		(property "Reference" "D7"
+			(at 248.92 79.0575 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 246.38 79.0575 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_Luminus_MP-3030-1100_3.0x3.0mm"
+			(at 241.3 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Togialed-TJ_S3030UG5W6TLC6BA5/C1322326"
+			(at 241.3 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 241.3 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 241.3 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "62bee3ee-dadf-4d61-92d1-8acc7d0b956a")
+		)
+		(pin "1"
+			(uuid "c56a2610-fb36-455c-959e-477cdf18f4c9")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/3e5014cb-2c74-4f2a-856e-45dcd879a326"
+					(reference "D7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
-		(at 80.01 46.99 90)
+		(at 228.6 69.85 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2650,7 +4205,7 @@
 		(fields_autoplaced yes)
 		(uuid "4854899d-460c-487e-bfa7-3ffcdcaf93c7")
 		(property "Reference" "R1"
-			(at 80.01 40.64 90)
+			(at 234.95 69.85 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2658,7 +4213,7 @@
 			)
 		)
 		(property "Value" "R"
-			(at 80.01 43.18 90)
+			(at 232.41 69.85 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2666,7 +4221,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_1210_3225Metric"
-			(at 80.01 48.768 90)
+			(at 226.822 69.85 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2674,8 +4229,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8590222854634971136"
-			(at 80.01 46.99 0)
+		(property "Datasheet" "~"
+			(at 228.6 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2684,7 +4239,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 80.01 46.99 0)
+			(at 228.6 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2708,8 +4263,751 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 241.3 69.85 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4c62cd2d-2b25-4fd2-bfd4-ba31d9046299")
+		(property "Reference" "R2"
+			(at 247.65 69.85 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R"
+			(at 245.11 69.85 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_1210_3225Metric"
+			(at 239.522 69.85 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 241.3 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 241.3 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "57bde7d0-7b79-4f6f-9bd3-113708c75a42")
+		)
+		(pin "2"
+			(uuid "b02caf83-50e6-4e65-ab99-e5a43a0860a7")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/3e5014cb-2c74-4f2a-856e-45dcd879a326"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 241.3 85.09 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "56a07584-284a-45c3-862f-52408632bd18")
+		(property "Reference" "D8"
+			(at 248.92 86.6775 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 246.38 86.6775 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_Luminus_MP-3030-1100_3.0x3.0mm"
+			(at 241.3 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Togialed-TJ_S3030UG5W6TLC6BA5/C1322326"
+			(at 241.3 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 241.3 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 241.3 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "b6223413-4e00-4c48-9b79-23429b6563ea")
+		)
+		(pin "1"
+			(uuid "51bdf6a5-3bf4-4f98-92c4-f7e9599399e7")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/3e5014cb-2c74-4f2a-856e-45dcd879a326"
+					(reference "D8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 254 115.57 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "56ea61ea-c0c3-4504-9519-6ecc69978aa9")
+		(property "Reference" "D18"
+			(at 261.62 117.1575 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 259.08 117.1575 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_Luminus_MP-3030-1100_3.0x3.0mm"
+			(at 254 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Togialed-TJ_S3030UG5W6TLC6BA5/C1322326"
+			(at 254 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 254 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 254 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "807b2202-a413-4756-8b94-7949b56dbfc5")
+		)
+		(pin "1"
+			(uuid "324b78f6-6bac-4f7a-8cdc-c7e8011e1787")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/3e5014cb-2c74-4f2a-856e-45dcd879a326"
+					(reference "D18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 266.7 100.33 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6ffb1689-f6fd-443a-a727-31c631e0f78b")
+		(property "Reference" "D22"
+			(at 274.32 101.9175 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 271.78 101.9175 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_Luminus_MP-3030-1100_3.0x3.0mm"
+			(at 266.7 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Togialed-TJ_S3030UG5W6TLC6BA5/C1322326"
+			(at 266.7 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 266.7 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 266.7 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "1b467a58-0e7b-492f-8175-dd51f0731ac4")
+		)
+		(pin "1"
+			(uuid "e72e8935-4f3a-42a3-8e9e-59b06a0c9344")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/3e5014cb-2c74-4f2a-856e-45dcd879a326"
+					(reference "D22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 254 69.85 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "70f206e8-d978-48dc-adfc-9194762c1819")
+		(property "Reference" "R3"
+			(at 260.35 69.85 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R"
+			(at 257.81 69.85 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_1210_3225Metric"
+			(at 252.222 69.85 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 254 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 254 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "002e2c4c-7f79-4b89-9a54-3c0bbb72377d")
+		)
+		(pin "2"
+			(uuid "2d1b1f6f-25bc-4c78-b2a2-744b7aeb0943")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/3e5014cb-2c74-4f2a-856e-45dcd879a326"
+					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCM_JLCPCB-Resistors:1206,100mΩ")
+		(at 191.77 58.42 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "720df0b1-acf5-4cc8-8b5a-d11c6eecb729")
+		(property "Reference" "R4"
+			(at 191.77 54.61 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100mΩ"
+			(at 191.77 58.42 90)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+		(property "Footprint" "PCM_JLCPCB:R_1206"
+			(at 191.77 60.198 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2205311900_UNI-ROYAL-Uniroyal-Elec-1206W4F100LT5E_C25334.pdf"
+			(at 191.77 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "250mW Thick Film Resistors 200V ±800ppm/°C ±1% 100mΩ 1206 Chip Resistor - Surface Mount ROHS"
+			(at 191.77 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C25334"
+			(at 191.77 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Stock" "413681"
+			(at 191.77 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.008USD"
+			(at 191.77 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Process" "SMT"
+			(at 191.77 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Minimum Qty" "15"
+			(at 191.77 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Attrition Qty" "10"
+			(at 191.77 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Class" "Basic Component"
+			(at 191.77 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Category" "Resistors,Chip Resistor - Surface Mount"
+			(at 191.77 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
+			(at 191.77 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "1206W4F100LT5E"
+			(at 191.77 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Resistance" "100mΩ"
+			(at 191.77 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Power(Watts)" "250mW"
+			(at 191.77 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Type" "Thick Film Resistors"
+			(at 191.77 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Overload Voltage (Max)" "200V"
+			(at 191.77 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Operating Temperature Range" "-55°C~+155°C"
+			(at 191.77 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "±1%"
+			(at 191.77 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Temperature Coefficient" "±800ppm/°C"
+			(at 191.77 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1aad2b41-5b52-461a-9a67-18aaf539a0c3")
+		)
+		(pin "2"
+			(uuid "b826c5d3-d431-43a6-8679-81a12f95f1df")
+		)
+		(instances
+			(project ""
+				(path "/3e5014cb-2c74-4f2a-856e-45dcd879a326"
+					(reference "R4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 254 100.33 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "795a9f61-7fce-4147-8cb1-7177a96c1c7e")
+		(property "Reference" "D16"
+			(at 261.62 101.9175 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 259.08 101.9175 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_Luminus_MP-3030-1100_3.0x3.0mm"
+			(at 254 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Togialed-TJ_S3030UG5W6TLC6BA5/C1322326"
+			(at 254 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 254 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 254 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "3d264ff4-a48e-4a80-864b-33f30e6012a1")
+		)
+		(pin "1"
+			(uuid "fc5dd764-f001-4297-a52b-fc883730a24b")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/3e5014cb-2c74-4f2a-856e-45dcd879a326"
+					(reference "D16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 254 107.95 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "80abf0a4-1292-4065-84be-cc550dc76a15")
+		(property "Reference" "D17"
+			(at 261.62 109.5375 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 259.08 109.5375 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_Luminus_MP-3030-1100_3.0x3.0mm"
+			(at 254 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Togialed-TJ_S3030UG5W6TLC6BA5/C1322326"
+			(at 254 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 254 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 254 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "f6002419-7076-4e56-946e-0c10b8ba8a4d")
+		)
+		(pin "1"
+			(uuid "1e5a66a7-989b-4013-b951-94fa803e5a75")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/3e5014cb-2c74-4f2a-856e-45dcd879a326"
+					(reference "D17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+24V")
-		(at 95.25 69.85 0)
+		(at 68.58 83.82 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2717,8 +5015,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8569fc41-8300-4282-a3e0-8256d588b32d")
-		(property "Reference" "#PWR02"
-			(at 95.25 73.66 0)
+		(property "Reference" "#PWR2"
+			(at 68.58 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2727,7 +5025,7 @@
 			)
 		)
 		(property "Value" "+24V"
-			(at 95.25 64.77 0)
+			(at 68.58 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2735,7 +5033,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 95.25 69.85 0)
+			(at 68.58 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2744,7 +5042,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 95.25 69.85 0)
+			(at 68.58 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2753,7 +5051,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+24V\""
-			(at 95.25 69.85 0)
+			(at 68.58 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2767,7 +5065,7 @@
 		(instances
 			(project ""
 				(path "/3e5014cb-2c74-4f2a-856e-45dcd879a326"
-					(reference "#PWR02")
+					(reference "#PWR2")
 					(unit 1)
 				)
 			)
@@ -2775,7 +5073,7 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 87.63 46.99 180)
+		(at 228.6 77.47 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2784,7 +5082,7 @@
 		(fields_autoplaced yes)
 		(uuid "871077b5-271b-42b1-acfc-28d071f599b9")
 		(property "Reference" "D1"
-			(at 89.2175 39.37 0)
+			(at 236.22 79.0575 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2792,7 +5090,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 89.2175 41.91 0)
+			(at 233.68 79.0575 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2800,7 +5098,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_Luminus_MP-3030-1100_3.0x3.0mm"
-			(at 87.63 46.99 0)
+			(at 228.6 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2808,8 +5106,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8589014757038821376"
-			(at 87.63 46.99 0)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Togialed-TJ_S3030UG5W6TLC6BA5/C1322326"
+			(at 228.6 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2818,7 +5116,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 87.63 46.99 0)
+			(at 228.6 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2827,7 +5125,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 87.63 46.99 0)
+			(at 228.6 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2852,7 +5150,7 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 118.11 46.99 180)
+		(at 228.6 107.95 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2861,7 +5159,7 @@
 		(fields_autoplaced yes)
 		(uuid "9063e941-7a74-4a33-bed6-b5e639b410d7")
 		(property "Reference" "D5"
-			(at 119.6975 39.37 0)
+			(at 236.22 109.5375 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2869,7 +5167,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 119.6975 41.91 0)
+			(at 233.68 109.5375 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2877,7 +5175,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_Luminus_MP-3030-1100_3.0x3.0mm"
-			(at 118.11 46.99 0)
+			(at 228.6 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2885,8 +5183,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8589014757038821376"
-			(at 118.11 46.99 0)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Togialed-TJ_S3030UG5W6TLC6BA5/C1322326"
+			(at 228.6 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2895,7 +5193,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 118.11 46.99 0)
+			(at 228.6 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2904,7 +5202,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 118.11 46.99 0)
+			(at 228.6 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2929,7 +5227,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 92.71 74.93 0)
+		(at 66.04 88.9 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2937,8 +5235,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a6042896-91fe-47da-9af4-2b100b2a24c8")
-		(property "Reference" "#PWR01"
-			(at 92.71 81.28 0)
+		(property "Reference" "#PWR1"
+			(at 66.04 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2947,7 +5245,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 92.71 80.01 0)
+			(at 66.04 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2955,7 +5253,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 92.71 74.93 0)
+			(at 66.04 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2964,7 +5262,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 92.71 74.93 0)
+			(at 66.04 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2973,7 +5271,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 92.71 74.93 0)
+			(at 66.04 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2987,7 +5285,7 @@
 		(instances
 			(project ""
 				(path "/3e5014cb-2c74-4f2a-856e-45dcd879a326"
-					(reference "#PWR01")
+					(reference "#PWR1")
 					(unit 1)
 				)
 			)
@@ -2995,7 +5293,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 86.36 69.85 0)
+		(at 59.69 83.82 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3003,8 +5301,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b262a26a-05ab-44e4-8790-05353037131e")
-		(property "Reference" "#FLG01"
-			(at 86.36 67.945 0)
+		(property "Reference" "#FLG1"
+			(at 59.69 81.915 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3013,7 +5311,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 86.36 64.77 0)
+			(at 59.69 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3021,7 +5319,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 86.36 69.85 0)
+			(at 59.69 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3030,7 +5328,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 86.36 69.85 0)
+			(at 59.69 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3039,7 +5337,7 @@
 			)
 		)
 		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 86.36 69.85 0)
+			(at 59.69 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3053,7 +5351,7 @@
 		(instances
 			(project ""
 				(path "/3e5014cb-2c74-4f2a-856e-45dcd879a326"
-					(reference "#FLG01")
+					(reference "#FLG1")
 					(unit 1)
 				)
 			)
@@ -3061,7 +5359,7 @@
 	)
 	(symbol
 		(lib_id "A000053:A000053")
-		(at 161.29 74.93 0)
+		(at 134.62 88.9 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3070,7 +5368,7 @@
 		(fields_autoplaced yes)
 		(uuid "b83d0f60-0e04-41d8-83ed-4bdf2129b52f")
 		(property "Reference" "U2"
-			(at 161.29 39.37 0)
+			(at 134.62 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3078,15 +5376,15 @@
 			)
 		)
 		(property "Value" "A000053"
-			(at 161.29 41.91 0)
+			(at 134.62 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "arduino_micro:A000053"
-			(at 161.29 74.93 0)
+		(property "Footprint" "A000053:ARDUINO_A000053"
+			(at 134.62 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3096,7 +5394,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 161.29 74.93 0)
+			(at 134.62 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3105,7 +5403,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 161.29 74.93 0)
+			(at 134.62 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3114,7 +5412,7 @@
 			)
 		)
 		(property "MF" "Arduino"
-			(at 161.29 74.93 0)
+			(at 134.62 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3124,7 +5422,7 @@
 			)
 		)
 		(property "Description_1" "Microcontroller board based on the ATmega32u4"
-			(at 161.29 74.93 0)
+			(at 134.62 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3134,7 +5432,7 @@
 			)
 		)
 		(property "Package" "Non-Standard Arduino"
-			(at 161.29 74.93 0)
+			(at 134.62 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3144,7 +5442,7 @@
 			)
 		)
 		(property "Price" "None"
-			(at 161.29 74.93 0)
+			(at 134.62 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3154,7 +5452,7 @@
 			)
 		)
 		(property "Check_prices" "https://www.snapeda.com/parts/Arduino%20Micro/Arduino/view-part/?ref=eda"
-			(at 161.29 74.93 0)
+			(at 134.62 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3164,7 +5462,7 @@
 			)
 		)
 		(property "STANDARD" "Manufacturer Recommendations"
-			(at 161.29 74.93 0)
+			(at 134.62 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3174,7 +5472,7 @@
 			)
 		)
 		(property "PARTREV" "N/A"
-			(at 161.29 74.93 0)
+			(at 134.62 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3184,7 +5482,7 @@
 			)
 		)
 		(property "SnapEDA_Link" "https://www.snapeda.com/parts/Arduino%20Micro/Arduino/view-part/?ref=snap"
-			(at 161.29 74.93 0)
+			(at 134.62 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3194,7 +5492,7 @@
 			)
 		)
 		(property "MP" "Arduino Micro"
-			(at 161.29 74.93 0)
+			(at 134.62 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3204,7 +5502,7 @@
 			)
 		)
 		(property "Availability" "In Stock"
-			(at 161.29 74.93 0)
+			(at 134.62 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3214,7 +5512,7 @@
 			)
 		)
 		(property "MANUFACTURER" "ARDUINO"
-			(at 161.29 74.93 0)
+			(at 134.62 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3329,8 +5627,230 @@
 		)
 	)
 	(symbol
+		(lib_id "PCM_JLCPCB-Resistors:1206,10kΩ")
+		(at 182.88 66.04 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b8e4ea87-bd49-4e2c-9522-f2e51ea2ff99")
+		(property "Reference" "R5"
+			(at 184.404 65.786 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10kΩ"
+			(at 182.88 66.04 90)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 0.8 0.8)
+				)
+			)
+		)
+		(property "Footprint" "PCM_JLCPCB:R_1206"
+			(at 181.102 66.04 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2206010145_UNI-ROYAL-Uniroyal-Elec-1206W4F1002T5E_C17902.pdf"
+			(at 182.88 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "250mW Thick Film Resistors 200V ±100ppm/°C ±1% 10kΩ 1206 Chip Resistor - Surface Mount ROHS"
+			(at 182.88 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C17902"
+			(at 182.88 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Stock" "2301652"
+			(at 182.88 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.006USD"
+			(at 182.88 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Process" "SMT"
+			(at 182.88 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Minimum Qty" "15"
+			(at 182.88 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Attrition Qty" "10"
+			(at 182.88 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Class" "Basic Component"
+			(at 182.88 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Category" "Resistors,Chip Resistor - Surface Mount"
+			(at 182.88 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
+			(at 182.88 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "1206W4F1002T5E"
+			(at 182.88 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Resistance" "10kΩ"
+			(at 182.88 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Power(Watts)" "250mW"
+			(at 182.88 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Type" "Thick Film Resistors"
+			(at 182.88 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Overload Voltage (Max)" "200V"
+			(at 182.88 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Operating Temperature Range" "-55°C~+155°C"
+			(at 182.88 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "±1%"
+			(at 182.88 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Temperature Coefficient" "±100ppm/°C"
+			(at 182.88 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "082fbd4b-36db-4093-ab66-49f74a4bbf7c")
+		)
+		(pin "1"
+			(uuid "b85bf1c3-cc4a-4080-80c7-382a0dbd10f4")
+		)
+		(instances
+			(project ""
+				(path "/3e5014cb-2c74-4f2a-856e-45dcd879a326"
+					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
-		(at 102.87 46.99 180)
+		(at 228.6 92.71 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3339,7 +5859,7 @@
 		(fields_autoplaced yes)
 		(uuid "b911593c-da57-40e0-923f-e41ce8324bb1")
 		(property "Reference" "D3"
-			(at 104.4575 39.37 0)
+			(at 236.22 94.2975 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3347,7 +5867,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 104.4575 41.91 0)
+			(at 233.68 94.2975 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3355,7 +5875,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_Luminus_MP-3030-1100_3.0x3.0mm"
-			(at 102.87 46.99 0)
+			(at 228.6 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3363,8 +5883,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8589014757038821376"
-			(at 102.87 46.99 0)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Togialed-TJ_S3030UG5W6TLC6BA5/C1322326"
+			(at 228.6 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3373,7 +5893,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 102.87 46.99 0)
+			(at 228.6 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3382,7 +5902,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 102.87 46.99 0)
+			(at 228.6 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3407,7 +5927,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 85.09 74.93 180)
+		(at 58.42 88.9 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3415,8 +5935,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bb264a8b-57ef-4400-b876-c2d4275e9eb5")
-		(property "Reference" "#FLG02"
-			(at 85.09 76.835 0)
+		(property "Reference" "#FLG2"
+			(at 58.42 90.805 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3425,7 +5945,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 85.09 80.01 0)
+			(at 58.42 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3433,7 +5953,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 85.09 74.93 0)
+			(at 58.42 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3442,7 +5962,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 85.09 74.93 0)
+			(at 58.42 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3451,7 +5971,7 @@
 			)
 		)
 		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 85.09 74.93 0)
+			(at 58.42 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3465,7 +5985,533 @@
 		(instances
 			(project ""
 				(path "/3e5014cb-2c74-4f2a-856e-45dcd879a326"
-					(reference "#FLG02")
+					(reference "#FLG2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 254 85.09 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c1e08dab-cec5-4def-917b-3ad4cced90ab")
+		(property "Reference" "D14"
+			(at 261.62 86.6775 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 259.08 86.6775 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_Luminus_MP-3030-1100_3.0x3.0mm"
+			(at 254 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Togialed-TJ_S3030UG5W6TLC6BA5/C1322326"
+			(at 254 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 254 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 254 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c1aa0608-9ac9-4157-8c3d-8092be2be53c")
+		)
+		(pin "1"
+			(uuid "1e7c06c2-6ffa-49a6-8502-4de9886e7bb5")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/3e5014cb-2c74-4f2a-856e-45dcd879a326"
+					(reference "D14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 266.7 92.71 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c8371dd0-2d8a-4ba5-9e22-83a1c31b2105")
+		(property "Reference" "D21"
+			(at 274.32 94.2975 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 271.78 94.2975 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_Luminus_MP-3030-1100_3.0x3.0mm"
+			(at 266.7 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Togialed-TJ_S3030UG5W6TLC6BA5/C1322326"
+			(at 266.7 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 266.7 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 266.7 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "ddcbef9b-7556-4c84-a1b5-ee96efaaaf1e")
+		)
+		(pin "1"
+			(uuid "941946f4-16c6-44c7-8294-b1b4542c6a92")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/3e5014cb-2c74-4f2a-856e-45dcd879a326"
+					(reference "D21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 266.7 69.85 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d42f0a1a-8128-425a-91e3-e5654a6b70ff")
+		(property "Reference" "R6"
+			(at 273.05 69.85 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R"
+			(at 270.51 69.85 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_1210_3225Metric"
+			(at 264.922 69.85 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 266.7 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 266.7 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2970f786-8dbe-4fd7-aa43-c4e4f4ab2519")
+		)
+		(pin "2"
+			(uuid "c846d171-7925-40b9-bb25-9109c6241d1f")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/3e5014cb-2c74-4f2a-856e-45dcd879a326"
+					(reference "R6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 254 92.71 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e0585518-69b1-40ae-b456-86f614b7c043")
+		(property "Reference" "D15"
+			(at 261.62 94.2975 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 259.08 94.2975 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_Luminus_MP-3030-1100_3.0x3.0mm"
+			(at 254 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Togialed-TJ_S3030UG5W6TLC6BA5/C1322326"
+			(at 254 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 254 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 254 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "65d69cf8-ef4b-4b24-abea-c80ad3041af9")
+		)
+		(pin "1"
+			(uuid "e0ce0dbd-662e-4c42-8949-bcbcc3cd27a7")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/3e5014cb-2c74-4f2a-856e-45dcd879a326"
+					(reference "D15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "WST2N7002:WST2N7002")
+		(at 203.2 58.42 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e14cb37e-617b-4de7-83d4-b42dcb870710")
+		(property "Reference" "U4"
+			(at 207.01 57.1499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "WST2N7002"
+			(at 207.01 59.6899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 203.2 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/WinsokSemicon-WST2N7002/C86936"
+			(at 203.2 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 203.2 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "d5a2bd1e-afde-44fc-a60f-1bab6c3dc77f")
+		)
+		(pin "3"
+			(uuid "118e9378-68b2-41bb-9ddf-04478d1f62df")
+		)
+		(pin "1"
+			(uuid "415933d1-9731-486f-93b4-a9c88db7977a")
+		)
+		(instances
+			(project ""
+				(path "/3e5014cb-2c74-4f2a-856e-45dcd879a326"
+					(reference "U4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 241.3 100.33 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e8187d2b-68da-441f-af5e-29dcd130d4f8")
+		(property "Reference" "D10"
+			(at 248.92 101.9175 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 246.38 101.9175 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_Luminus_MP-3030-1100_3.0x3.0mm"
+			(at 241.3 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Togialed-TJ_S3030UG5W6TLC6BA5/C1322326"
+			(at 241.3 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 241.3 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 241.3 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "d7c99014-968c-4fc1-8ada-6cf9b34d7df1")
+		)
+		(pin "1"
+			(uuid "b1327482-ad5f-4020-8351-bb59516375cc")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/3e5014cb-2c74-4f2a-856e-45dcd879a326"
+					(reference "D10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 266.7 107.95 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "eb94ae2b-9d30-44e2-ac96-e237bf528478")
+		(property "Reference" "D23"
+			(at 274.32 109.5375 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 271.78 109.5375 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_Luminus_MP-3030-1100_3.0x3.0mm"
+			(at 266.7 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Togialed-TJ_S3030UG5W6TLC6BA5/C1322326"
+			(at 266.7 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 266.7 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 266.7 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "8c1500e0-1f42-43a6-b997-37452061523d")
+		)
+		(pin "1"
+			(uuid "f3dcaecb-95b0-4d21-bd29-1cd66c0a2441")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/3e5014cb-2c74-4f2a-856e-45dcd879a326"
+					(reference "D23")
 					(unit 1)
 				)
 			)

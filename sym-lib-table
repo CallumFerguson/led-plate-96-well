@@ -2,4 +2,6 @@
   (version 7)
   (lib (name "RAPC722X")(type "KiCad")(uri "${KIPRJMOD}/components/RAPC722X/RAPC722X.kicad_sym")(options "")(descr ""))
   (lib (name "A000053")(type "KiCad")(uri "${KIPRJMOD}/components/arduino_micro/A000053.kicad_sym")(options "")(descr ""))
+  (lib (name "L2N7002SLLT1G")(type "KiCad")(uri "${KIPRJMOD}/components/L2N7002SLLT1G/L2N7002SLLT1G.kicad_sym")(options "")(descr ""))
+  (lib (name "WST2N7002")(type "KiCad")(uri "${KIPRJMOD}/components/WST2N7002/WST2N7002.kicad_sym")(options "")(descr ""))
 )
