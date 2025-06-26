@@ -10952,7 +10952,7 @@
 		(path "/1da09a1d-d697-43e9-a485-e6bdd9e79c8c")
 		(sheetname "/")
 		(sheetfile "basic-test.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -4.5 7.49)
 			(end 4.5 7.49)
@@ -17547,7 +17547,7 @@
 		(path "/ce024ea1-3381-4dad-a461-3f1ad8093ffa")
 		(sheetname "/")
 		(sheetfile "basic-test.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -8.89 -24.13)
 			(end 8.89 -24.13)
