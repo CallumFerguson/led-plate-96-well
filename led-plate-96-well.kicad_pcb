@@ -3739,6 +3739,18 @@
 				)
 			)
 		)
+		(property "LCSC" "C728397"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "e6c63338-b74a-44a0-95ea-d8ca045bdd84")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/4c62cd2d-2b25-4fd2-bfd4-ba31d9046299")
 		(sheetname "/")
@@ -4739,6 +4751,18 @@
 				)
 			)
 		)
+		(property "LCSC" "C728397"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "ebe9de99-348a-44c9-9db4-1aaaaf35e4fb")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/d8209dc5-5ccc-4f09-a94e-596e858cdd8b")
 		(sheetname "/")
@@ -5609,6 +5633,18 @@
 				)
 			)
 		)
+		(property "LCSC" "C728397"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "7e58cee3-2770-4be2-b705-63f1ad95a6ce")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/00c1a5dc-4166-4b4e-9005-9c28263bd6ca")
 		(sheetname "/")
@@ -6335,6 +6371,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "cbe9d08f-65c0-4a29-a508-52e01d056976")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C728397"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "09b0a1a9-eb38-49ca-873d-942094aff3c7")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8944,6 +8992,18 @@
 				)
 			)
 		)
+		(property "LCSC" "C728397"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "46f3f3b8-e00b-4d10-8dcc-66a0afbe9c62")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/65238915-71ac-49a2-ab09-f893565ba394")
 		(sheetname "/")
@@ -10211,6 +10271,18 @@
 				)
 			)
 		)
+		(property "LCSC" "C20917"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "531fbfbe-c12d-45fa-90fe-1101ebcaa89b")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/c2b04dc2-19cd-4f54-91d5-347d741f64de")
 		(sheetname "/")
 		(sheetfile "led-plate-96-well.kicad_sch")
@@ -10543,6 +10615,18 @@
 				)
 			)
 		)
+		(property "LCSC" "C728397"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "8bc320ad-d0ee-4860-ab35-412df75060e2")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/b7812a19-b4db-4491-8049-adb3272ee8bd")
 		(sheetname "/")
@@ -10795,7 +10879,7 @@
 		(path "/1415fe3f-1376-4b87-927c-5c9d73c2c2aa")
 		(sheetname "/")
 		(sheetfile "led-plate-96-well.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -4.5 7.49)
 			(end 4.5 7.49)
@@ -15449,7 +15533,7 @@
 				)
 			)
 		)
-		(property "Value" "100mΩ"
+		(property "Value" "100Ω"
 			(at 0 1.82 0)
 			(layer "F.Fab")
 			(uuid "4cda2370-a792-4a5e-b75f-2168a57a4f44")
@@ -15460,7 +15544,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2205311900_UNI-ROYAL-Uniroyal-Elec-1206W4F100LT5E_C25334.pdf"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16688,6 +16772,18 @@
 				)
 			)
 		)
+		(property "LCSC" "C728397"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "cf518952-25f1-40e1-8887-440baa8a52b6")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/d42f0a1a-8128-425a-91e3-e5654a6b70ff")
 		(sheetname "/")
@@ -16887,6 +16983,18 @@
 				)
 			)
 		)
+		(property "LCSC" "C728397"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "93a437b1-4f0c-4bc1-997f-52e5b095f88f")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/4854899d-460c-487e-bfa7-3ffcdcaf93c7")
 		(sheetname "/")
@@ -17052,7 +17160,7 @@
 				)
 			)
 		)
-		(property "Value" "100mΩ"
+		(property "Value" "100Ω"
 			(at 0 1.82 0)
 			(layer "F.Fab")
 			(uuid "bd9b89da-3891-4d4d-8eb4-9c9d6b257e1d")
@@ -17063,7 +17171,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2205311900_UNI-ROYAL-Uniroyal-Elec-1206W4F100LT5E_C25334.pdf"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -17723,7 +17831,7 @@
 				)
 			)
 		)
-		(property "Value" "100mΩ"
+		(property "Value" "100Ω"
 			(at 0 1.82 0)
 			(layer "F.Fab")
 			(uuid "d62ac02d-4562-46a1-8c3a-3c7b17382e42")
@@ -17734,7 +17842,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2205311900_UNI-ROYAL-Uniroyal-Elec-1206W4F100LT5E_C25334.pdf"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20167,11 +20275,23 @@
 				)
 			)
 		)
+		(property "LCSC" ""
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "1e56b1b2-aeac-4da8-8115-d0f8301972bc")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "Converter*DCDC*RECOM*R*78E*0.5*")
 		(path "/125fe7ae-9c15-48db-82b7-18abf8ffbde5")
 		(sheetname "/")
 		(sheetfile "led-plate-96-well.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start 8.35 -6.56)
 			(end 8.35 2.06)
@@ -20691,6 +20811,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7e47ea75-3eac-4a59-9d0e-461741677cb7")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C728397"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "7436b238-6508-4496-8c32-bb16091ae20a")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21424,6 +21556,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c433ff06-5a75-4196-bbd3-9764becb71c9")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C728397"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "8c65ff9f-8f8f-4cd4-92db-0b3f010b688e")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22835,6 +22979,18 @@
 				)
 			)
 		)
+		(property "LCSC" "C728397"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "7162f3f3-f6e4-40ac-8645-a49b18f9acd9")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/8a01a890-fa23-45bc-8ce0-a9e277e2be56")
 		(sheetname "/")
@@ -23583,6 +23739,18 @@
 				)
 			)
 		)
+		(property "LCSC" "C1322326"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "cbf9a898-dbcd-46aa-b2ec-93f8e752e2e4")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/b911593c-da57-40e0-923f-e41ce8324bb1")
 		(sheetname "/")
@@ -24095,6 +24263,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "20998a2d-9ec5-4aed-bb49-14980fb3908f")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C20917"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "b5067c4f-f45d-479d-aa8c-4ae4f6675262")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26570,6 +26750,18 @@
 				)
 			)
 		)
+		(property "LCSC" "C20917"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "ae528bfe-2e7f-48fd-ba7e-dce7f70ca824")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/249a7856-40f1-43de-9294-bd582082ebeb")
 		(sheetname "/")
 		(sheetfile "led-plate-96-well.kicad_sch")
@@ -27429,6 +27621,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "37b2435d-4177-410d-bfa1-8224b53955a1")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C728397"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "dcccdb50-a1cd-409a-811c-20d1acb55761")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -30038,6 +30242,18 @@
 				)
 			)
 		)
+		(property "LCSC" "C728397"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "788d32c1-49a0-44d7-8507-3b9e1d917e6d")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/6fc7b418-6083-412c-ac75-bfd509308335")
 		(sheetname "/")
@@ -30771,6 +30987,18 @@
 				)
 			)
 		)
+		(property "LCSC" "C728397"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "162e7c1e-ee4f-40e4-993a-daef3ea026e8")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/12532ec6-760d-43a9-a1fd-6ef5ee180625")
 		(sheetname "/")
@@ -31230,6 +31458,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "85118b63-0f7a-48eb-89fa-d7a51583e7d8")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C20917"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "505c8e0d-303b-440a-a4d6-9a1eeae8e5e9")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31836,6 +32076,18 @@
 				)
 			)
 		)
+		(property "LCSC" "C728397"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "b887c7bf-4ec0-465b-b506-880b9244010f")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/f586f42d-49d6-4522-99e5-f8ffb5c0ff70")
 		(sheetname "/")
@@ -32268,7 +32520,7 @@
 				)
 			)
 		)
-		(property "Value" "100mΩ"
+		(property "Value" "100Ω"
 			(at 0 1.82 0)
 			(layer "F.Fab")
 			(uuid "36ba8bb8-1614-47f7-96ec-83598a9cc699")
@@ -32279,7 +32531,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2205311900_UNI-ROYAL-Uniroyal-Elec-1206W4F100LT5E_C25334.pdf"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -32850,7 +33102,7 @@
 		(path "/b83d0f60-0e04-41d8-83ed-4bdf2129b52f")
 		(sheetname "/")
 		(sheetfile "led-plate-96-well.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(fp_line
 			(start -8.89 -24.13)
 			(end 8.89 -24.13)
@@ -33748,6 +34000,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0a7feb5e-96a7-4808-a08d-ee92b0a51502")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C728397"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "7e9797be-0d71-43c1-b3e6-d7fae23fb06c")
 			(effects
 				(font
 					(size 1.27 1.27)
