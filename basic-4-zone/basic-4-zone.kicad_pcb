@@ -10226,7 +10226,7 @@
 		(descr "SOT, 3 Pin (JEDEC TO-236 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=TO-236), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "U3"
-			(at 143.54 -38.28 90)
+			(at 0.0125 -3.05 90)
 			(layer "F.SilkS")
 			(uuid "35294a71-93ff-4ded-ad7f-11d6b1bbce81")
 			(effects
