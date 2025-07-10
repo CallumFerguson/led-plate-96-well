@@ -3,4 +3,5 @@
   (lib (name "arduino_micro")(type "KiCad")(uri "${KIPRJMOD}/components/arduino_micro")(options "")(descr ""))
   (lib (name "RAPC722X")(type "KiCad")(uri "${KIPRJMOD}/components/RAPC722X")(options "")(descr ""))
   (lib (name "SMD2835_WITH_STEP")(type "KiCad")(uri "${KIPRJMOD}/components/SMD2835/SMD2835_WITH_STEP.pretty")(options "")(descr ""))
+  (lib (name "plate_adapater_96_well")(type "KiCad")(uri "${KIPRJMOD}/components/plate_adapater_96_well/plate_adapater_96_well.pretty")(options "")(descr ""))
 )
