@@ -3,7 +3,7 @@
 	(generator "eeschema")
 	(generator_version "9.0")
 	(uuid "2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917")
-	(paper "A4")
+	(paper "A1")
 	(lib_symbols
 		(symbol "A000053:A000053"
 			(pin_names
@@ -759,6 +759,452 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:C"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:LED"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LED"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Light emitting diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Pins" "1=K 2=A"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "LED diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "LED_0_1"
+				(polyline
+					(pts
+						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy -1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "LED_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Driver_LED:TLC5947RHB"
 			(pin_names
 				(offset 1.016)
@@ -1439,10 +1885,4468 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "RAPC722X:RAPC722X"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at -5.08 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" "RAPC722X"
+				(at -5.08 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "RAPC722X:SWITCHCRAFT_RAPC722X"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "PARTREV" "A"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "STANDARD" "Manufacturer Recommendations"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "MAXIMUM_PACKAGE_HEIGHT" "11 mm"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "MANUFACTURER" "Switchcraft"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(symbol "RAPC722X_0_0"
+				(polyline
+					(pts
+						(xy -4.445 1.905) (xy -5.08 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.81 2.54) (xy -4.445 1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.905 -1.905) (xy -2.54 -2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -2.54) (xy -1.905 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 5.08 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.286) (xy 0.254 -1.27) (xy -0.254 -1.27) (xy 0 -2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 2.54) (xy -3.81 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 -2.54) (xy -1.27 -2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "PIN"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "SHUNT"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "SLEEVE"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:+5V"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+5V"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+5V\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+5V_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+5V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:GND"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:PWR_FLAG"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(junction
+		(at 303.53 228.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "04c38e8b-6c6c-4de9-b968-7f4672574be5")
+	)
+	(junction
+		(at 278.13 254)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "16443829-1d5b-4ec5-a376-96cbf75ef49b")
+	)
+	(junction
+		(at 303.53 254)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1814d40e-bc5b-4a6d-a867-ff1db912d6aa")
+	)
+	(junction
+		(at 254 228.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2009d742-a7a2-4c0a-9383-7fcd7b3e21e3")
+	)
+	(junction
+		(at 254 254)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2abac542-9354-48e3-971a-f0f214f5ed8b")
+	)
+	(junction
+		(at 303.53 190.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "47718171-f062-4ba6-aec8-039515022afd")
+	)
+	(junction
+		(at 303.53 215.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4ca0a16a-a90f-4bb7-b1b8-b4605c9176b3")
+	)
+	(junction
+		(at 278.13 190.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5c554db8-c873-4043-a647-a16b9106eca6")
+	)
+	(junction
+		(at 278.13 241.3)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5c6b3644-0ed3-4c8c-ad6c-8f6b34d0ca77")
+	)
+	(junction
+		(at 278.13 266.7)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "60311711-6656-4d8c-a02e-d3eeb716836b")
+	)
+	(junction
+		(at 303.53 241.3)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "773888c0-b9a4-42e5-99d0-10590f210247")
+	)
+	(junction
+		(at 254 190.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "784974ea-08d3-42fa-94d4-70f835935b16")
+	)
+	(junction
+		(at 303.53 266.7)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7b916c49-7f7a-45c4-b6e3-f6f7ec517ddb")
+	)
+	(junction
+		(at 240.03 64.77)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7e871262-ca5b-47cd-b674-a71cb9401d87")
+	)
+	(junction
+		(at 187.96 113.03)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a9a67174-a063-4b96-a78d-443607d6de4f")
+	)
+	(junction
+		(at 240.03 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ac9269ab-8408-4cb0-8a16-8874307b5205")
+	)
+	(junction
+		(at 278.13 228.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bfc79c3c-589b-4b9a-bec0-707a4822aedb")
+	)
+	(junction
+		(at 278.13 215.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c18cd042-6f05-4134-955d-9a932a42d362")
+	)
+	(junction
+		(at 254 241.3)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c2ed357d-9dd4-4cf7-8f4b-716effefc1dc")
+	)
+	(junction
+		(at 278.13 203.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c6c3d8fa-9943-4b2c-a4f0-b047fdd09813")
+	)
+	(junction
+		(at 303.53 203.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d97c938c-1526-441f-b471-a1db76d224b9")
+	)
+	(junction
+		(at 254 266.7)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e70198a3-cf16-486c-9a1b-80561b6c7c2d")
+	)
+	(junction
+		(at 254 215.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ec50292b-d92a-418f-81f8-ad8fc72c6487")
+	)
+	(junction
+		(at 91.44 91.44)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "eeaaa446-1a20-4709-85dc-381c538c6687")
+	)
+	(junction
+		(at 254 203.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f3fd1a73-a3c2-4d4e-ac7a-4944b02327b0")
+	)
+	(junction
+		(at 91.44 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fb2fd68b-00d3-49fa-833f-d21ee2cac2c2")
+	)
+	(wire
+		(pts
+			(xy 111.76 209.55) (xy 116.84 209.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "000cca87-98b2-4d6b-bffc-64b002d80f97")
+	)
+	(wire
+		(pts
+			(xy 303.53 215.9) (xy 303.53 228.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "004209e0-f204-4df9-94e0-4826e3021a31")
+	)
+	(wire
+		(pts
+			(xy 264.16 87.63) (xy 252.73 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "05fd974b-3ff1-4274-9f84-fea6ac7545dc")
+	)
+	(wire
+		(pts
+			(xy 311.15 266.7) (xy 323.85 266.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "06d9416b-85d0-4d6a-88a2-2f191144a71e")
+	)
+	(wire
+		(pts
+			(xy 261.62 190.5) (xy 265.43 190.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "08943fe1-d2e0-4bb7-bf57-819e2bf42528")
+	)
+	(wire
+		(pts
+			(xy 252.73 128.27) (xy 314.96 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "09127933-1149-427d-90a8-d68d89dd450b")
+	)
+	(wire
+		(pts
+			(xy 285.75 177.8) (xy 289.56 177.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a7ed16a-326a-4117-b7b5-d35ded7bf3d0")
+	)
+	(wire
+		(pts
+			(xy 203.2 110.49) (xy 207.01 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0b12cf99-9b4e-4278-a4ae-d261ac3cf45a")
+	)
+	(wire
+		(pts
+			(xy 111.76 151.13) (xy 118.11 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0efa62b8-7f92-497e-a879-5564a51c5854")
+	)
+	(wire
+		(pts
+			(xy 271.78 254) (xy 271.78 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0f6e5602-a3dc-49bd-960d-dfa31b6bfbb1")
+	)
+	(wire
+		(pts
+			(xy 254 203.2) (xy 254 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0fb392c0-4ea3-42d8-9218-7d242fbc5375")
+	)
+	(wire
+		(pts
+			(xy 285.75 190.5) (xy 290.83 190.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "10601e6e-c7ab-46dd-b6e2-57b11abf695c")
+	)
+	(wire
+		(pts
+			(xy 252.73 110.49) (xy 290.83 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "108d571f-4fd9-4372-a912-e8e98059b850")
+	)
+	(wire
+		(pts
+			(xy 266.7 203.2) (xy 266.7 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "11789441-f438-476d-8a22-947f676f2d9f")
+	)
+	(wire
+		(pts
+			(xy 52.07 113.03) (xy 187.96 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1262f2b2-d40d-46e6-9ab4-bc5aed598965")
+	)
+	(wire
+		(pts
+			(xy 285.75 228.6) (xy 294.64 228.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1339d75f-510a-41e7-afe1-78fccbc995a6")
+	)
+	(wire
+		(pts
+			(xy 254 177.8) (xy 254 190.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "140794d3-d0cc-4055-81d0-50cec79fc777")
+	)
+	(wire
+		(pts
+			(xy 290.83 190.5) (xy 290.83 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "180e941c-9d03-4a8a-a058-048f2db51f48")
+	)
+	(wire
+		(pts
+			(xy 311.15 228.6) (xy 320.04 228.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "18cfef4a-e8e9-4843-aa9c-0551dedf6bb3")
+	)
+	(wire
+		(pts
+			(xy 321.31 241.3) (xy 321.31 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "191d7610-c39b-4074-a5de-64aacd0e5290")
+	)
+	(wire
+		(pts
+			(xy 187.96 109.22) (xy 187.96 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1abfa85b-849a-4aba-8182-97f90fc3cfa7")
+	)
+	(wire
+		(pts
+			(xy 273.05 266.7) (xy 273.05 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1ad286ee-b27f-4906-9569-c72259f992db")
+	)
+	(wire
+		(pts
+			(xy 234.95 77.47) (xy 240.03 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1ae7a2f2-2201-4c37-b2bb-a5b7bdc92e1f")
+	)
+	(wire
+		(pts
+			(xy 303.53 190.5) (xy 303.53 203.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1c0d335d-a2a4-47c7-adbd-a5d8c936f167")
+	)
+	(wire
+		(pts
+			(xy 254 215.9) (xy 254 228.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2266e12d-ba83-485b-8ebe-52659d3fdd9d")
+	)
+	(wire
+		(pts
+			(xy 252.73 120.65) (xy 295.91 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "237c1eda-d875-41cd-8636-5d208129ed58")
+	)
+	(wire
+		(pts
+			(xy 222.25 64.77) (xy 227.33 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2485edf4-44e5-4e2b-adf4-08b0c4305702")
+	)
+	(wire
+		(pts
+			(xy 303.53 177.8) (xy 303.53 190.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "26493f42-bb5e-4ef4-acb5-76c32180e552")
+	)
+	(wire
+		(pts
+			(xy 311.15 241.3) (xy 321.31 241.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "267275c4-58dd-4d8c-9e6a-46b3c78d3764")
+	)
+	(wire
+		(pts
+			(xy 320.04 228.6) (xy 320.04 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "279d3406-13b9-42c1-8a98-92f82cd3a6e9")
+	)
+	(wire
+		(pts
+			(xy 303.53 266.7) (xy 303.53 270.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2822e7b1-a7ad-4442-beca-fd49b492ae6b")
+	)
+	(wire
+		(pts
+			(xy 83.82 91.44) (xy 91.44 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2863b0e1-9bac-423a-ba62-623e83f71330")
+	)
+	(wire
+		(pts
+			(xy 264.16 177.8) (xy 264.16 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "28b81cc2-5a7d-4a35-a61a-08177f6f59c6")
+	)
+	(wire
+		(pts
+			(xy 297.18 254) (xy 297.18 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2a93eac2-5b53-4c46-b40d-cffbb54b3049")
+	)
+	(wire
+		(pts
+			(xy 57.15 179.07) (xy 57.15 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2ab431cb-e733-4cc0-b143-b89f0493ebe9")
+	)
+	(wire
+		(pts
+			(xy 267.97 215.9) (xy 267.97 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "32907460-ffe9-4d36-a61a-a15809fa4d26")
+	)
+	(wire
+		(pts
+			(xy 252.73 135.89) (xy 318.77 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "33ea2904-42a4-48dc-8f1e-d62201a13e1b")
+	)
+	(wire
+		(pts
+			(xy 261.62 266.7) (xy 273.05 266.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "36405917-23d7-4559-bf24-d9b728802a24")
+	)
+	(wire
+		(pts
+			(xy 273.05 105.41) (xy 252.73 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "369236b6-5c1c-47e1-be55-85b330c32ad7")
+	)
+	(wire
+		(pts
+			(xy 261.62 177.8) (xy 264.16 177.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "36d652d0-d84f-446c-95aa-7bc730ea3cae")
+	)
+	(wire
+		(pts
+			(xy 222.25 77.47) (xy 227.33 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "40d76bb6-ce49-406c-950d-cfbb4f1e97fa")
+	)
+	(wire
+		(pts
+			(xy 83.82 96.52) (xy 91.44 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "461f0e51-d690-47de-af89-a4bac181de1a")
+	)
+	(wire
+		(pts
+			(xy 285.75 241.3) (xy 295.91 241.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "498afb71-896e-452f-8d45-7cc20fcf7a18")
+	)
+	(wire
+		(pts
+			(xy 71.12 186.69) (xy 52.07 186.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4c1269d2-ceb9-42d6-8c5d-715dff7f1c2a")
+	)
+	(wire
+		(pts
+			(xy 289.56 177.8) (xy 289.56 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4cccfba9-ae8a-4009-81b6-52c749e903a0")
+	)
+	(wire
+		(pts
+			(xy 261.62 241.3) (xy 270.51 241.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d0b9bd3-9151-4539-9351-eb49dd5f0de1")
+	)
+	(wire
+		(pts
+			(xy 232.41 153.67) (xy 232.41 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "50cb47cd-8b90-401e-a378-fa75baa5cf69")
+	)
+	(wire
+		(pts
+			(xy 303.53 228.6) (xy 303.53 241.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "551024f0-2f4a-40da-91bb-e48a833b2fff")
+	)
+	(wire
+		(pts
+			(xy 311.15 215.9) (xy 318.77 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "57f7cca4-0ed5-469b-b32d-1f75f89edbf0")
+	)
+	(wire
+		(pts
+			(xy 322.58 254) (xy 322.58 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "590cf94e-253a-47bc-a842-e6995ef7ccc4")
+	)
+	(wire
+		(pts
+			(xy 278.13 228.6) (xy 278.13 241.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5c625e92-2e03-4baf-9357-bc5ca5ba561b")
+	)
+	(wire
+		(pts
+			(xy 252.73 107.95) (xy 289.56 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e9fbc6c-c0ff-4787-aafd-c4f5e56ae89b")
+	)
+	(wire
+		(pts
+			(xy 311.15 203.2) (xy 317.5 203.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5f2a1a6f-505d-4990-a763-492dee995f48")
+	)
+	(wire
+		(pts
+			(xy 261.62 254) (xy 271.78 254)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "629633bf-c3c1-49d1-acb8-24e2d2d8ed3a")
+	)
+	(wire
+		(pts
+			(xy 187.96 113.03) (xy 217.17 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "65c2dbbd-81ee-46da-8f8e-fe1bc43690b6")
+	)
+	(wire
+		(pts
+			(xy 252.73 138.43) (xy 320.04 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "68769ee2-4ac2-4d87-ba6c-e0941dec2c32")
+	)
+	(wire
+		(pts
+			(xy 187.96 97.79) (xy 187.96 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6ff33ce1-eaf2-435a-bb0c-b8ae7f4fbe99")
+	)
+	(wire
+		(pts
+			(xy 285.75 203.2) (xy 292.1 203.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "73171395-1469-4ec4-8435-2bd988c8cda7")
+	)
+	(wire
+		(pts
+			(xy 265.43 90.17) (xy 252.73 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7442e59f-23b1-4179-b263-1cdcc43160e9")
+	)
+	(wire
+		(pts
+			(xy 254 266.7) (xy 254 270.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "776284f6-6a0c-4636-88a3-573224e80d5e")
+	)
+	(wire
+		(pts
+			(xy 267.97 95.25) (xy 252.73 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a3f28e5-c78f-44e4-8c60-9c49abf748e0")
+	)
+	(wire
+		(pts
+			(xy 285.75 266.7) (xy 298.45 266.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8402657a-0236-4b96-8476-088a3dbeeeee")
+	)
+	(wire
+		(pts
+			(xy 303.53 254) (xy 303.53 266.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8428a666-51f2-4a6f-a9fe-1835d8f13009")
+	)
+	(wire
+		(pts
+			(xy 303.53 241.3) (xy 303.53 254)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8bd49f8e-0ed8-440d-b9a8-0871124516b3")
+	)
+	(wire
+		(pts
+			(xy 311.15 254) (xy 322.58 254)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8c4642f7-cc0b-41ed-b2d5-c7669777d65b")
+	)
+	(wire
+		(pts
+			(xy 252.73 130.81) (xy 316.23 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8e21bdb3-3387-4681-9db4-02e7467f61b5")
+	)
+	(wire
+		(pts
+			(xy 270.51 100.33) (xy 252.73 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8e54888d-26f1-4ddd-96e7-9b124c352087")
+	)
+	(wire
+		(pts
+			(xy 323.85 266.7) (xy 323.85 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "90cd9d08-76ac-4c79-8468-62be43fe73f8")
+	)
+	(wire
+		(pts
+			(xy 270.51 241.3) (xy 270.51 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "91ea40bb-c306-4db7-bbdb-0e7311510aec")
+	)
+	(wire
+		(pts
+			(xy 254 190.5) (xy 254 203.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "92ef3efb-efab-4f6c-987c-834d14aaaab8")
+	)
+	(wire
+		(pts
+			(xy 254 241.3) (xy 254 254)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "93f0ca2f-e829-44ef-bf70-69f037f1b6e4")
+	)
+	(wire
+		(pts
+			(xy 214.63 110.49) (xy 217.17 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "947385a3-3b43-4901-8331-75705ed5a816")
+	)
+	(wire
+		(pts
+			(xy 311.15 190.5) (xy 316.23 190.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "98a8f470-9ab1-4a2a-9279-9036fd7a9f5b")
+	)
+	(wire
+		(pts
+			(xy 278.13 266.7) (xy 278.13 270.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9e140540-269b-405e-9427-b4d637289e24")
+	)
+	(wire
+		(pts
+			(xy 252.73 140.97) (xy 321.31 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f075f60-951d-40fe-b429-48588f319ba9")
+	)
+	(wire
+		(pts
+			(xy 71.12 184.15) (xy 54.61 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a01e23c8-d124-4633-83dc-255f2fa8d80c")
+	)
+	(wire
+		(pts
+			(xy 71.12 194.31) (xy 49.53 194.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a1f5bc90-11be-4036-a24a-3ae2eb04e88f")
+	)
+	(wire
+		(pts
+			(xy 293.37 215.9) (xy 293.37 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a389e58e-16e6-4f49-b9c4-e2d2650cdae5")
+	)
+	(wire
+		(pts
+			(xy 57.15 120.65) (xy 217.17 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a465d5e3-de43-4725-820a-648691c35cf2")
+	)
+	(wire
+		(pts
+			(xy 240.03 60.96) (xy 240.03 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aba21010-dc61-46e9-b3e2-f2dfda474466")
+	)
+	(wire
+		(pts
+			(xy 311.15 177.8) (xy 314.96 177.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "acb4a0af-15f6-48c4-8e3b-54a5630d6bad")
+	)
+	(wire
+		(pts
+			(xy 252.73 133.35) (xy 317.5 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ad750588-c455-420d-ac88-4ee551aebe02")
+	)
+	(wire
+		(pts
+			(xy 252.73 123.19) (xy 297.18 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "add6e150-e805-469a-9f9b-5ed60ee20f0c")
+	)
+	(wire
+		(pts
+			(xy 303.53 203.2) (xy 303.53 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b04456da-bc13-4918-9528-2bf258cf3b28")
+	)
+	(wire
+		(pts
+			(xy 271.78 102.87) (xy 252.73 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0f05970-490f-4e0c-822c-d1981e88d3c1")
+	)
+	(wire
+		(pts
+			(xy 254 228.6) (xy 254 241.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b2aa9af8-0b59-4f99-b190-72992c1ced28")
+	)
+	(wire
+		(pts
+			(xy 254 254) (xy 254 266.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b3dd6af0-32ce-4e3f-8fdb-c83e2e93fb44")
+	)
+	(wire
+		(pts
+			(xy 52.07 186.69) (xy 52.07 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b64a3c36-6f83-455e-9e61-8c8e03db1df3")
+	)
+	(wire
+		(pts
+			(xy 252.73 143.51) (xy 322.58 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bade7875-2b07-476e-a4ef-f246fb2e653c")
+	)
+	(wire
+		(pts
+			(xy 298.45 266.7) (xy 298.45 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bcbc4ce6-a0e9-49d6-9cca-744f4bb9b2cd")
+	)
+	(wire
+		(pts
+			(xy 240.03 77.47) (xy 240.03 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bdcdf5fb-83bc-4ce0-82fa-aceba398928c")
+	)
+	(wire
+		(pts
+			(xy 49.53 194.31) (xy 49.53 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "be887c55-758a-4bfb-b261-d7577cc415e9")
+	)
+	(wire
+		(pts
+			(xy 317.5 203.2) (xy 317.5 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c6527832-c6d8-4c72-aea0-2054cd202082")
+	)
+	(wire
+		(pts
+			(xy 49.53 115.57) (xy 217.17 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c6b06463-c97a-458a-bdb5-d3d0c08ec239")
+	)
+	(wire
+		(pts
+			(xy 252.73 146.05) (xy 323.85 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c86a85eb-974b-43ee-9e15-fadc6c37f8ec")
+	)
+	(wire
+		(pts
+			(xy 252.73 118.11) (xy 294.64 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "caa93a29-9e37-4d18-b1c2-271db9b93620")
+	)
+	(wire
+		(pts
+			(xy 278.13 203.2) (xy 278.13 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cbf94f4c-efdb-46bf-aa3e-fdbec31b0ba7")
+	)
+	(wire
+		(pts
+			(xy 265.43 190.5) (xy 265.43 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ccab16d0-944d-4559-ad87-7bbedf351018")
+	)
+	(wire
+		(pts
+			(xy 91.44 91.44) (xy 101.6 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce0895d0-5c02-4a20-8bd9-6da96d5cee03")
+	)
+	(wire
+		(pts
+			(xy 278.13 241.3) (xy 278.13 254)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cfe15ce2-dcef-471d-8662-6b5287181a56")
+	)
+	(wire
+		(pts
+			(xy 54.61 184.15) (xy 54.61 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d197f399-4dd2-4af1-8f5c-ce4fc55464c6")
+	)
+	(wire
+		(pts
+			(xy 237.49 153.67) (xy 237.49 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d1ff6abc-a5b9-4859-a781-6338549f2d44")
+	)
+	(wire
+		(pts
+			(xy 318.77 215.9) (xy 318.77 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d300c9e1-266b-4b9d-be96-fc4c398e90c0")
+	)
+	(wire
+		(pts
+			(xy 252.73 115.57) (xy 293.37 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d66ba46e-38cc-42ab-8e76-afa5601e38f2")
+	)
+	(wire
+		(pts
+			(xy 54.61 118.11) (xy 217.17 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6a687bf-1f86-4222-a7a3-a4c279edc328")
+	)
+	(wire
+		(pts
+			(xy 252.73 113.03) (xy 292.1 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d70c9f67-fdbe-4886-bd99-c6fee6d11770")
+	)
+	(wire
+		(pts
+			(xy 278.13 254) (xy 278.13 266.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dbc05191-6463-4b32-b1b8-f1695167f44b")
+	)
+	(wire
+		(pts
+			(xy 278.13 177.8) (xy 278.13 190.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc0ce23b-97af-4714-97e3-a624573ddc72")
+	)
+	(wire
+		(pts
+			(xy 316.23 190.5) (xy 316.23 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc63f127-0ac6-4097-b3cf-83dcf3ed65d3")
+	)
+	(wire
+		(pts
+			(xy 292.1 203.2) (xy 292.1 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e0a22bef-5446-45ad-aa71-bd58e73cb454")
+	)
+	(wire
+		(pts
+			(xy 269.24 228.6) (xy 269.24 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e0d50292-f7e5-498d-b68f-7aa1aa121d26")
+	)
+	(wire
+		(pts
+			(xy 295.91 241.3) (xy 295.91 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e328cca6-b554-48b6-b707-0a3dc53e546b")
+	)
+	(wire
+		(pts
+			(xy 252.73 125.73) (xy 298.45 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e4a9a7d6-0d0e-4abd-925a-42c358671fcf")
+	)
+	(wire
+		(pts
+			(xy 240.03 64.77) (xy 240.03 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e5342281-24c0-48e4-9beb-42307b3c5617")
+	)
+	(wire
+		(pts
+			(xy 71.12 179.07) (xy 57.15 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e6e6570b-54c4-42d6-9520-d22a78a3a7fc")
+	)
+	(wire
+		(pts
+			(xy 261.62 203.2) (xy 266.7 203.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ed93c5f7-1bb1-4e35-9a20-34624e66714a")
+	)
+	(wire
+		(pts
+			(xy 261.62 228.6) (xy 269.24 228.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eddf0565-0abc-46fd-bfc3-64da9ffc0f3d")
+	)
+	(wire
+		(pts
+			(xy 91.44 96.52) (xy 101.6 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f17da761-166d-4720-9c92-f23c35ba7005")
+	)
+	(wire
+		(pts
+			(xy 294.64 228.6) (xy 294.64 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f1b2de3b-a316-454e-883e-1c510baab215")
+	)
+	(wire
+		(pts
+			(xy 285.75 215.9) (xy 293.37 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f616a95d-ca86-4e6c-be53-7e41c7739d6c")
+	)
+	(wire
+		(pts
+			(xy 314.96 177.8) (xy 314.96 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f6692e62-ecab-4309-aa1c-8a3746b33fda")
+	)
+	(wire
+		(pts
+			(xy 285.75 254) (xy 297.18 254)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f6a62009-c8e9-4cc7-9938-533c0100f529")
+	)
+	(wire
+		(pts
+			(xy 261.62 215.9) (xy 267.97 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f75c8396-efdb-46da-9896-5ed38cc133c8")
+	)
+	(wire
+		(pts
+			(xy 278.13 190.5) (xy 278.13 203.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f82b8d8f-4517-4554-be5d-975037c83332")
+	)
+	(wire
+		(pts
+			(xy 278.13 215.9) (xy 278.13 228.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fded23cf-08e5-4837-baa7-644ae67534b0")
+	)
+	(wire
+		(pts
+			(xy 234.95 64.77) (xy 240.03 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fe438b66-e30f-4fbf-8896-4fbdde84cb06")
+	)
+	(wire
+		(pts
+			(xy 269.24 97.79) (xy 252.73 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "feafa0dd-59c3-4201-bbb4-9b129b4dd870")
+	)
+	(wire
+		(pts
+			(xy 266.7 92.71) (xy 252.73 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff43ee8a-dbe1-4b7a-8426-58cd30492a9f")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 231.14 77.47 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "032fa699-c859-4853-afcc-fafbe1a4cb35")
+		(property "Reference" "C1"
+			(at 231.14 69.85 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 231.14 72.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 234.95 76.5048 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 231.14 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 231.14 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "part number" "CC0603KRX7R9BB104"
+			(at 231.14 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3a056e29-ae77-4b61-95fa-f8e6f452556b")
+		)
+		(pin "2"
+			(uuid "c7341596-8bd3-459b-9eac-3227825d590e")
+		)
+		(instances
+			(project ""
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 101.6 91.44 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "14ff0877-2917-4561-aba4-f909bba4f73c")
+		(property "Reference" "#PWR01"
+			(at 97.79 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 105.41 91.4399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 101.6 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 101.6 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 101.6 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2cdbc1df-a7ef-495c-9859-2195e7add1d4")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 257.81 241.3 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "15623137-13e7-4090-a6df-27988ae297d7")
+		(property "Reference" "D6"
+			(at 259.3975 233.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 259.3975 236.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SMD2835_WITH_STEP:LED_PLCC_2835"
+			(at 257.81 241.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 257.81 241.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 257.81 241.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 257.81 241.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "part number" "TJ-S2835UG2W8TLC6B-A5"
+			(at 257.81 241.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "08ea8fe1-f58a-4bc5-ac1c-1c1a69460cc9")
+		)
+		(pin "2"
+			(uuid "c3be96c2-a92e-4d6a-8c49-7a9f9cf775a6")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "D6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 281.94 177.8 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1899582d-fd9a-4097-afa9-14d70a7c0123")
+		(property "Reference" "D9"
+			(at 283.5275 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 283.5275 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SMD2835_WITH_STEP:LED_PLCC_2835"
+			(at 281.94 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 281.94 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 281.94 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 281.94 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "part number" "TJ-S2835UG2W8TLC6B-A5"
+			(at 281.94 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0c8ffbbb-499e-48a0-936c-8696d48a7063")
+		)
+		(pin "2"
+			(uuid "a6783ab8-e2ca-48d5-bf92-f9e335b62839")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "D9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 254 270.51 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1b65d3a2-5834-46e9-8163-bb921571ff8d")
+		(property "Reference" "#PWR012"
+			(at 254 266.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 254 275.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 254 270.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 254 270.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 254 270.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a1127387-e4f0-4abb-b0c5-029f54b61fb5")
+		)
+		(instances
+			(project ""
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 303.53 270.51 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1dcec1b3-4908-4bd2-abe8-9396993483b6")
+		(property "Reference" "#PWR014"
+			(at 303.53 266.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 303.53 275.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 303.53 270.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 303.53 270.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 303.53 270.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "77256b95-c94a-4bea-83bc-b20d1911dd42")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 187.96 97.79 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1dd0b92d-76fe-436a-8ac3-a821b9e0e4d3")
+		(property "Reference" "#PWR011"
+			(at 187.96 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 187.96 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 187.96 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 187.96 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 187.96 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "846c5d97-2b2c-4eba-aa7c-2003978b3486")
+		)
+		(instances
+			(project ""
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "#PWR011")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 240.03 60.96 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "21f5f140-112a-488b-8dbd-e9a2db795f7e")
+		(property "Reference" "#PWR03"
+			(at 240.03 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 240.03 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 240.03 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 240.03 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 240.03 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ed47eaa8-96ad-4e30-bd54-17cdcbd71a56")
+		)
+		(instances
+			(project ""
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 257.81 203.2 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "23e4bdc2-7708-49db-8614-101767fc3900")
+		(property "Reference" "D3"
+			(at 259.3975 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 259.3975 198.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SMD2835_WITH_STEP:LED_PLCC_2835"
+			(at 257.81 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 257.81 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 257.81 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 257.81 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "part number" "TJ-S2835UG2W8TLC6B-A5"
+			(at 257.81 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ec9097be-b102-4272-b6e1-119615a31f8d")
+		)
+		(pin "2"
+			(uuid "4dcd99a3-1b2e-477a-bb89-3ed327be0cc1")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 281.94 203.2 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2688ac84-c319-437b-af2f-8ff93719233c")
+		(property "Reference" "D11"
+			(at 283.5275 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 283.5275 198.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SMD2835_WITH_STEP:LED_PLCC_2835"
+			(at 281.94 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 281.94 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 281.94 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 281.94 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "part number" "TJ-S2835UG2W8TLC6B-A5"
+			(at 281.94 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9569cddc-b7c9-4767-a857-78164b6c3715")
+		)
+		(pin "2"
+			(uuid "27f313d3-3d44-4a02-a2ba-1ed70c482e3f")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "D11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 231.14 64.77 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "28a48734-5033-403e-bb2d-7836634a0fb4")
+		(property "Reference" "C2"
+			(at 231.14 57.15 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10uF"
+			(at 231.14 59.69 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 234.95 63.8048 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 231.14 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 231.14 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "part number" "CL21A106KAYNNNE"
+			(at 231.14 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "dce5a637-fdc4-47d1-a31d-fe73d56de53d")
+		)
+		(pin "2"
+			(uuid "d537ad95-176a-45db-8b7a-3452677b4c70")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 281.94 266.7 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "36f4d87f-da4e-42e5-904b-6ae9403072c7")
+		(property "Reference" "D16"
+			(at 283.5275 259.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 283.5275 261.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SMD2835_WITH_STEP:LED_PLCC_2835"
+			(at 281.94 266.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 281.94 266.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 281.94 266.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 281.94 266.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "part number" "TJ-S2835UG2W8TLC6B-A5"
+			(at 281.94 266.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3cf4d81f-8b4d-41b1-bce6-0766e9b91a13")
+		)
+		(pin "2"
+			(uuid "650ba7b8-d50d-4764-9eac-b41d9fde748b")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "D16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 281.94 228.6 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "46af146c-4816-40cf-99fc-755046a71399")
+		(property "Reference" "D13"
+			(at 283.5275 220.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 283.5275 223.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SMD2835_WITH_STEP:LED_PLCC_2835"
+			(at 281.94 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 281.94 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 281.94 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 281.94 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "part number" "TJ-S2835UG2W8TLC6B-A5"
+			(at 281.94 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3acd4e33-b8c0-49d6-852a-1d07f46ada26")
+		)
+		(pin "2"
+			(uuid "cba1a4a4-4249-458b-bed4-f07c1690b55c")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "D13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 307.34 215.9 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "476ca273-f5c3-41fb-ab8a-80e0286ff621")
+		(property "Reference" "D20"
+			(at 308.9275 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 308.9275 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SMD2835_WITH_STEP:LED_PLCC_2835"
+			(at 307.34 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 307.34 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 307.34 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 307.34 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "part number" "TJ-S2835UG2W8TLC6B-A5"
+			(at 307.34 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "642bdf46-4b32-4087-bb94-f86234a7cb43")
+		)
+		(pin "2"
+			(uuid "8c89dd23-4356-4bb2-807f-f695722c8cdb")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "D20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 307.34 228.6 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4b558f06-fcd9-46f7-a978-13092b04d38a")
+		(property "Reference" "D21"
+			(at 308.9275 220.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 308.9275 223.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SMD2835_WITH_STEP:LED_PLCC_2835"
+			(at 307.34 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 307.34 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 307.34 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 307.34 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "part number" "TJ-S2835UG2W8TLC6B-A5"
+			(at 307.34 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4b020ed0-7fcb-4d56-89f4-f08e795ac7dd")
+		)
+		(pin "2"
+			(uuid "513e753c-b078-454f-8322-ee9759783276")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "D21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 210.82 110.49 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4e1a1405-3d95-47d1-98a7-3c8fdd15d6a1")
+		(property "Reference" "R1"
+			(at 209.5499 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2.49kΩ"
+			(at 212.0899 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 210.82 112.268 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 210.82 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 210.82 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "part number" "RTT022491FTH"
+			(at 210.82 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "2f79ba3a-611d-43e9-b6ab-77245467cc6b")
+		)
+		(pin "1"
+			(uuid "b73653ea-3cec-4770-854c-69899393f6bc")
+		)
+		(instances
+			(project ""
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 203.2 110.49 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4e1d862f-c300-4774-8364-87410c80491a")
+		(property "Reference" "#PWR010"
+			(at 196.85 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 199.39 110.4899 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 203.2 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 203.2 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 203.2 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7fa96635-589b-4771-b38c-f79d1cdaa78e")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "#PWR010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 222.25 64.77 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "56258dfc-c71f-4d01-903c-5643cddfaabc")
+		(property "Reference" "#PWR05"
+			(at 215.9 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 218.44 64.7699 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 222.25 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 222.25 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 222.25 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fa189bda-6e96-45f7-a7d7-1569591306bc")
+		)
+		(instances
+			(project ""
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 281.94 254 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "57b00ccb-8fc2-42f8-b459-3eb4ae86a9ca")
+		(property "Reference" "D15"
+			(at 283.5275 246.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 283.5275 248.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SMD2835_WITH_STEP:LED_PLCC_2835"
+			(at 281.94 254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 281.94 254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 281.94 254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 281.94 254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "part number" "TJ-S2835UG2W8TLC6B-A5"
+			(at 281.94 254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ebf711ab-4365-4978-902a-65d95cf80cf7")
+		)
+		(pin "2"
+			(uuid "c0de8422-5cc2-4fef-9b55-e25f8f3be041")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "D15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 257.81 177.8 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5c4a19e0-47a9-4efc-865d-af090bc69a95")
+		(property "Reference" "D1"
+			(at 259.3975 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 259.3975 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SMD2835_WITH_STEP:LED_PLCC_2835"
+			(at 257.81 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 257.81 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 257.81 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 257.81 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "part number" "TJ-S2835UG2W8TLC6B-A5"
+			(at 257.81 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "58409d53-813f-4b8e-98c3-a9c5c209d970")
+		)
+		(pin "2"
+			(uuid "7a740fa7-61cb-4428-9b9a-2003c625eb05")
+		)
+		(instances
+			(project ""
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 91.44 91.44 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "616e70f0-1bc0-42e7-9c2b-1092c65490a5")
+		(property "Reference" "#FLG01"
+			(at 91.44 89.535 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 91.44 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 91.44 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 91.44 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 91.44 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "22ab4c17-8d3f-4d4e-9f41-4a4625ffc241")
+		)
+		(instances
+			(project ""
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "#FLG01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 237.49 158.75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6b00cc6a-2735-4e72-8a82-31086beccba3")
+		(property "Reference" "#PWR09"
+			(at 237.49 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 237.49 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 237.49 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 237.49 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 237.49 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ed3a0a93-d523-4e81-8684-c73b8a4893ed")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "#PWR09")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 91.44 96.52 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6dd0efb9-82e4-4cdb-abe5-c47433c443fe")
+		(property "Reference" "#FLG02"
+			(at 91.44 98.425 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 91.44 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 91.44 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 91.44 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 91.44 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "253e40e4-bb9c-4737-9194-eee45c89896b")
+		)
+		(instances
+			(project ""
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "#FLG02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 307.34 266.7 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7396bad8-5a69-42dd-801c-24d33cd92aa8")
+		(property "Reference" "D24"
+			(at 308.9275 259.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 308.9275 261.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SMD2835_WITH_STEP:LED_PLCC_2835"
+			(at 307.34 266.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 307.34 266.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 307.34 266.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 307.34 266.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "part number" "TJ-S2835UG2W8TLC6B-A5"
+			(at 307.34 266.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a257d36e-33df-44a1-aa6a-998dcb940593")
+		)
+		(pin "2"
+			(uuid "add64710-9c3f-4cbd-9d2a-5a7b757ccc1c")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "D24")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 307.34 177.8 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "74e5f6c1-a1cd-47ef-b676-f2b99203eeaa")
+		(property "Reference" "D17"
+			(at 308.9275 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 308.9275 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SMD2835_WITH_STEP:LED_PLCC_2835"
+			(at 307.34 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 307.34 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 307.34 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 307.34 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "part number" "TJ-S2835UG2W8TLC6B-A5"
+			(at 307.34 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b7565d98-7ef8-42e2-aa76-d4c00e44ec5e")
+		)
+		(pin "2"
+			(uuid "4e955300-ec38-4393-9fce-6f33a6949895")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "D17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 187.96 105.41 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "819765cf-1af8-4e9d-a903-fec77644be2b")
+		(property "Reference" "R2"
+			(at 190.5 104.1399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10kΩ"
+			(at 190.5 106.6799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 186.182 105.41 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 187.96 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 187.96 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "part number" "0603WAF1002T5E"
+			(at 187.96 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "41be9cd9-a530-4d9a-b1cf-ec758a5c89b1")
+		)
+		(pin "1"
+			(uuid "5c3e3075-0517-4068-994f-221c7a276816")
+		)
+		(instances
+			(project ""
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 281.94 241.3 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8860576b-56fc-4922-85f0-d6bd0a0a8c48")
+		(property "Reference" "D14"
+			(at 283.5275 233.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 283.5275 236.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SMD2835_WITH_STEP:LED_PLCC_2835"
+			(at 281.94 241.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 281.94 241.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 281.94 241.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 281.94 241.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "part number" "TJ-S2835UG2W8TLC6B-A5"
+			(at 281.94 241.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8d145144-2725-4ec9-ace9-3d58a059f180")
+		)
+		(pin "2"
+			(uuid "303ff61a-4132-4ba4-b74b-5734651f9601")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "D14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 281.94 190.5 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "948ab238-1404-4286-97c8-5e492a541d08")
+		(property "Reference" "D10"
+			(at 283.5275 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 283.5275 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SMD2835_WITH_STEP:LED_PLCC_2835"
+			(at 281.94 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 281.94 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 281.94 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 281.94 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "part number" "TJ-S2835UG2W8TLC6B-A5"
+			(at 281.94 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "da9a89dc-c9a0-40b8-aad2-5b69b1f7bc60")
+		)
+		(pin "2"
+			(uuid "6096debe-2d4e-403d-a994-de3313837d38")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "D10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 257.81 215.9 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9710f0e6-c3da-46ff-9d27-b339bf841d13")
+		(property "Reference" "D4"
+			(at 259.3975 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 259.3975 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SMD2835_WITH_STEP:LED_PLCC_2835"
+			(at 257.81 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 257.81 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 257.81 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 257.81 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "part number" "TJ-S2835UG2W8TLC6B-A5"
+			(at 257.81 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "eff20383-5146-4cfc-b071-6f4fbecb7a9e")
+		)
+		(pin "2"
+			(uuid "51fb46cd-e0ad-4727-b596-61dd11456cdc")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "D4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 307.34 254 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "98d2f94d-5304-4516-9efb-c1a276d3a6ae")
+		(property "Reference" "D23"
+			(at 308.9275 246.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 308.9275 248.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SMD2835_WITH_STEP:LED_PLCC_2835"
+			(at 307.34 254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 307.34 254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 307.34 254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 307.34 254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "part number" "TJ-S2835UG2W8TLC6B-A5"
+			(at 307.34 254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4fd7f66e-db68-4e4e-b4b2-7fa23c537f0c")
+		)
+		(pin "2"
+			(uuid "f23aacc9-1a17-4d3f-9b09-6fc5304ede12")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "D23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 257.81 266.7 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9fd46be6-a9d2-4373-8655-2b7197571415")
+		(property "Reference" "D8"
+			(at 259.3975 259.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 259.3975 261.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SMD2835_WITH_STEP:LED_PLCC_2835"
+			(at 257.81 266.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 257.81 266.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 257.81 266.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 257.81 266.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "part number" "TJ-S2835UG2W8TLC6B-A5"
+			(at 257.81 266.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "087ce8c3-551d-49b0-80ab-4cdf5707006a")
+		)
+		(pin "2"
+			(uuid "ee3848e2-5b0f-4a54-ac3e-c3617c0f2abb")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "D8")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "A000053:A000053")
-		(at 54.61 58.42 0)
+		(at 91.44 179.07 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1450,8 +6354,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ae03183e-bf4c-4a17-89c5-0ecb85ee699c")
-		(property "Reference" "U2"
-			(at 54.61 22.86 0)
+		(property "Reference" "U1"
+			(at 91.44 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1459,7 +6363,7 @@
 			)
 		)
 		(property "Value" "A000053"
-			(at 54.61 25.4 0)
+			(at 91.44 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1467,7 +6371,7 @@
 			)
 		)
 		(property "Footprint" "arduino_micro:A000053"
-			(at 54.61 58.42 0)
+			(at 91.44 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1477,7 +6381,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 54.61 58.42 0)
+			(at 91.44 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1486,7 +6390,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 54.61 58.42 0)
+			(at 91.44 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1495,7 +6399,7 @@
 			)
 		)
 		(property "MF" "Arduino"
-			(at 54.61 58.42 0)
+			(at 91.44 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1505,7 +6409,7 @@
 			)
 		)
 		(property "Description_1" "Microcontroller board based on the ATmega32u4"
-			(at 54.61 58.42 0)
+			(at 91.44 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1515,7 +6419,7 @@
 			)
 		)
 		(property "Package" "Non-Standard Arduino"
-			(at 54.61 58.42 0)
+			(at 91.44 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1525,7 +6429,7 @@
 			)
 		)
 		(property "Price" "None"
-			(at 54.61 58.42 0)
+			(at 91.44 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1535,7 +6439,7 @@
 			)
 		)
 		(property "Check_prices" "https://www.snapeda.com/parts/Arduino%20Micro/Arduino/view-part/?ref=eda"
-			(at 54.61 58.42 0)
+			(at 91.44 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1545,7 +6449,7 @@
 			)
 		)
 		(property "STANDARD" "Manufacturer Recommendations"
-			(at 54.61 58.42 0)
+			(at 91.44 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1555,7 +6459,7 @@
 			)
 		)
 		(property "PARTREV" "N/A"
-			(at 54.61 58.42 0)
+			(at 91.44 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1565,7 +6469,7 @@
 			)
 		)
 		(property "SnapEDA_Link" "https://www.snapeda.com/parts/Arduino%20Micro/Arduino/view-part/?ref=snap"
-			(at 54.61 58.42 0)
+			(at 91.44 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1575,7 +6479,7 @@
 			)
 		)
 		(property "MP" "Arduino Micro"
-			(at 54.61 58.42 0)
+			(at 91.44 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1585,7 +6489,7 @@
 			)
 		)
 		(property "Availability" "In Stock"
-			(at 54.61 58.42 0)
+			(at 91.44 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1595,7 +6499,7 @@
 			)
 		)
 		(property "MANUFACTURER" "ARDUINO"
-			(at 54.61 58.42 0)
+			(at 91.44 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1703,7 +6607,644 @@
 		(instances
 			(project ""
 				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
-					(reference "U2")
+					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 281.94 215.9 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b29023e3-819f-42a9-9a8c-535e24784901")
+		(property "Reference" "D12"
+			(at 283.5275 208.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 283.5275 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SMD2835_WITH_STEP:LED_PLCC_2835"
+			(at 281.94 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 281.94 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 281.94 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 281.94 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "part number" "TJ-S2835UG2W8TLC6B-A5"
+			(at 281.94 215.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bb806a0b-3366-4c62-9fbf-cba41d2da96c")
+		)
+		(pin "2"
+			(uuid "766fca4a-9e31-431e-8919-940ea8dd4579")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "D12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "RAPC722X:RAPC722X")
+		(at 76.2 93.98 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b58cd617-11d7-468c-91b1-537270938167")
+		(property "Reference" "J1"
+			(at 76.2 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "RAPC722X"
+			(at 76.2 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "RAPC722X:SWITCHCRAFT_RAPC722X"
+			(at 76.2 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 76.2 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 76.2 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PARTREV" "A"
+			(at 76.2 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "STANDARD" "Manufacturer Recommendations"
+			(at 76.2 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" "11 mm"
+			(at 76.2 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" "Switchcraft"
+			(at 76.2 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(pin "PIN"
+			(uuid "c3a1d0d3-0990-47a5-b936-ccad8b043bf5")
+		)
+		(pin "SLEEVE"
+			(uuid "e7b5c047-ccf4-4a3c-ab8b-ccfe974bc8c0")
+		)
+		(pin "SHUNT"
+			(uuid "1747bb38-23f4-45f8-a1d6-6680b17e1b9c")
+		)
+		(instances
+			(project ""
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 116.84 209.55 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b61a5d0a-c177-4b34-a31d-d83b4904a07c")
+		(property "Reference" "#PWR06"
+			(at 123.19 209.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 120.65 209.5499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 116.84 209.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 116.84 209.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 116.84 209.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b6866089-b81b-44c5-a52f-670f14c32662")
+		)
+		(instances
+			(project ""
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 222.25 77.47 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bb812f07-176c-4b75-9422-ebb78d6a565e")
+		(property "Reference" "#PWR04"
+			(at 215.9 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 218.44 77.4699 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 222.25 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 222.25 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 222.25 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "782c2382-be58-4359-9564-ff2e71f75355")
+		)
+		(instances
+			(project ""
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 232.41 158.75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bc7e10ac-0b47-444a-b06a-a380aed4f6a4")
+		(property "Reference" "#PWR07"
+			(at 232.41 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 232.41 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 232.41 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 232.41 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 232.41 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "025708fc-d606-4782-a983-d79c34f7ca9c")
+		)
+		(instances
+			(project ""
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 307.34 190.5 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bffa6828-1873-4cd2-9982-2afe630b0324")
+		(property "Reference" "D18"
+			(at 308.9275 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 308.9275 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SMD2835_WITH_STEP:LED_PLCC_2835"
+			(at 307.34 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 307.34 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 307.34 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 307.34 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "part number" "TJ-S2835UG2W8TLC6B-A5"
+			(at 307.34 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ae8e5182-4a4d-431a-84a8-08465f23c2ec")
+		)
+		(pin "2"
+			(uuid "01b15df0-ff66-4d2c-a655-b854365cff24")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "D18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 307.34 203.2 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c0fefe89-14dd-4ea2-8e3c-d5b87106729e")
+		(property "Reference" "D19"
+			(at 308.9275 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 308.9275 198.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SMD2835_WITH_STEP:LED_PLCC_2835"
+			(at 307.34 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 307.34 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 307.34 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 307.34 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "part number" "TJ-S2835UG2W8TLC6B-A5"
+			(at 307.34 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8cd9aa06-53cb-4197-9779-14062377076d")
+		)
+		(pin "2"
+			(uuid "0873e17b-5db2-41aa-9637-26c58b51b6ae")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "D19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 101.6 96.52 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c37f4b9b-2acd-4b52-a4bc-44bce64f7709")
+		(property "Reference" "#PWR02"
+			(at 107.95 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 105.41 96.5199 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 101.6 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 101.6 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 101.6 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0cb39200-1c9a-4c6d-8655-550f5795da5a")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -1711,7 +7252,7 @@
 	)
 	(symbol
 		(lib_id "Driver_LED:TLC5947RHB")
-		(at 148.59 62.23 0)
+		(at 234.95 118.11 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1719,8 +7260,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d2e20f1c-d9af-460d-b743-f2e541f98bc1")
-		(property "Reference" "U1"
-			(at 155.8133 22.86 0)
+		(property "Reference" "U2"
+			(at 242.1733 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1729,7 +7270,7 @@
 			)
 		)
 		(property "Value" "TLC5947RHB"
-			(at 155.8133 25.4 0)
+			(at 242.1733 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1738,7 +7279,7 @@
 			)
 		)
 		(property "Footprint" "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.45x3.45mm"
-			(at 134.62 21.59 0)
+			(at 220.98 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1748,7 +7289,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tlc5947.pdf"
-			(at 148.59 62.23 0)
+			(at 234.95 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1757,7 +7298,7 @@
 			)
 		)
 		(property "Description" "24-Channel, 12-Bit PWM LED Driver, QFN"
-			(at 148.59 62.23 0)
+			(at 234.95 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1867,7 +7408,484 @@
 		(instances
 			(project ""
 				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
-					(reference "U1")
+					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 278.13 270.51 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d2fb5a21-dc60-4336-badc-f5ac1a570d3c")
+		(property "Reference" "#PWR013"
+			(at 278.13 266.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 278.13 275.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 278.13 270.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 278.13 270.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 278.13 270.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3ead27ea-65f7-4af8-ba0f-d20514b8e8a3")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "#PWR013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 257.81 190.5 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "dd9ca1d2-452a-4552-8e93-ff370162d66d")
+		(property "Reference" "D2"
+			(at 259.3975 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 259.3975 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SMD2835_WITH_STEP:LED_PLCC_2835"
+			(at 257.81 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 257.81 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 257.81 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 257.81 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "part number" "TJ-S2835UG2W8TLC6B-A5"
+			(at 257.81 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ef7f697b-6a18-41ae-a12a-f069e9ee7523")
+		)
+		(pin "2"
+			(uuid "95acddc1-679f-401d-b897-551be0884db5")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "D2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 257.81 254 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "deff67b7-9838-46a5-9737-b373f1919bb8")
+		(property "Reference" "D7"
+			(at 259.3975 246.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 259.3975 248.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SMD2835_WITH_STEP:LED_PLCC_2835"
+			(at 257.81 254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 257.81 254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 257.81 254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 257.81 254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "part number" "TJ-S2835UG2W8TLC6B-A5"
+			(at 257.81 254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a00d5bd4-4fde-4991-8d30-8aa72e2934ba")
+		)
+		(pin "2"
+			(uuid "c4106a39-b8e3-421e-b220-8069bac9f771")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "D7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 118.11 151.13 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e444e118-6b9a-4858-b3f5-817ba6fee648")
+		(property "Reference" "#PWR08"
+			(at 114.3 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 121.92 151.1299 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 118.11 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 118.11 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 118.11 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "045e2b1d-5fb8-4ed0-bb67-eed47490f4d5")
+		)
+		(instances
+			(project ""
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "#PWR08")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 257.81 228.6 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e6d3d2a2-da9f-4d60-8c8a-fac803743b06")
+		(property "Reference" "D5"
+			(at 259.3975 220.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 259.3975 223.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SMD2835_WITH_STEP:LED_PLCC_2835"
+			(at 257.81 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 257.81 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 257.81 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 257.81 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "part number" "TJ-S2835UG2W8TLC6B-A5"
+			(at 257.81 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4a959df6-bdb9-47e3-b5aa-cbee69725af6")
+		)
+		(pin "2"
+			(uuid "b9c289f5-10bf-4f96-b314-102b2f1403f6")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "D5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 307.34 241.3 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e7b133e5-310a-4bbd-a098-f2014ea45b71")
+		(property "Reference" "D22"
+			(at 308.9275 233.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 308.9275 236.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SMD2835_WITH_STEP:LED_PLCC_2835"
+			(at 307.34 241.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 307.34 241.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 307.34 241.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 307.34 241.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "part number" "TJ-S2835UG2W8TLC6B-A5"
+			(at 307.34 241.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "287475e7-a381-426d-bdf5-90937deac11b")
+		)
+		(pin "2"
+			(uuid "2d2f26ef-c859-4ed4-9be4-b7eeac2827bd")
+		)
+		(instances
+			(project "led-plate-96-well"
+				(path "/2a6c0e47-d1ca-47c1-a3f3-ee9b9e776917"
+					(reference "D22")
 					(unit 1)
 				)
 			)
