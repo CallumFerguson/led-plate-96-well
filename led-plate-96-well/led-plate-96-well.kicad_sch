@@ -12657,7 +12657,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 210.82 112.268 90)
 			(effects
 				(font
@@ -12684,7 +12684,7 @@
 				(hide yes)
 			)
 		)
-		(property "part number" "RTT022491FTH"
+		(property "part number" "RC0603FR-072K49L"
 			(at 210.82 110.49 0)
 			(effects
 				(font
@@ -13635,7 +13635,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100uF"
+		(property "Value" "10uF"
 			(at 105.41 95.2499 0)
 			(effects
 				(font
@@ -13644,7 +13644,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 102.5652 97.79 0)
 			(effects
 				(font
@@ -13671,7 +13671,7 @@
 				(hide yes)
 			)
 		)
-		(property "part number" "CL31A107MQHNNNE"
+		(property "part number" "CL21A106KAYNNNE"
 			(at 101.6 93.98 0)
 			(effects
 				(font
