@@ -1,4 +1,6 @@
 import './App.css';
+import "./components/WellPlate96"
+import WellPlate96 from './components/WellPlate96';
 
 const App = () => {
   return (
@@ -14,6 +16,7 @@ const App = () => {
               <section className="rounded-2xl border bg-white p-6 shadow-sm">
                 <h2 className="text-xl font-semibold">Top Left</h2>
                 <p className="text-sm text-gray-600">Put your content here…</p>
+                < WellPlate96 />
               </section>
 
               <section className="rounded-2xl border bg-white p-6 shadow-sm">
