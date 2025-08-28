@@ -1,26 +1,6 @@
 import './App.css';
 import "./components/WellPlate96"
 import WellPlate96 from './components/WellPlate96';
-import plateUrl from './assets/96-Well_plate.svg?url';
-
-const Test = () => {
-  return <div className="relative">
-    <img
-      src={plateUrl}
-      alt="96-well plate"
-      className="block select-none pointer-events-none max-w-full h-auto"
-      draggable={false}
-      loading="lazy"
-    />
-    <div className="absolute inset-[6%] grid grid-cols-12 grid-rows-8 grid-flow-col">
-      {Array.from({ length: 96 }, (_, i) => (
-        <div key={i} className="block aspect-square w-[70%] rounded-full bg-black/40">{i}</div>
-      ))}
-    </div>
-
-  </div>;
-
-};
 
 const App = () => {
   return (
@@ -36,8 +16,7 @@ const App = () => {
               <section className="rounded-2xl border bg-white p-6 shadow-sm">
                 <h2 className="text-xl font-semibold">Top Left</h2>
                 <p className="text-sm text-gray-600">Put your content here…</p>
-                {/* < WellPlate96 /> */}
-                <Test />
+                < WellPlate96 />
               </section>
 
               <section className="rounded-2xl border bg-white p-6 shadow-sm">
