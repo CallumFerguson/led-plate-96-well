@@ -1,13 +1,44 @@
-// App.tsx
 import "./App.css";
 import WellPlate96 from "./components/WellPlate96";
 import GroupList from "./components/GroupList";
-import type { Group } from "./components/GroupList";
+import type { Group } from "./components/GroupListTypes";
 import { useMemo, useState } from "react";
 import SequenceList from "./components/SequenceList";
 
+const PALETTE = [
+  "#2563eb", // blue-600
+  "#10b981", // emerald-500
+  "#f59e0b", // amber-500
+  "#ef4444", // red-500
+  "#8b5cf6", // violet-500
+  "#06b6d4", // cyan-500
+  "#f43f5e", // rose-500
+  "#84cc16", // lime-500
+];
+
+const uid = (): string =>
+  typeof crypto !== "undefined" && "randomUUID" in crypto
+    ? crypto.randomUUID()
+    : `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+
 const App = () => {
-  const [selectedGroup, setSelectedGroup] = useState<Group | null>(null);
+  // Groups (owned here so color can be shared globally)
+  const [groups, setGroups] = useState<Group[]>([]);
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+
+  const selectedGroup = useMemo(
+    () => groups.find((g) => g.id === selectedId) ?? null,
+    [groups, selectedId]
+  );
+
+  const addGroup = () => {
+    const nextColor = PALETTE[groups.length % PALETTE.length];
+    const g: Group = { id: uid(), name: `Group ${groups.length + 1}`, color: nextColor };
+    setGroups((prev) => [...prev, g]);
+    setSelectedId(g.id);
+  };
+
+  const selectGroup = (groupId: string) => setSelectedId(groupId);
 
   // Per-group selected wells: groupId -> Set of well indices (0..95)
   const [selectedByGroup, setSelectedByGroup] = useState<Record<string, Set<number>>>({});
@@ -18,22 +49,18 @@ const App = () => {
     [selectedGroup, selectedByGroup]
   );
 
-  // Build index -> owner group id/name maps, plus sets for 'dimmed' (other groups)
-  const { ownerIdByIndex, ownerNameByIndex, otherGroupsSelected } = useMemo(() => {
+  // Build index -> owner group id/name/color maps, plus sets for 'dimmed' (other groups)
+  const { ownerIdByIndex, ownerNameByIndex, ownerColorByIndex, otherGroupsSelected } = useMemo(() => {
     const ownerId: Record<number, string> = {};
     const ownerName: Record<number, string> = {};
+    const ownerColor: Record<number, string> = {};
+
     Object.entries(selectedByGroup).forEach(([gid, set]) => {
+      const g = groups.find((gg) => gg.id === gid);
       set.forEach((i) => {
         ownerId[i] = gid;
-      });
-    });
-
-    // You may have access to group names inside GroupList; if not, we'll only show the ID.
-    // We'll try to infer the selectedGroup name for current; others default to their id.
-    // (If you keep a list of groups in App later, populate names here.)
-    Object.entries(selectedByGroup).forEach(([gid, set]) => {
-      set.forEach((i) => {
-        ownerName[i] = gid; // fallback to id; GroupList could expose names later
+        ownerName[i] = g?.name ?? gid;
+        ownerColor[i] = g?.color ?? "#64748b";
       });
     });
 
@@ -45,8 +72,8 @@ const App = () => {
       }
     });
 
-    return { ownerIdByIndex: ownerId, ownerNameByIndex: ownerName, otherGroupsSelected: others };
-  }, [selectedByGroup, selectedGroup]);
+    return { ownerIdByIndex: ownerId, ownerNameByIndex: ownerName, ownerColorByIndex: ownerColor, otherGroupsSelected: others };
+  }, [selectedByGroup, selectedGroup, groups]);
 
   const toggleWell = (idx: number) => {
     if (!selectedGroup) return;
@@ -73,22 +100,38 @@ const App = () => {
             {/* Left column */}
             <div className="grid grid-rows-2 gap-6 min-h-[70vh]">
               <section className="rounded-2xl border bg-white p-6 shadow-sm">
-                <h2 className="text-xl font-semibold">Select Wells</h2>
+                <div className="flex items-center gap-2">
+                  {selectedGroup && (
+                    <span
+                      aria-hidden
+                      className="inline-block size-3 rounded-full ring-2"
+                      style={{ backgroundColor: selectedGroup.color, boxShadow: `0 0 0 2px ${selectedGroup.color}44` }}
+                    />
+                  )}
+                  <h2 className="text-xl font-semibold">Select Wells</h2>
+                </div>
                 <p className="text-sm text-gray-600">
                   {selectedGroup ? `for ${selectedGroup.name}` : "No group selected"}
                 </p>
 
                 <WellPlate96
                   selectedGroup={selectedGroup}
+                  currentColor={selectedGroup?.color}
                   selected={selectedSet}
                   dimmed={otherGroupsSelected}
                   ownerNameByIndex={ownerNameByIndex}
+                  ownerColorByIndex={ownerColorByIndex}
                   onToggle={toggleWell}
                 />
               </section>
 
               <section className="rounded-2xl border bg-white p-6 shadow-sm">
-                <GroupList onSelect={setSelectedGroup} />
+                <GroupList
+                  groups={groups}
+                  selectedId={selectedId}
+                  onAdd={addGroup}
+                  onSelect={selectGroup}
+                />
               </section>
             </div>
 
