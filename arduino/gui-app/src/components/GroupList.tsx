@@ -5,6 +5,7 @@ export type GroupListProps = {
   selectedId: string | null;
   onAdd: () => void;
   onSelect: (groupId: string) => void;
+  onRemove: (groupId: string) => void;
   className?: string;
 };
 
@@ -13,6 +14,7 @@ export default function GroupList({
   selectedId,
   onAdd,
   onSelect,
+  onRemove,
   className = "",
 }: GroupListProps) {
   return (
@@ -28,6 +30,7 @@ export default function GroupList({
         </button>
       </div>
 
+      {/* Scrolls when there are many groups */}
       <div
         role="listbox"
         aria-label="Groups"
@@ -46,7 +49,7 @@ export default function GroupList({
                     aria-selected={isSelected}
                     onClick={() => onSelect(g.id)}
                     className={[
-                      "group block w-full text-left px-3 py-2 focus:outline-none",
+                      "group grid w-full grid-cols-[1fr_auto] items-center gap-2 px-3 py-2 text-left focus:outline-none",
                       isSelected ? "bg-gray-100" : "hover:bg-gray-50",
                     ].join(" ")}
                     type="button"
@@ -63,6 +66,22 @@ export default function GroupList({
                         }}
                       />
                       <span className="font-medium">{g.name}</span>
+                    </div>
+
+                    {/* Remove button (doesn't trigger selection) */}
+                    <div className="justify-self-end">
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          onRemove(g.id);
+                        }}
+                        className="rounded-md border px-2.5 py-1 text-xs hover:bg-gray-50"
+                        aria-label={`Remove ${g.name}`}
+                        title="Remove group"
+                      >
+                        Remove
+                      </button>
                     </div>
                   </button>
                 </li>

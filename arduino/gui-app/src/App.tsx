@@ -21,6 +21,45 @@ const uid = (): string =>
     ? crypto.randomUUID()
     : `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
 
+/** Get the smallest available "Group N" name (N starts at 1) that isn't taken. */
+function nextGroupName(existing: Group[]): string {
+  const used = new Set(existing.map((g) => g.name));
+  let n = 1;
+  while (used.has(`Group ${n}`)) n++;
+  return `Group ${n}`;
+}
+
+/**
+ * Choose a color such that:
+ * 1) Prefer a palette color not currently used by any existing group (no duplicates until all colors used).
+ * 2) If all palette colors are already used, choose the least-used color to balance duplicates.
+ * When a group is removed, its color becomes immediately available again due to (1).
+ */
+function nextGroupColor(existing: Group[], palette: string[]): string {
+  const used = new Set(existing.map((g) => g.color));
+
+  // Prefer completely unused (by current groups) colors.
+  for (const c of palette) {
+    if (!used.has(c)) return c;
+  }
+
+  // All colors are currently in use: choose the least-used color.
+  const counts: Record<string, number> = {};
+  for (const c of palette) counts[c] = 0;
+  for (const g of existing) counts[g.color] = (counts[g.color] ?? 0) + 1;
+
+  let candidate = palette[0];
+  let min = counts[candidate] ?? 0;
+  for (const c of palette) {
+    const cnt = counts[c] ?? 0;
+    if (cnt < min) {
+      min = cnt;
+      candidate = c;
+    }
+  }
+  return candidate;
+}
+
 const App = () => {
   // Groups (owned here so color can be shared globally)
   const [groups, setGroups] = useState<Group[]>([]);
@@ -31,21 +70,41 @@ const App = () => {
     [groups, selectedId]
   );
 
+  // Per-group selected wells: groupId -> Set of well indices (0..95)
+  const [selectedByGroup, setSelectedByGroup] = useState<Record<string, Set<number>>>({});
+
   const addGroup = () => {
-    const nextColor = PALETTE[groups.length % PALETTE.length];
-    const g: Group = { id: uid(), name: `Group ${groups.length + 1}`, color: nextColor };
+    const g: Group = {
+      id: uid(),
+      name: nextGroupName(groups),
+      color: nextGroupColor(groups, PALETTE),
+    };
     setGroups((prev) => [...prev, g]);
     setSelectedId(g.id);
   };
 
-  const selectGroup = (groupId: string) => setSelectedId(groupId);
+  // Toggle selection: clicking an already-selected group unselects it
+  const selectGroup = (groupId: string) => {
+    setSelectedId((curr) => (curr === groupId ? null : groupId));
+  };
 
-  // Per-group selected wells: groupId -> Set of well indices (0..95)
-  const [selectedByGroup, setSelectedByGroup] = useState<Record<string, Set<number>>>({});
+  // Remove a group and its well selections; unselect if it was selected
+  const removeGroup = (groupId: string) => {
+    setGroups((prev) => prev.filter((g) => g.id !== groupId));
+    setSelectedByGroup((prev) => {
+      const copy = { ...prev };
+      delete copy[groupId];
+      return copy;
+    });
+    setSelectedId((curr) => (curr === groupId ? null : curr));
+  };
 
   // Convenience: selection for the currently selected group
   const selectedSet = useMemo(
-    () => (selectedGroup ? (selectedByGroup[selectedGroup.id] ?? new Set<number>()) : new Set<number>()),
+    () =>
+      selectedGroup
+        ? selectedByGroup[selectedGroup.id] ?? new Set<number>()
+        : new Set<number>(),
     [selectedGroup, selectedByGroup]
   );
 
@@ -72,7 +131,12 @@ const App = () => {
       }
     });
 
-    return { ownerIdByIndex: ownerId, ownerNameByIndex: ownerName, ownerColorByIndex: ownerColor, otherGroupsSelected: others };
+    return {
+      ownerIdByIndex: ownerId,
+      ownerNameByIndex: ownerName,
+      ownerColorByIndex: ownerColor,
+      otherGroupsSelected: others,
+    };
   }, [selectedByGroup, selectedGroup, groups]);
 
   const toggleWell = (idx: number) => {
@@ -105,7 +169,10 @@ const App = () => {
                     <span
                       aria-hidden
                       className="inline-block size-3 rounded-full ring-2"
-                      style={{ backgroundColor: selectedGroup.color, boxShadow: `0 0 0 2px ${selectedGroup.color}44` }}
+                      style={{
+                        backgroundColor: selectedGroup.color,
+                        boxShadow: `0 0 0 2px ${selectedGroup.color}44`,
+                      }}
                     />
                   )}
                   <h2 className="text-xl font-semibold">Select Wells</h2>
@@ -131,12 +198,14 @@ const App = () => {
                   selectedId={selectedId}
                   onAdd={addGroup}
                   onSelect={selectGroup}
+                  onRemove={removeGroup}
                 />
               </section>
             </div>
 
             {/* Right column */}
             <aside className="rounded-2xl border bg-white p-6 shadow-sm min-h-[70vh]">
+              {/* Scrolls when there are many steps */}
               <SequenceList selectedGroup={selectedGroup} />
             </aside>
           </div>
