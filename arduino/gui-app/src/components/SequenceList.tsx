@@ -1,7 +1,7 @@
-import { useMemo, useState } from "react";
 import type { Group } from "./GroupListTypes";
+import { useMemo } from "react";
 
-type Step = {
+export type Step = {
   id: string;
   secondsOn: string;   // strings for clean typing UX
   secondsOff: string;
@@ -27,19 +27,19 @@ const clampNumberString = (s: string, min: number, max?: number) => {
 const MIN_INTENSITY = 0;
 const MAX_INTENSITY = 4095;
 
-export default function SequenceList({ selectedGroup }: { selectedGroup: Group | null }) {
-  // Per-group store: { [groupId]: Step[] }
-  const [perGroup, setPerGroup] = useState<Record<string, Step[]>>({});
-
-  const steps = useMemo<Step[]>(
-    () => (selectedGroup ? perGroup[selectedGroup.id] ?? [] : []),
-    [perGroup, selectedGroup]
+export default function SequenceList({
+  selectedGroup,
+  steps,
+  setSteps,
+}: {
+  selectedGroup: Group | null;
+  steps: Step[];
+  setSteps: (next: Step[]) => void;
+}) {
+  const safeSteps = useMemo<Step[]>(
+    () => (selectedGroup ? steps ?? [] : []),
+    [steps, selectedGroup]
   );
-
-  const setStepsForSelected = (next: Step[]) => {
-    if (!selectedGroup) return;
-    setPerGroup((prev) => ({ ...prev, [selectedGroup.id]: next }));
-  };
 
   const addStep = () => {
     if (!selectedGroup) return;
@@ -50,17 +50,15 @@ export default function SequenceList({ selectedGroup }: { selectedGroup: Group |
       intensity: String(MAX_INTENSITY), // default full scale (4095)
       repeats: "1",
     };
-    setStepsForSelected([...steps, next]);
+    setSteps([...safeSteps, next]);
   };
 
   const updateField = (id: string, field: keyof Step, value: string) => {
-    setStepsForSelected(
-      steps.map((s) => (s.id === id ? { ...s, [field]: value } : s))
-    );
+    setSteps(safeSteps.map((s) => (s.id === id ? { ...s, [field]: value } : s)));
   };
 
   const removeStep = (id: string) => {
-    setStepsForSelected(steps.filter((s) => s.id !== id));
+    setSteps(safeSteps.filter((s) => s.id !== id));
   };
 
   return (
@@ -93,11 +91,11 @@ export default function SequenceList({ selectedGroup }: { selectedGroup: Group |
       <div className="min-h-0 flex-1 overflow-auto rounded-xl border">
         {!selectedGroup ? (
           <div className="p-4 text-sm text-gray-500">Select a group to add steps.</div>
-        ) : steps.length === 0 ? (
+        ) : safeSteps.length === 0 ? (
           <div className="p-4 text-sm text-gray-500">No steps yet. Click “Add step”.</div>
         ) : (
           <ul className="divide-y">
-            {steps.map((s, idx) => (
+            {safeSteps.map((s, idx) => (
               <li key={s.id} className="p-3">
                 <div className="mb-2 text-sm font-medium">Step {idx + 1}</div>
 
