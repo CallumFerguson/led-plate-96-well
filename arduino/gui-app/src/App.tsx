@@ -9,9 +9,8 @@ import SequenceList, { type Step } from "./components/SequenceList";
 /** Locked-in Arduino sketch template: only inject between the DATA markers. */
 const INO_TEMPLATE_PREFIX = String.raw`/*
   Auto-generated from your 96-well UI.
-  - Runs ALL GROUPS CONCURRENTLY with non-blocking scheduling (no delay()).
-  - Pins and startup behavior match your example.
-  - Only the DATA section below changes between exports.
+  - Uses ms on/off and per-step loop_duration_ms (0 = forever)
+  - Runs ALL GROUPS CONCURRENTLY (no delay()) using your sequenceIntensity()
 */
 
 #include "Adafruit_TLC5947.h"
@@ -22,265 +21,131 @@ const INO_TEMPLATE_PREFIX = String.raw`/*
 #define PIN_BLANK 6
 
 #define NUM_TLC5947 4
-#define TOTAL_CHANNELS (NUM_TLC5947 * 24)
-
-/** Behavior after finishing all steps:
-    1 = loop forever (restart all groups), 0 = run once and stop (leave wells off). */
-#define PROGRAM_LOOP 1
+constexpr uint16_t NUM_CHANNELS = NUM_TLC5947 * 24;
 
 Adafruit_TLC5947 tlc(NUM_TLC5947, PIN_CLOCK, PIN_DATA, PIN_LATCH);
 
-struct Step {
-  float secondsOn;    // >= 0
-  float secondsOff;   // >= 0
-  uint16_t intensity; // 0..4095
-  uint16_t repeats;   // >= 1
+struct SequenceStep
+{
+    uint32_t on_ms;            // ON window length
+    uint32_t off_ms;           // OFF window length
+    uint16_t intensity;        // value to return while ON
+    uint32_t loop_duration_ms; // duration to run this step (0 = forever)
 };
 
-/* =========================
-   ==== BEGIN GENERATED DATA ====
-   (the exporter injects NUM_GROUPS, well/step arrays & offsets here)
+// Returns current intensity for the sequence.
+// - 0 if we're in an OFF window or sequence has ended
+// - step.intensity if we're in an ON window
+// Safe across millis() rollover.
+uint16_t sequenceIntensity(const SequenceStep *steps, size_t count)
+{
+    uint32_t elapsed = millis(); // rollover-safe elapsed time
+
+    // Walk through steps, subtracting their durations until we find the active one.
+    for (size_t i = 0; i < count; ++i)
+    {
+        const SequenceStep &s = steps[i];
+        uint32_t dur = s.loop_duration_ms;
+
+        // If this step is infinite or the remaining time falls within this step, evaluate it.
+        if (dur == 0 || elapsed < dur)
+        {
+            // Edge cases
+            if (s.intensity == 0)
+                return 0; // explicitly off
+            if (s.on_ms == 0)
+                return 0; // never turns on
+            if (s.off_ms == 0)
+                return s.intensity; // always on within this step
+
+            // Regular blinking within the step
+            uint64_t period = (uint64_t)s.on_ms + (uint64_t)s.off_ms; // avoid overflow
+            if (period == 0)
+                return 0; // both zero -> off
+
+            uint64_t phase = (uint64_t)elapsed % period;
+            return (phase < s.on_ms) ? s.intensity : 0;
+        }
+
+        // Otherwise, move to the next step
+        elapsed -= dur;
+    }
+
+    // Past the end of all steps -> off
+    return 0;
+}
+
+// =========================
+// ===== START GENERATED CODE =====
+// (the exporter injects wellGroup and per-group sequences here)
 `;
 
 const INO_TEMPLATE_SUFFIX = String.raw`
-   ==== END GENERATED DATA ====
-   =========================== */
+// ===== END GENERATED CODE =====
+// ===========================
 
-enum Phase : uint8_t { PHASE_ON = 0, PHASE_OFF = 1, PHASE_DONE = 2 };
+constexpr int numGroups =
+#if defined(NUM_GROUPS_EXPORTED_LITERAL)
+NUM_GROUPS_EXPORTED_LITERAL;
+#else
+0;
+#endif
 
-struct GroupState {
-  uint16_t step_idx;
-  uint16_t repeat_left;
-  Phase phase;
-  unsigned long next_ms;
-};
+void setup()
+{
+    Serial.begin(115200);
 
-GroupState g_states[NUM_GROUPS];
+    /*
+        The TLC5947 BLANK pin keeps all the LEDs off when it is high. The board has
+        a pull up resistor on the BLANK pin so the LEDs will be off by default. It is
+        important to set all the LEDs to 0 intensity before setting the BLANK pin to
+        low so the LEDs do not flash on during start up.
+    */
 
-static inline unsigned long secs_to_ms(float s) {
-  if (s <= 0.0f) return 0UL;
-  return (unsigned long)(s * 1000.0f);
+    // turn all LEDs off
+    tlc.begin();
+    for (uint16_t i = 0; i < NUM_CHANNELS; i++)
+    {
+        tlc.setPWM(i, 0);
+    }
+    tlc.write();
+
+    // set blank pin to low
+    pinMode(PIN_BLANK, OUTPUT);
+    digitalWrite(PIN_BLANK, LOW);
 }
 
-static inline void set_group_wells(uint16_t g, uint16_t value) {
-  const uint32_t start = WELL_OFFSETS[g];
-  const uint32_t end   = WELL_OFFSETS[g + 1];
-  for (uint32_t i = start; i < end; ++i) {
-    tlc.setPWM(WELLS_FLAT[i], value);
-  }
-}
+unsigned long lastReportMs = 0;
+unsigned long loopCount = 0;
 
-// Returns pointer to this group's current Step (safe even if empty: returns a dummy)
-static const Step& current_step(uint16_t g) {
-  static const Step EMPTY = {0,0,0,1};
-  const uint32_t s0 = STEP_OFFSETS[g];
-  const uint32_t s1 = STEP_OFFSETS[g + 1];
-  if (s0 >= s1) return EMPTY; // no steps
-  const Step* base = &STEPS_FLAT[s0];
-  uint16_t idx = g_states[g].step_idx;
-  if (idx >= (s1 - s0)) idx = (s1 - s0) - 1;
-  return base[idx];
-}
+void loop()
+{
+    loopCount++;
 
-static void start_group(uint16_t g, unsigned long now) {
-  g_states[g].step_idx = 0;
-  const Step& st = current_step(g);
-  g_states[g].repeat_left = st.repeats ? st.repeats : 1;
-  g_states[g].phase = PHASE_ON;
+    unsigned long now = millis();
+    if (now - lastReportMs >= 1000)
+    {
+        float hz = (loopCount * 1000.0f) / (now - lastReportMs);
+        Serial.print(F("loop() ≈ "));
+        Serial.print(hz, 1);
+        Serial.println(F(" Hz"));
+        loopCount = 0;
+        lastReportMs = now;
+    }
 
-  // Apply ON immediately
-  set_group_wells(g, st.intensity);
-  g_states[g].next_ms = now + secs_to_ms(st.secondsOn);
-}
-
-static bool advance_group_once(uint16_t g, unsigned long now, bool &dirtyPwm) {
-  GroupState &S = g_states[g];
-  if (S.phase == PHASE_DONE) return false;
-
-  const Step& st = current_step(g);
-
-  // Handle zero-length phases by collapsing them immediately.
-  auto collapse_zero = [&](void) {
-    int safety = 8; // avoid infinite churn on pathological 0/0 steps
-    while (safety-- > 0) {
-      if (S.phase == PHASE_ON) {
-        // If ON duration is zero, go straight to OFF
-        if (st.secondsOn <= 0.0f) {
-          set_group_wells(g, 0);
-          dirtyPwm = true;
-          S.phase = PHASE_OFF;
-          if (st.secondsOff <= 0.0f) {
-            // OFF also zero: advance to next repeat/step immediately
-            if (--S.repeat_left > 0) {
-              // next repeat of the same step -> ON again
-              S.phase = PHASE_ON;
-              set_group_wells(g, st.intensity);
-              // keep dirty flag; next_ms for ON phase is now + 0 (handled below)
-              continue;
-            } else {
-              // move to next step
-              const uint32_t s0 = STEP_OFFSETS[g];
-              const uint32_t s1 = STEP_OFFSETS[g + 1];
-              if (s0 >= s1) { S.phase = PHASE_DONE; break; } // empty
-              S.step_idx++;
-              if (s0 + S.step_idx >= s1) {
-                if (PROGRAM_LOOP) {
-                  S.step_idx = 0;
-                } else {
-                  S.phase = PHASE_DONE;
-                  break;
-                }
-              }
-              const Step& st2 = current_step(g);
-              S.repeat_left = st2.repeats ? st2.repeats : 1;
-              S.phase = PHASE_ON;
-              set_group_wells(g, st2.intensity);
-              dirtyPwm = true;
-              // and loop again in case durations are also zero
-              continue;
+    for (int group = 0; group < numGroups; group++)
+    {
+        uint16_t intensity = sequenceIntensity(groupSequences[group], groupSequenceStepCount[group]);
+        for (uint16_t well = 0; well < NUM_CHANNELS; well++)
+        {
+            if (wellGroup[well] == group)
+            {
+                tlc.setPWM(well, intensity);
             }
-          } else {
-            // OFF has time > 0, schedule it
-            S.next_ms = now + secs_to_ms(st.secondsOff);
-            return true;
-          }
-        } else {
-          // ON has time > 0, schedule it
-          S.next_ms = now + secs_to_ms(st.secondsOn);
-          return true;
         }
-      } else { // PHASE_OFF
-        if (st.secondsOff <= 0.0f) {
-          // advance cycle immediately
-          if (--S.repeat_left > 0) {
-            S.phase = PHASE_ON;
-            set_group_wells(g, st.intensity);
-            dirtyPwm = true;
-            continue; // ON may also be zero; loop
-          } else {
-            // next step
-            const uint32_t s0 = STEP_OFFSETS[g];
-            const uint32_t s1 = STEP_OFFSETS[g + 1];
-            if (s0 >= s1) { S.phase = PHASE_DONE; break; } // empty
-            S.step_idx++;
-            if (s0 + S.step_idx >= s1) {
-              if (PROGRAM_LOOP) {
-                S.step_idx = 0;
-              } else {
-                S.phase = PHASE_DONE;
-                break;
-              }
-            }
-            const Step& st2 = current_step(g);
-            S.repeat_left = st2.repeats ? st2.repeats : 1;
-            S.phase = PHASE_ON;
-            set_group_wells(g, st2.intensity);
-            dirtyPwm = true;
-            continue;
-          }
-        } else {
-          // schedule OFF duration
-          S.next_ms = now + secs_to_ms(st.secondsOff);
-          return true;
-        }
-      }
     }
-    return false; // either DONE or fully collapsed with no scheduling needed
-  };
 
-  if (S.next_ms == 0UL) {
-    // (first time) or (we just rebuilt states)
-    return collapse_zero();
-  }
-
-  if ((long)(now - S.next_ms) < 0) {
-    return false; // not time yet
-  }
-
-  // Time to transition this group once
-  if (S.phase == PHASE_ON) {
-    // Turn OFF
-    set_group_wells(g, 0);
-    dirtyPwm = true;
-    S.phase = PHASE_OFF;
-    if (st.secondsOff > 0.0f) S.next_ms = now + secs_to_ms(st.secondsOff);
-    else return collapse_zero();
-    return true;
-  } else if (S.phase == PHASE_OFF) {
-    // Next repeat or step
-    if (--S.repeat_left > 0) {
-      S.phase = PHASE_ON;
-      set_group_wells(g, st.intensity);
-      dirtyPwm = true;
-      if (st.secondsOn > 0.0f) S.next_ms = now + secs_to_ms(st.secondsOn);
-      else return collapse_zero();
-      return true;
-    } else {
-      // Advance to next step
-      const uint32_t s0 = STEP_OFFSETS[g];
-      const uint32_t s1 = STEP_OFFSETS[g + 1];
-      if (s0 >= s1) { S.phase = PHASE_DONE; return true; } // empty
-      S.step_idx++;
-      if (s0 + S.step_idx >= s1) {
-        if (PROGRAM_LOOP) {
-          S.step_idx = 0;
-        } else {
-          S.phase = PHASE_DONE;
-          return true;
-        }
-      }
-      const Step& st2 = current_step(g);
-      S.repeat_left = st2.repeats ? st2.repeats : 1;
-      S.phase = PHASE_ON;
-      set_group_wells(g, st2.intensity);
-      dirtyPwm = true;
-      if (st2.secondsOn > 0.0f) S.next_ms = now + secs_to_ms(st2.secondsOn);
-      else return collapse_zero();
-      return true;
-    }
-  }
-  return false;
-}
-
-void setup() {
-  /*
-    The TLC5947 BLANK pin keeps all the LEDs off when it is high.
-    The board has a pull-up on BLANK so LEDs are off by default.
-    Important: Set all LEDs to 0 before pulling BLANK low so they don't flash.
-  */
-  tlc.begin();
-  for (uint16_t i = 0; i < TOTAL_CHANNELS; i++) {
-    tlc.setPWM(i, 0);
-  }
-  tlc.write();
-
-  pinMode(PIN_BLANK, OUTPUT);
-  digitalWrite(PIN_BLANK, LOW);
-
-  // Initialize runtime state for each group
-  const unsigned long now = millis();
-  for (uint16_t g = 0; g < NUM_GROUPS; ++g) {
-    g_states[g] = {0, 1, PHASE_ON, 0UL};
-    start_group(g, now);
-  }
-}
-
-void loop() {
-  const unsigned long now = millis();
-  bool dirty = false;
-
-  // Advance any group that needs it. Limit total transitions per loop to avoid
-  // pathological churn with many zero-length steps across groups.
-  int transitions_budget = 64;
-  bool progressed = true;
-  while (progressed && transitions_budget-- > 0) {
-    progressed = false;
-    for (uint16_t g = 0; g < NUM_GROUPS; ++g) {
-      if (advance_group_once(g, now, dirty)) progressed = true;
-    }
-  }
-
-  if (dirty) tlc.write();
+    tlc.write();
 }
 `;
 
@@ -310,10 +175,7 @@ function nextGroupName(existing: Group[]): string {
 
 function nextGroupColor(existing: Group[], palette: string[]): string {
   const used = new Set(existing.map((g) => g.color));
-
-  for (const c of palette) {
-    if (!used.has(c)) return c;
-  }
+  for (const c of palette) if (!used.has(c)) return c;
 
   const counts: Record<string, number> = {};
   for (const c of palette) counts[c] = 0;
@@ -334,7 +196,6 @@ function nextGroupColor(existing: Group[], palette: string[]): string {
 // ------------ small coercion helpers for export ------------
 const clamp = (n: number, min: number, max: number) => Math.min(Math.max(n, min), max);
 const toInt = (s: string, min: number, max: number) => clamp(Math.round(Number(s || "0")), min, max);
-const toFloat = (s: string, min: number) => Math.max(Number(s || "0"), min);
 
 const App = () => {
   // Groups and selection state
@@ -348,7 +209,7 @@ const App = () => {
   // Per-group selected wells: groupId -> Set<index>
   const [selectedByGroup, setSelectedByGroup] = useState<Record<string, Set<number>>>({});
 
-  // Per-group sequence steps for export
+  // Per-group sequence steps for export (now ms-based)
   const [stepsByGroup, setStepsByGroup] = useState<Record<string, Step[]>>({});
 
   const stepsForSelected = useMemo<Step[]>(
@@ -393,7 +254,7 @@ const App = () => {
   const selectedSet = useMemo(
     () =>
       selectedGroup
-        ? selectedByGroup[selectedGroup.id] ?? new Set<number>()
+        ? (selectedByGroup[selectedGroup.id] ?? new Set<number>())
         : new Set<number>(),
     [selectedGroup, selectedByGroup]
   );
@@ -431,9 +292,7 @@ const App = () => {
     if (!selectedGroup) return;
 
     const currentOwner = ownerIdByIndex[idx];
-    if (currentOwner && currentOwner !== selectedGroup.id) {
-      return;
-    }
+    if (currentOwner && currentOwner !== selectedGroup.id) return;
 
     setSelectedByGroup((prev) => {
       const currSet = new Set(prev[selectedGroup.id] ?? []);
@@ -445,81 +304,101 @@ const App = () => {
 
   /** Build and download a concurrent, template-based Arduino sketch (.ino). */
   const exportIno = () => {
-    // Collect and normalize the UI data
-    const serialGroups = groups.map((g) => {
+    // Collect + normalize UI data (ms-based)
+    const serialGroups = groups.map((g, gi) => {
       const wells = Array.from(selectedByGroup[g.id] ?? []).sort((a, b) => a - b);
       const rawSteps = stepsByGroup[g.id] ?? [];
       const steps = rawSteps.map((s) => ({
-        on: Math.max(Number(s.secondsOn || "0"), 0),
-        off: Math.max(Number(s.secondsOff || "0"), 0),
-        intensity: Math.min(Math.max(Math.round(Number(s.intensity || "0")), 0), 4095),
-        repeats: Math.max(Math.round(Number(s.repeats || "1")), 1),
+        on_ms: toInt(s.msOn, 0, 0xffffffff),
+        off_ms: toInt(s.msOff, 0, 0xffffffff),
+        intensity: toInt(s.intensity, 0, 4095),
+        loop_duration_ms: toInt(s.loopDurationMs, 0, 0xffffffff), // 0 = forever
       }));
-      return { wells, steps };
+      return { wells, steps, index: gi };
     });
 
-    const numGroups = serialGroups.length;
+    const NUM_CHANNELS = 96; // 4 TLC5947 * 24 channels each
 
-    // Flatten wells and offsets
-    const wellOffsets: number[] = [0];
-    const wellsFlat: number[] = [];
-    for (const g of serialGroups) {
-      wellsFlat.push(...g.wells);
-      wellOffsets.push(wellsFlat.length);
+    // Build wellGroup: initialize to -1
+    const wellGroup: number[] = Array(NUM_CHANNELS).fill(-1);
+    serialGroups.forEach((g, gi) => {
+      g.wells.forEach((idx) => {
+        if (idx >= 0 && idx < NUM_CHANNELS) wellGroup[idx] = gi;
+      });
+    });
+
+    const groupsCount = serialGroups.length;
+
+    // Emit the generated code section
+    const lines: string[] = [];
+
+    // NUM_GROUPS literal (used to set numGroups via macro trick in the suffix)
+    lines.push(`#define NUM_GROUPS_EXPORTED_LITERAL ${groupsCount}`);
+    lines.push(``);
+
+    // wellGroup array (pretty-print in rows of 8)
+    lines.push(`int8_t wellGroup[NUM_CHANNELS] = {`);
+    for (let i = 0; i < NUM_CHANNELS; i += 8) {
+      const row = wellGroup.slice(i, i + 8).join(", ");
+      lines.push(`    ${row}${i + 8 < NUM_CHANNELS ? "," : ""}`);
+    }
+    lines.push(`};`);
+    lines.push(``);
+
+    // Per-group SequenceStep arrays
+    serialGroups.forEach((g, gi) => {
+      if (g.steps.length > 0) {
+        lines.push(`static const SequenceStep group${gi}SequenceSteps[] = {`);
+        g.steps.forEach((st, si) => {
+          lines.push(
+            `    { ${st.on_ms}, ${st.off_ms}, ${st.intensity}, ${st.loop_duration_ms} }${si + 1 < g.steps.length ? "," : ""}`
+          );
+        });
+        lines.push(`};`);
+      } else {
+        // No steps for this group -> we'll map to NULL in groupSequences
+        lines.push(`// group${gi} has no steps`);
+      }
+    });
+    lines.push(``);
+
+    // Counts
+    {
+      const counts = serialGroups.map((g) => g.steps.length);
+      const size = Math.max(1, groupsCount);
+      const payload =
+        groupsCount === 0 ? "0" : counts.join(", ");
+      lines.push(
+        `static const uint8_t groupSequenceStepCount[${size}] = { ${payload} };`
+      );
     }
 
-    // Flatten steps and offsets
-    const stepOffsets: number[] = [0];
-    type StepOut = { on: number; off: number; intensity: number; repeats: number };
-    const stepsFlat: StepOut[] = [];
-    for (const g of serialGroups) {
-      stepsFlat.push(...g.steps);
-      stepOffsets.push(stepsFlat.length);
+    // Pointers array
+    {
+      const size = Math.max(1, groupsCount);
+      const entries =
+        groupsCount === 0
+          ? "NULL"
+          : serialGroups
+            .map((g, gi) =>
+              g.steps.length > 0
+                ? `group${gi}SequenceSteps`
+                : `NULL`
+            )
+            .join(", ");
+      lines.push(
+        `static const SequenceStep *const groupSequences[${size}] = { ${entries} };`
+      );
     }
 
-    // Emit C arrays
-    const dataLines: string[] = [];
-    dataLines.push(`#define NUM_GROUPS ${numGroups}`);
-    dataLines.push(``);
-
-    // Wells
-    dataLines.push(`// Flattened wells for all groups`);
-    dataLines.push(
-      wellsFlat.length
-        ? `const uint16_t WELLS_FLAT[] = { ${wellsFlat.join(", ")} };`
-        : `const uint16_t WELLS_FLAT[] = { /* empty */ };`
-    );
-    dataLines.push(
-      `const uint32_t WELL_OFFSETS[NUM_GROUPS + 1] = { ${wellOffsets.join(", ")} };`
-    );
-    dataLines.push(``);
-
-    // Steps
-    dataLines.push(`// Flattened steps for all groups`);
-    if (stepsFlat.length) {
-      const stepRows = stepsFlat
-        .map(
-          (s) =>
-            `{ ${s.on.toFixed(3)}f, ${s.off.toFixed(3)}f, ${s.intensity}, ${s.repeats} }`
-        )
-        .join(",\n  ");
-      dataLines.push(`const Step STEPS_FLAT[] = {\n  ${stepRows}\n};`);
-    } else {
-      dataLines.push(`const Step STEPS_FLAT[] = { /* empty */ };`);
-    }
-    dataLines.push(
-      `const uint32_t STEP_OFFSETS[NUM_GROUPS + 1] = { ${stepOffsets.join(", ")} };`
-    );
-    dataLines.push(``);
-
-    const ino = INO_TEMPLATE_PREFIX + dataLines.join("\n") + INO_TEMPLATE_SUFFIX;
+    const ino = INO_TEMPLATE_PREFIX + lines.join("\n") + INO_TEMPLATE_SUFFIX;
 
     // Download
     const blob = new Blob([ino], { type: "text/x-arduino" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "WellPlateConcurrent.ino";
+    a.download = "WellPlate_ms_template.ino";
     document.body.appendChild(a);
     a.click();
     a.remove();

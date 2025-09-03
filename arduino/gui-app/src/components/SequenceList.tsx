@@ -3,10 +3,10 @@ import { useMemo } from "react";
 
 export type Step = {
   id: string;
-  secondsOn: string;   // strings for clean typing UX
-  secondsOff: string;
-  intensity: string;   // 0–4095
-  repeats: string;     // integer ≥ 1
+  msOn: string;            // integers (ms), ≥ 0
+  msOff: string;           // integers (ms), ≥ 0
+  intensity: string;       // 0–4095
+  loopDurationMs: string;  // integers (ms), ≥ 0 (0 = forever)
 };
 
 const uid = () =>
@@ -15,7 +15,6 @@ const uid = () =>
     : `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
 
 const digitsOnly = (s: string) => s.replace(/\D/g, "");
-const decimalOnly = (s: string) => s.replace(/[^0-9.]/g, "").replace(/(\..*)\./g, "$1");
 
 const clampNumberString = (s: string, min: number, max?: number) => {
   const n = Number(s);
@@ -45,10 +44,10 @@ export default function SequenceList({
     if (!selectedGroup) return;
     const next: Step = {
       id: uid(),
-      secondsOn: "1",
-      secondsOff: "1",
-      intensity: String(MAX_INTENSITY), // default full scale (4095)
-      repeats: "1",
+      msOn: "700",
+      msOff: "300",
+      intensity: String(MAX_INTENSITY),
+      loopDurationMs: "10000", // 0 = forever
     };
     setSteps([...safeSteps, next]);
   };
@@ -70,7 +69,10 @@ export default function SequenceList({
               <span
                 aria-hidden
                 className="inline-block size-3 rounded-full ring-2"
-                style={{ backgroundColor: selectedGroup.color, boxShadow: `0 0 0 2px ${selectedGroup.color}44` }}
+                style={{
+                  backgroundColor: selectedGroup.color,
+                  boxShadow: `0 0 0 2px ${selectedGroup.color}44`,
+                }}
               />
               <span>Sequence for {selectedGroup.name}</span>
             </>
@@ -90,9 +92,13 @@ export default function SequenceList({
 
       <div className="min-h-0 flex-1 overflow-auto rounded-xl border">
         {!selectedGroup ? (
-          <div className="p-4 text-sm text-gray-500">Select a group to add steps.</div>
+          <div className="p-4 text-sm text-gray-500">
+            Select a group to add steps.
+          </div>
         ) : safeSteps.length === 0 ? (
-          <div className="p-4 text-sm text-gray-500">No steps yet. Click “Add step”.</div>
+          <div className="p-4 text-sm text-gray-500">
+            No steps yet. Click “Add step”.
+          </div>
         ) : (
           <ul className="divide-y">
             {safeSteps.map((s, idx) => (
@@ -100,19 +106,21 @@ export default function SequenceList({
                 <div className="mb-2 text-sm font-medium">Step {idx + 1}</div>
 
                 <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-                  {/* Seconds On */}
+                  {/* MS On */}
                   <label className="flex flex-col gap-1">
-                    <span className="text-xs text-gray-600">Seconds on</span>
+                    <span className="text-xs text-gray-600">MS on</span>
                     <input
                       type="text"
-                      inputMode="decimal"
-                      placeholder="e.g., 1.5"
-                      value={s.secondsOn}
-                      onChange={(e) => updateField(s.id, "secondsOn", decimalOnly(e.target.value))}
+                      inputMode="numeric"
+                      placeholder="e.g., 700"
+                      value={s.msOn}
+                      onChange={(e) =>
+                        updateField(s.id, "msOn", digitsOnly(e.target.value))
+                      }
                       onBlur={(e) =>
                         updateField(
                           s.id,
-                          "secondsOn",
+                          "msOn",
                           clampNumberString(e.target.value || "0", 0)
                         )
                       }
@@ -120,19 +128,21 @@ export default function SequenceList({
                     />
                   </label>
 
-                  {/* Seconds Off */}
+                  {/* MS Off */}
                   <label className="flex flex-col gap-1">
-                    <span className="text-xs text-gray-600">Seconds off</span>
+                    <span className="text-xs text-gray-600">MS off</span>
                     <input
                       type="text"
-                      inputMode="decimal"
-                      placeholder="e.g., 0.5"
-                      value={s.secondsOff}
-                      onChange={(e) => updateField(s.id, "secondsOff", decimalOnly(e.target.value))}
+                      inputMode="numeric"
+                      placeholder="e.g., 300"
+                      value={s.msOff}
+                      onChange={(e) =>
+                        updateField(s.id, "msOff", digitsOnly(e.target.value))
+                      }
                       onBlur={(e) =>
                         updateField(
                           s.id,
-                          "secondsOff",
+                          "msOff",
                           clampNumberString(e.target.value || "0", 0)
                         )
                       }
@@ -148,32 +158,50 @@ export default function SequenceList({
                       inputMode="numeric"
                       placeholder="0–4095"
                       value={s.intensity}
-                      onChange={(e) => updateField(s.id, "intensity", digitsOnly(e.target.value))}
+                      onChange={(e) =>
+                        updateField(
+                          s.id,
+                          "intensity",
+                          digitsOnly(e.target.value)
+                        )
+                      }
                       onBlur={(e) =>
                         updateField(
                           s.id,
                           "intensity",
-                          clampNumberString(e.target.value || "0", MIN_INTENSITY, MAX_INTENSITY)
+                          clampNumberString(
+                            e.target.value || "0",
+                            MIN_INTENSITY,
+                            MAX_INTENSITY
+                          )
                         )
                       }
                       className="w-full rounded-md border px-2 py-1.5"
                     />
                   </label>
 
-                  {/* Repeats (≥ 1) */}
+                  {/* Loop duration (ms) */}
                   <label className="flex flex-col gap-1">
-                    <span className="text-xs text-gray-600">Repeat</span>
+                    <span className="text-xs text-gray-600">
+                      Loop duration (ms)
+                    </span>
                     <input
                       type="text"
                       inputMode="numeric"
-                      placeholder="1"
-                      value={s.repeats}
-                      onChange={(e) => updateField(s.id, "repeats", digitsOnly(e.target.value))}
+                      placeholder="e.g., 10000 (0 = forever)"
+                      value={s.loopDurationMs}
+                      onChange={(e) =>
+                        updateField(
+                          s.id,
+                          "loopDurationMs",
+                          digitsOnly(e.target.value)
+                        )
+                      }
                       onBlur={(e) =>
                         updateField(
                           s.id,
-                          "repeats",
-                          clampNumberString(e.target.value || "1", 1)
+                          "loopDurationMs",
+                          clampNumberString(e.target.value || "0", 0)
                         )
                       }
                       className="w-full rounded-md border px-2 py-1.5"
