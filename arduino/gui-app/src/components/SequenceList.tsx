@@ -183,7 +183,7 @@ export default function SequenceList({
                   {/* Loop duration (ms) */}
                   <label className="flex flex-col gap-1">
                     <span className="text-xs text-gray-600">
-                      Loop duration (ms)
+                      Duration (ms)
                     </span>
                     <input
                       type="text"
