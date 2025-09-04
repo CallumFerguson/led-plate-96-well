@@ -44,10 +44,10 @@ export default function SequenceList({
     if (!selectedGroup) return;
     const next: Step = {
       id: uid(),
-      msOn: "700",
-      msOff: "300",
-      intensity: String(MAX_INTENSITY),
-      loopDurationMs: "10000", // 0 = forever
+      msOn: "1000",
+      msOff: "1000",
+      intensity: "10",
+      loopDurationMs: "0", // 0 = forever
     };
     setSteps([...safeSteps, next]);
   };
