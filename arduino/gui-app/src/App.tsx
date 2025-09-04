@@ -302,6 +302,27 @@ const App = () => {
     });
   };
 
+  const bulkToggleWells = (indices: number[], add: boolean) => {
+    if (!selectedGroup) return;
+
+    setSelectedByGroup((prev) => {
+      const currSet = new Set(prev[selectedGroup.id] ?? []);
+      
+      indices.forEach((idx) => {
+        const currentOwner = ownerIdByIndex[idx];
+        if (currentOwner && currentOwner !== selectedGroup.id) return;
+        
+        if (add) {
+          currSet.add(idx);
+        } else {
+          currSet.delete(idx);
+        }
+      });
+      
+      return { ...prev, [selectedGroup.id]: currSet };
+    });
+  };
+
   /** Build and download a concurrent, template-based Arduino sketch (.ino). */
   const exportIno = () => {
     // Collect + normalize UI data (ms-based)
@@ -438,6 +459,7 @@ const App = () => {
                   ownerNameByIndex={ownerNameByIndex}
                   ownerColorByIndex={ownerColorByIndex}
                   onToggle={toggleWell}
+                  onBulkToggle={bulkToggleWells}
                 />
               </section>
 

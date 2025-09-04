@@ -1,5 +1,6 @@
 import plateUrl from "../assets/96-Well_plate_blank.svg?url";
 import type { Group } from "./GroupListTypes";
+import { useState, useRef, useCallback } from "react";
 
 function hexToRgba(hex: string, alpha: number) {
     const v = hex.replace("#", "");
@@ -18,6 +19,7 @@ type WellPlate96Props = {
     ownerNameByIndex?: Record<number, string | undefined>;
     ownerColorByIndex?: Record<number, string | undefined>;
     onToggle: (index: number) => void;
+    onBulkToggle?: (indices: number[], add: boolean) => void;
 };
 
 const FREE_RING = "0 0 0 2px rgba(15,23,42,0.28), inset 0 0 0 1px rgba(255,255,255,0.6), 0 1px 2px rgba(2,6,23,0.06)";
@@ -32,8 +34,127 @@ const WellPlate96 = ({
     ownerNameByIndex = {},
     ownerColorByIndex = {},
     onToggle,
+    onBulkToggle,
 }: WellPlate96Props) => {
     const canEdit = Boolean(selectedGroup);
+    
+    // Simple drag selection state
+    const [isDragging, setIsDragging] = useState(false);
+    const [dragStart, setDragStart] = useState<{ col: number; row: number } | null>(null);
+    const [dragEnd, setDragEnd] = useState<{ col: number; row: number } | null>(null);
+    const containerRef = useRef<HTMLDivElement>(null);
+
+
+    // Convert grid position to well index
+    const getWellIndex = (col: number, row: number) => {
+        if (col < 0 || col >= 12 || row < 0 || row >= 8) return -1;
+        return col * 8 + row;
+    };
+
+    // Get wells in drag rectangle
+    const getWellsInRect = useCallback(() => {
+        if (!dragStart || !dragEnd) return [];
+        
+        const minCol = Math.min(dragStart.col, dragEnd.col);
+        const maxCol = Math.max(dragStart.col, dragEnd.col);
+        const minRow = Math.min(dragStart.row, dragEnd.row);
+        const maxRow = Math.max(dragStart.row, dragEnd.row);
+        
+        const wells: number[] = [];
+        for (let col = minCol; col <= maxCol; col++) {
+            for (let row = minRow; row <= maxRow; row++) {
+                const index = getWellIndex(col, row);
+                if (index >= 0) wells.push(index);
+            }
+        }
+        return wells;
+    }, [dragStart, dragEnd]);
+
+    // Handle mouse down
+    const handleMouseDown = useCallback((e: React.MouseEvent) => {
+        if (!canEdit || !containerRef.current) return;
+        
+        const rect = containerRef.current.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        // Calculate grid position based on actual layout
+        // Account for padding: 38px left, 37px right, 26px top/bottom
+        const gridX = x - 38; // Subtract left padding
+        const gridY = y - 26; // Subtract top padding
+        
+        // Calculate available grid area
+        const gridWidth = rect.width - 38 - 37; // Total width minus left and right padding
+        const gridHeight = rect.height - 26 - 26; // Total height minus top and bottom padding
+        
+        // Calculate cell dimensions
+        const cellWidth = gridWidth / 12; // 12 columns
+        const cellHeight = gridHeight / 8; // 8 rows
+        
+        // Calculate which cell the mouse is in
+        const col = Math.floor(gridX / cellWidth);
+        const row = Math.floor(gridY / cellHeight);
+        
+        if (col >= 0 && col < 12 && row >= 0 && row < 8) {
+            const wellIndex = getWellIndex(col, row);
+            if (wellIndex >= 0) {
+                setIsDragging(true);
+                setDragStart({ col, row });
+                setDragEnd({ col, row });
+                
+                // If single click on a well, toggle it
+                if (e.target === e.currentTarget) {
+                    onToggle(wellIndex);
+                }
+            }
+        }
+    }, [canEdit, selected, onToggle]);
+
+    // Handle mouse move
+    const handleMouseMove = useCallback((e: React.MouseEvent) => {
+        if (!isDragging || !containerRef.current) return;
+        
+        const rect = containerRef.current.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        // Calculate grid position based on actual layout
+        const gridX = x - 38; // Subtract left padding
+        const gridY = y - 26; // Subtract top padding
+        
+        // Calculate available grid area
+        const gridWidth = rect.width - 38 - 37; // Total width minus left and right padding
+        const gridHeight = rect.height - 26 - 26; // Total height minus top and bottom padding
+        
+        // Calculate cell dimensions
+        const cellWidth = gridWidth / 12; // 12 columns
+        const cellHeight = gridHeight / 8; // 8 rows
+        
+        // Calculate which cell the mouse is in
+        const col = Math.floor(gridX / cellWidth);
+        const row = Math.floor(gridY / cellHeight);
+        
+        if (col >= 0 && col < 12 && row >= 0 && row < 8) {
+            setDragEnd({ col, row });
+        }
+    }, [isDragging]);
+
+    // Handle mouse up
+    const handleMouseUp = useCallback(() => {
+        if (!isDragging) return;
+        
+        const wells = getWellsInRect();
+        if (wells.length > 1 && onBulkToggle) {
+            // Determine if we're adding or removing based on first well
+            const firstWell = wells[0];
+            const isAdding = !selected.has(firstWell);
+            onBulkToggle(wells, isAdding);
+        }
+        
+        setIsDragging(false);
+        setDragStart(null);
+        setDragEnd(null);
+    }, [isDragging, getWellsInRect, onBulkToggle, selected]);
 
     return (
         <div className="relative inline-block">
@@ -47,6 +168,7 @@ const WellPlate96 = ({
 
             {/* Overlay matches image size exactly */}
             <div
+                ref={containerRef}
                 className="absolute inset-0 grid grid-cols-12 grid-rows-8 grid-flow-col p-[6%]"
                 style={{
                     paddingTop: "26px",
@@ -54,11 +176,18 @@ const WellPlate96 = ({
                     paddingLeft: "38px",
                     paddingRight: "37px",
                 }}
+                onMouseDown={handleMouseDown}
+                onMouseMove={handleMouseMove}
+                onMouseUp={handleMouseUp}
             >
                 {Array.from({ length: 96 }, (_, i) => {
                     const isSelected = selected.has(i);
                     const isDimmed = !isSelected && dimmed.has(i);
                     const clickable = canEdit && !isDimmed;
+                    
+                    // Check if this well is in the drag selection
+                    const dragWells = isDragging ? getWellsInRect() : [];
+                    const isInDragSelection = dragWells.includes(i);
 
                     const ownerColor = ownerColorByIndex[i] || "#64748b";
 
@@ -84,6 +213,13 @@ const WellPlate96 = ({
                         background = `radial-gradient(closest-side, ${tint}, ${hexToRgba(ownerColor, 0.12)} 55%, rgba(255,255,255,0.6))`;
                         boxShadow = `0 0 0 1px ${ring}, 0 1px 2px rgba(2,6,23,0.04)`;
                         ariaLabel += ` (already in ${ownerNameByIndex[i] ?? "another group"})`;
+                    } else if (isInDragSelection) {
+                        // Well is in drag selection
+                        const tint = hexToRgba(currentColor, 0.2);
+                        const ring = hexToRgba(currentColor, 0.6);
+                        background = `radial-gradient(closest-side, ${tint}, ${hexToRgba(currentColor, 0.1)} 55%, rgba(255,255,255,0.8))`;
+                        boxShadow = `0 0 0 2px ${ring}, 0 1px 2px rgba(2,6,23,0.08)`;
+                        ariaLabel += " (will be selected)";
                     } else {
                         // Free, unselected well
                         background = FREE_BG;
@@ -97,7 +233,12 @@ const WellPlate96 = ({
                             disabled={!clickable}
                             aria-pressed={isSelected}
                             aria-label={ariaLabel}
-                            onClick={() => clickable && onToggle(i)}
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                if (clickable && !isDragging) {
+                                    onToggle(i);
+                                }
+                            }}
                             className={[
                                 "place-self-center w-[31px] h-[31px] rounded-full transition",
                                 clickable ? "cursor-pointer hover:brightness-105" : "cursor-not-allowed opacity-85",
