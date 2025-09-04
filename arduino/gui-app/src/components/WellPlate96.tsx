@@ -42,6 +42,7 @@ const WellPlate96 = ({
     const [isDragging, setIsDragging] = useState(false);
     const [dragStart, setDragStart] = useState<{ col: number; row: number } | null>(null);
     const [dragEnd, setDragEnd] = useState<{ col: number; row: number } | null>(null);
+    const [dragMode, setDragMode] = useState<'select' | 'unselect' | null>(null);
     const containerRef = useRef<HTMLDivElement>(null);
 
 
@@ -74,6 +75,9 @@ const WellPlate96 = ({
     const handleMouseDown = useCallback((e: React.MouseEvent) => {
         if (!canEdit || !containerRef.current) return;
         
+        // Prevent right-click context menu
+        e.preventDefault();
+        
         const rect = containerRef.current.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
@@ -98,17 +102,26 @@ const WellPlate96 = ({
         if (col >= 0 && col < 12 && row >= 0 && row < 8) {
             const wellIndex = getWellIndex(col, row);
             if (wellIndex >= 0) {
+                // Determine drag mode based on mouse button
+                if (e.button === 0) { // Left click
+                    setDragMode('select');
+                } else if (e.button === 2) { // Right click
+                    setDragMode('unselect');
+                } else {
+                    return; // Middle click or other buttons
+                }
+                
                 setIsDragging(true);
                 setDragStart({ col, row });
                 setDragEnd({ col, row });
                 
-                // If single click on a well, toggle it
-                if (e.target === e.currentTarget) {
+                // If single click on a well button, toggle it
+                if (e.target !== e.currentTarget) {
                     onToggle(wellIndex);
                 }
             }
         }
-    }, [canEdit, selected, onToggle]);
+    }, [canEdit, onToggle]);
 
     // Handle mouse move
     const handleMouseMove = useCallback((e: React.MouseEvent) => {
@@ -141,20 +154,19 @@ const WellPlate96 = ({
 
     // Handle mouse up
     const handleMouseUp = useCallback(() => {
-        if (!isDragging) return;
+        if (!isDragging || !dragMode) return;
         
         const wells = getWellsInRect();
-        if (wells.length > 1 && onBulkToggle) {
-            // Determine if we're adding or removing based on first well
-            const firstWell = wells[0];
-            const isAdding = !selected.has(firstWell);
+        if (wells.length > 0 && onBulkToggle) {
+            const isAdding = dragMode === 'select';
             onBulkToggle(wells, isAdding);
         }
         
         setIsDragging(false);
         setDragStart(null);
         setDragEnd(null);
-    }, [isDragging, getWellsInRect, onBulkToggle, selected]);
+        setDragMode(null);
+    }, [isDragging, dragMode, getWellsInRect, onBulkToggle]);
 
     return (
         <div className="relative inline-block">
@@ -179,6 +191,7 @@ const WellPlate96 = ({
                 onMouseDown={handleMouseDown}
                 onMouseMove={handleMouseMove}
                 onMouseUp={handleMouseUp}
+                onContextMenu={(e) => e.preventDefault()}
             >
                 {Array.from({ length: 96 }, (_, i) => {
                     const isSelected = selected.has(i);
@@ -192,8 +205,8 @@ const WellPlate96 = ({
                     const ownerColor = ownerColorByIndex[i] || "#64748b";
 
                     // Visuals
-                    let background: string;
-                    let boxShadow: string;
+                    let background: string = FREE_BG;
+                    let boxShadow: string = FREE_RING;
                     let ariaLabel = `Well ${i + 1}`;
 
                     if (isSelected) {
@@ -215,15 +228,19 @@ const WellPlate96 = ({
                         ariaLabel += ` (already in ${ownerNameByIndex[i] ?? "another group"})`;
                     } else if (isInDragSelection) {
                         // Well is in drag selection
-                        const tint = hexToRgba(currentColor, 0.2);
-                        const ring = hexToRgba(currentColor, 0.6);
-                        background = `radial-gradient(closest-side, ${tint}, ${hexToRgba(currentColor, 0.1)} 55%, rgba(255,255,255,0.8))`;
-                        boxShadow = `0 0 0 2px ${ring}, 0 1px 2px rgba(2,6,23,0.08)`;
-                        ariaLabel += " (will be selected)";
-                    } else {
-                        // Free, unselected well
-                        background = FREE_BG;
-                        boxShadow = FREE_RING;
+                        if (dragMode === 'select') {
+                            const tint = hexToRgba(currentColor, 0.2);
+                            const ring = hexToRgba(currentColor, 0.6);
+                            background = `radial-gradient(closest-side, ${tint}, ${hexToRgba(currentColor, 0.1)} 55%, rgba(255,255,255,0.8))`;
+                            boxShadow = `0 0 0 2px ${ring}, 0 1px 2px rgba(2,6,23,0.08)`;
+                            ariaLabel += " (will be selected)";
+                        } else if (dragMode === 'unselect') {
+                            const tint = hexToRgba('#ef4444', 0.2);
+                            const ring = hexToRgba('#ef4444', 0.6);
+                            background = `radial-gradient(closest-side, ${tint}, ${hexToRgba('#ef4444', 0.1)} 55%, rgba(255,255,255,0.8))`;
+                            boxShadow = `0 0 0 2px ${ring}, 0 1px 2px rgba(2,6,23,0.08)`;
+                            ariaLabel += " (will be unselected)";
+                        }
                     }
 
                     return (
@@ -239,6 +256,7 @@ const WellPlate96 = ({
                                     onToggle(i);
                                 }
                             }}
+                            onContextMenu={(e) => e.preventDefault()}
                             className={[
                                 "place-self-center w-[31px] h-[31px] rounded-full transition",
                                 clickable ? "cursor-pointer hover:brightness-105" : "cursor-not-allowed opacity-85",
