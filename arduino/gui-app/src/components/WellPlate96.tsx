@@ -44,7 +44,11 @@ const WellPlate96 = ({
     const [dragEnd, setDragEnd] = useState<{ col: number; row: number } | null>(null);
     const [dragMode, setDragMode] = useState<'select' | 'unselect' | null>(null);
     const [hasMoved, setHasMoved] = useState(false);
+    const [mouseStartPos, setMouseStartPos] = useState<{ x: number; y: number } | null>(null);
     const containerRef = useRef<HTMLDivElement>(null);
+    
+    // Minimum distance to consider it a drag (in pixels)
+    const DRAG_THRESHOLD = 3;
 
 
     // Convert grid position to well index
@@ -116,6 +120,7 @@ const WellPlate96 = ({
                 setDragStart({ col, row });
                 setDragEnd({ col, row });
                 setHasMoved(false);
+                setMouseStartPos({ x: e.clientX, y: e.clientY });
                 
                 // Don't call onToggle here - wait to see if it becomes a drag
             }
@@ -124,7 +129,17 @@ const WellPlate96 = ({
 
     // Handle mouse move
     const handleMouseMove = useCallback((e: React.MouseEvent) => {
-        if (!dragStart || !containerRef.current) return;
+        if (!dragStart || !containerRef.current || !mouseStartPos) return;
+        
+        // Check if mouse has moved enough to be considered a drag
+        const deltaX = e.clientX - mouseStartPos.x;
+        const deltaY = e.clientY - mouseStartPos.y;
+        const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+        
+        if (distance >= DRAG_THRESHOLD && !hasMoved) {
+            setHasMoved(true);
+            setIsDragging(true);
+        }
         
         const rect = containerRef.current.getBoundingClientRect();
         const x = e.clientX - rect.left;
@@ -147,23 +162,16 @@ const WellPlate96 = ({
         const row = Math.floor(gridY / cellHeight);
         
         if (col >= 0 && col < 12 && row >= 0 && row < 8) {
-            // Check if we've moved to a different cell
-            if (col !== dragStart.col || row !== dragStart.row) {
-                if (!hasMoved) {
-                    setHasMoved(true);
-                    setIsDragging(true);
-                }
-                setDragEnd({ col, row });
-            }
+            setDragEnd({ col, row });
         }
-    }, [dragStart, hasMoved]);
+    }, [dragStart, mouseStartPos, hasMoved]);
 
     // Handle mouse up
     const handleMouseUp = useCallback(() => {
         if (!dragStart || !dragMode) return;
         
         if (isDragging) {
-            // This was a drag operation
+            // This was a drag operation (including single-well drags)
             const wells = getWellsInRect();
             if (wells.length > 0 && onBulkToggle) {
                 const isAdding = dragMode === 'select';
@@ -182,6 +190,7 @@ const WellPlate96 = ({
         setDragEnd(null);
         setDragMode(null);
         setHasMoved(false);
+        setMouseStartPos(null);
     }, [dragStart, isDragging, dragMode, getWellsInRect, onBulkToggle, onToggle]);
 
     return (
