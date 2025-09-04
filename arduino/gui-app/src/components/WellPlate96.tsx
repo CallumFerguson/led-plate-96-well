@@ -43,6 +43,7 @@ const WellPlate96 = ({
     const [dragStart, setDragStart] = useState<{ col: number; row: number } | null>(null);
     const [dragEnd, setDragEnd] = useState<{ col: number; row: number } | null>(null);
     const [dragMode, setDragMode] = useState<'select' | 'unselect' | null>(null);
+    const [hasMoved, setHasMoved] = useState(false);
     const containerRef = useRef<HTMLDivElement>(null);
 
 
@@ -111,21 +112,19 @@ const WellPlate96 = ({
                     return; // Middle click or other buttons
                 }
                 
-                setIsDragging(true);
+                // Initialize drag state but don't start dragging yet
                 setDragStart({ col, row });
                 setDragEnd({ col, row });
+                setHasMoved(false);
                 
-                // If single click on a well button, toggle it
-                if (e.target !== e.currentTarget) {
-                    onToggle(wellIndex);
-                }
+                // Don't call onToggle here - wait to see if it becomes a drag
             }
         }
-    }, [canEdit, onToggle]);
+    }, [canEdit]);
 
     // Handle mouse move
     const handleMouseMove = useCallback((e: React.MouseEvent) => {
-        if (!isDragging || !containerRef.current) return;
+        if (!dragStart || !containerRef.current) return;
         
         const rect = containerRef.current.getBoundingClientRect();
         const x = e.clientX - rect.left;
@@ -148,25 +147,42 @@ const WellPlate96 = ({
         const row = Math.floor(gridY / cellHeight);
         
         if (col >= 0 && col < 12 && row >= 0 && row < 8) {
-            setDragEnd({ col, row });
+            // Check if we've moved to a different cell
+            if (col !== dragStart.col || row !== dragStart.row) {
+                if (!hasMoved) {
+                    setHasMoved(true);
+                    setIsDragging(true);
+                }
+                setDragEnd({ col, row });
+            }
         }
-    }, [isDragging]);
+    }, [dragStart, hasMoved]);
 
     // Handle mouse up
     const handleMouseUp = useCallback(() => {
-        if (!isDragging || !dragMode) return;
+        if (!dragStart || !dragMode) return;
         
-        const wells = getWellsInRect();
-        if (wells.length > 0 && onBulkToggle) {
-            const isAdding = dragMode === 'select';
-            onBulkToggle(wells, isAdding);
+        if (isDragging) {
+            // This was a drag operation
+            const wells = getWellsInRect();
+            if (wells.length > 0 && onBulkToggle) {
+                const isAdding = dragMode === 'select';
+                onBulkToggle(wells, isAdding);
+            }
+        } else {
+            // This was a single click - toggle the well
+            const wellIndex = getWellIndex(dragStart.col, dragStart.row);
+            if (wellIndex >= 0) {
+                onToggle(wellIndex);
+            }
         }
         
         setIsDragging(false);
         setDragStart(null);
         setDragEnd(null);
         setDragMode(null);
-    }, [isDragging, dragMode, getWellsInRect, onBulkToggle]);
+        setHasMoved(false);
+    }, [dragStart, isDragging, dragMode, getWellsInRect, onBulkToggle, onToggle]);
 
     return (
         <div className="relative inline-block">
@@ -250,12 +266,6 @@ const WellPlate96 = ({
                             disabled={!clickable}
                             aria-pressed={isSelected}
                             aria-label={ariaLabel}
-                            onClick={(e) => {
-                                e.stopPropagation();
-                                if (clickable && !isDragging) {
-                                    onToggle(i);
-                                }
-                            }}
                             onContextMenu={(e) => e.preventDefault()}
                             className={[
                                 "place-self-center w-[31px] h-[31px] rounded-full transition",
