@@ -533,100 +533,101 @@ const App = () => {
 
   return (
     <main className="min-h-screen bg-gray-50">
-      <div className="mx-auto max-w-6xl p-6">
-        <div className="overflow-x-auto">
-          <div className="grid gap-6 grid-cols-[minmax(28rem,1.6fr)_minmax(20rem,1fr)] min-w-[52rem]">
-            {/* Left column */}
-            <div className="grid grid-rows-2 gap-6 min-h-[70vh]">
-              <section className="rounded-2xl border bg-white p-6 shadow-sm">
-                <div className="flex items-center gap-2">
-                  {selectedGroup && (
-                    <span
-                      aria-hidden
-                      className="inline-block size-3 rounded-full ring-2"
-                      style={{
-                        backgroundColor: selectedGroup.color,
-                        boxShadow: `0 0 0 2px ${selectedGroup.color}44`,
-                      }}
-                    />
-                  )}
-                  <h2 className="text-xl font-semibold">Select Wells</h2>
-                </div>
-                <p className="text-sm text-gray-600">
-                  {selectedGroup ? `for ${selectedGroup.name}` : "No group selected"}
-                </p>
+      <div className="mx-auto w-[1200px] p-6">
+        <div className="grid gap-6 grid-cols-[700px_480px]">
+          {/* Left column */}
+          <div className="grid gap-6 h-[800px]" style={{ gridTemplateRows: '1fr 300px' }}>
+            <section className="rounded-2xl border bg-white p-6 shadow-sm">
+              <div className="flex items-center gap-2">
+                {selectedGroup && (
+                  <span
+                    aria-hidden
+                    className="inline-block size-3 rounded-full ring-2"
+                    style={{
+                      backgroundColor: selectedGroup.color,
+                      boxShadow: `0 0 0 2px ${selectedGroup.color}44`,
+                    }}
+                  />
+                )}
+                <h2 className="text-xl font-semibold">Select Wells</h2>
+              </div>
+              <p className="text-sm text-gray-600">
+                {selectedGroup ? `for ${selectedGroup.name}` : "No group selected"}
+              </p>
 
-                <WellPlate96
-                  selectedGroup={selectedGroup}
-                  currentColor={selectedGroup?.color}
-                  selected={selectedSet}
-                  dimmed={otherGroupsSelected}
-                  ownerNameByIndex={ownerNameByIndex}
-                  ownerColorByIndex={ownerColorByIndex}
-                  onToggle={toggleWell}
-                  onBulkToggle={bulkToggleWells}
-                />
-              </section>
+              <WellPlate96
+                selectedGroup={selectedGroup}
+                currentColor={selectedGroup?.color}
+                selected={selectedSet}
+                dimmed={otherGroupsSelected}
+                ownerNameByIndex={ownerNameByIndex}
+                ownerColorByIndex={ownerColorByIndex}
+                onToggle={toggleWell}
+                onBulkToggle={bulkToggleWells}
+              />
+            </section>
 
-              <section className="rounded-2xl border bg-white p-6 shadow-sm">
-                <GroupList
-                  groups={groups}
-                  selectedId={selectedId}
-                  onAdd={addGroup}
-                  onSelect={selectGroup}
-                  onRemove={removeGroup}
-                />
-              </section>
+            <section className="rounded-2xl border bg-white p-6 shadow-sm">
+              <GroupList
+                groups={groups}
+                selectedId={selectedId}
+                onAdd={addGroup}
+                onSelect={selectGroup}
+                onRemove={removeGroup}
+              />
+            </section>
+          </div>
+
+          {/* Right column */}
+          <aside className="rounded-2xl border bg-white p-6 shadow-sm h-[800px] flex flex-col">
+            <div className="mb-3 flex items-center justify-between">
+              <div className="text-lg font-semibold">Program Sequence</div>
+            </div>
+            
+            <div className="mb-4 flex flex-wrap gap-2">
+              <button
+                type="button"
+                onClick={importJson}
+                className="rounded-lg border px-3 py-1.5 text-sm hover:bg-gray-50"
+                title="Import configuration from JSON file"
+              >
+                Import JSON
+              </button>
+              <button
+                type="button"
+                onClick={exportJson}
+                className="rounded-lg border px-3 py-1.5 text-sm hover:bg-gray-50"
+                title="Export configuration to JSON file"
+              >
+                Export JSON
+              </button>
+              <button
+                type="button"
+                onClick={randomizeWells}
+                className="rounded-lg border px-3 py-1.5 text-sm hover:bg-gray-50"
+                title="Randomize well positions for all groups"
+                disabled={groups.length === 0}
+              >
+                Randomize Wells
+              </button>
+              <button
+                type="button"
+                onClick={exportIno}
+                className="rounded-lg border px-3 py-1.5 text-sm hover:bg-gray-50"
+                title="Export Arduino sketch"
+              >
+                Export .ino
+              </button>
             </div>
 
-            {/* Right column */}
-            <aside className="rounded-2xl border bg-white p-6 shadow-sm min-h-[70vh]">
-              <div className="mb-3 flex items-center justify-between">
-                <div className="text-lg font-semibold">Program Sequence</div>
-                <div className="flex gap-2">
-                  <button
-                    type="button"
-                    onClick={importJson}
-                    className="rounded-lg border px-3 py-1.5 text-sm hover:bg-gray-50"
-                    title="Import configuration from JSON file"
-                  >
-                    Import JSON
-                  </button>
-                  <button
-                    type="button"
-                    onClick={exportJson}
-                    className="rounded-lg border px-3 py-1.5 text-sm hover:bg-gray-50"
-                    title="Export configuration to JSON file"
-                  >
-                    Export JSON
-                  </button>
-                  <button
-                    type="button"
-                    onClick={randomizeWells}
-                    className="rounded-lg border px-3 py-1.5 text-sm hover:bg-gray-50"
-                    title="Randomize well positions for all groups"
-                    disabled={groups.length === 0}
-                  >
-                    Randomize Wells
-                  </button>
-                  <button
-                    type="button"
-                    onClick={exportIno}
-                    className="rounded-lg border px-3 py-1.5 text-sm hover:bg-gray-50"
-                    title="Export Arduino sketch"
-                  >
-                    Export .ino
-                  </button>
-                </div>
-              </div>
-
+            <div className="flex-1 overflow-hidden">
               <SequenceList
                 selectedGroup={selectedGroup}
                 steps={stepsForSelected}
                 setSteps={setStepsForSelected}
               />
-            </aside>
-          </div>
+            </div>
+          </aside>
         </div>
       </div>
     </main>
