@@ -323,6 +323,43 @@ const App = () => {
     });
   };
 
+  const randomizeWells = () => {
+    if (groups.length === 0) return;
+
+    // Get all current well counts for each group
+    const groupWellCounts = groups.map(group => {
+      const currentWells = selectedByGroup[group.id] ?? new Set();
+      return { groupId: group.id, count: currentWells.size };
+    });
+
+    // Create array of all 96 well indices
+    const allWells = Array.from({ length: 96 }, (_, i) => i);
+    
+    // Shuffle the array
+    for (let i = allWells.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [allWells[i], allWells[j]] = [allWells[j], allWells[i]];
+    }
+
+    // Assign wells to groups sequentially, ensuring no duplicates
+    const newSelectedByGroup: Record<string, Set<number>> = {};
+    let wellIndex = 0;
+
+    groupWellCounts.forEach(({ groupId, count }) => {
+      const newWells = new Set<number>();
+      
+      // Assign the required number of wells to this group
+      for (let i = 0; i < count && wellIndex < allWells.length; i++) {
+        newWells.add(allWells[wellIndex]);
+        wellIndex++;
+      }
+      
+      newSelectedByGroup[groupId] = newWells;
+    });
+
+    setSelectedByGroup(newSelectedByGroup);
+  };
+
   /** Build and download a concurrent, template-based Arduino sketch (.ino). */
   const exportIno = () => {
     // Collect + normalize UI data (ms-based)
@@ -478,14 +515,25 @@ const App = () => {
             <aside className="rounded-2xl border bg-white p-6 shadow-sm min-h-[70vh]">
               <div className="mb-3 flex items-center justify-between">
                 <div className="text-lg font-semibold">Program Sequence</div>
-                <button
-                  type="button"
-                  onClick={exportIno}
-                  className="rounded-lg border px-3 py-1.5 text-sm hover:bg-gray-50"
-                  title="Export Arduino sketch"
-                >
-                  Export .ino
-                </button>
+                <div className="flex gap-2">
+                  <button
+                    type="button"
+                    onClick={randomizeWells}
+                    className="rounded-lg border px-3 py-1.5 text-sm hover:bg-gray-50"
+                    title="Randomize well positions for all groups"
+                    disabled={groups.length === 0}
+                  >
+                    Randomize Wells
+                  </button>
+                  <button
+                    type="button"
+                    onClick={exportIno}
+                    className="rounded-lg border px-3 py-1.5 text-sm hover:bg-gray-50"
+                    title="Export Arduino sketch"
+                  >
+                    Export .ino
+                  </button>
+                </div>
               </div>
 
               <SequenceList
