@@ -360,6 +360,74 @@ const App = () => {
     setSelectedByGroup(newSelectedByGroup);
   };
 
+  /** Export groups and sequence steps as JSON */
+  const exportJson = () => {
+    const data = {
+      groups,
+      selectedByGroup: Object.fromEntries(
+        Object.entries(selectedByGroup).map(([key, set]) => [key, Array.from(set)])
+      ),
+      stepsByGroup,
+    };
+    
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "well-plate-config.json";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+  };
+
+  /** Import groups and sequence steps from JSON */
+  const importJson = () => {
+    const input = document.createElement("input");
+    input.type = "file";
+    input.accept = ".json";
+    input.onchange = (e) => {
+      const file = (e.target as HTMLInputElement).files?.[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        try {
+          const data = JSON.parse(e.target?.result as string);
+          
+          // Validate and set groups
+          if (Array.isArray(data.groups)) {
+            setGroups(data.groups);
+          }
+          
+          // Validate and set selectedByGroup (convert arrays back to Sets)
+          if (data.selectedByGroup && typeof data.selectedByGroup === 'object') {
+            const newSelectedByGroup: Record<string, Set<number>> = {};
+            Object.entries(data.selectedByGroup).forEach(([key, value]) => {
+              if (Array.isArray(value)) {
+                newSelectedByGroup[key] = new Set(value);
+              }
+            });
+            setSelectedByGroup(newSelectedByGroup);
+          }
+          
+          // Validate and set stepsByGroup
+          if (data.stepsByGroup && typeof data.stepsByGroup === 'object') {
+            setStepsByGroup(data.stepsByGroup);
+          }
+          
+          // Clear selection
+          setSelectedId(null);
+        } catch (error) {
+          alert("Error loading JSON file. Please check the file format.");
+          console.error("JSON import error:", error);
+        }
+      };
+      reader.readAsText(file);
+    };
+    input.click();
+  };
+
   /** Build and download a concurrent, template-based Arduino sketch (.ino). */
   const exportIno = () => {
     // Collect + normalize UI data (ms-based)
@@ -516,6 +584,22 @@ const App = () => {
               <div className="mb-3 flex items-center justify-between">
                 <div className="text-lg font-semibold">Program Sequence</div>
                 <div className="flex gap-2">
+                  <button
+                    type="button"
+                    onClick={importJson}
+                    className="rounded-lg border px-3 py-1.5 text-sm hover:bg-gray-50"
+                    title="Import configuration from JSON file"
+                  >
+                    Import JSON
+                  </button>
+                  <button
+                    type="button"
+                    onClick={exportJson}
+                    className="rounded-lg border px-3 py-1.5 text-sm hover:bg-gray-50"
+                    title="Export configuration to JSON file"
+                  >
+                    Export JSON
+                  </button>
                   <button
                     type="button"
                     onClick={randomizeWells}
