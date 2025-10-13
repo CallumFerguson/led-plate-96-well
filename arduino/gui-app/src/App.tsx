@@ -307,18 +307,18 @@ const App = () => {
 
     setSelectedByGroup((prev) => {
       const currSet = new Set(prev[selectedGroup.id] ?? []);
-      
+
       indices.forEach((idx) => {
         const currentOwner = ownerIdByIndex[idx];
         if (currentOwner && currentOwner !== selectedGroup.id) return;
-        
+
         if (add) {
           currSet.add(idx);
         } else {
           currSet.delete(idx);
         }
       });
-      
+
       return { ...prev, [selectedGroup.id]: currSet };
     });
   };
@@ -334,7 +334,7 @@ const App = () => {
 
     // Create array of all 96 well indices
     const allWells = Array.from({ length: 96 }, (_, i) => i);
-    
+
     // Shuffle the array
     for (let i = allWells.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -347,13 +347,13 @@ const App = () => {
 
     groupWellCounts.forEach(({ groupId, count }) => {
       const newWells = new Set<number>();
-      
+
       // Assign the required number of wells to this group
       for (let i = 0; i < count && wellIndex < allWells.length; i++) {
         newWells.add(allWells[wellIndex]);
         wellIndex++;
       }
-      
+
       newSelectedByGroup[groupId] = newWells;
     });
 
@@ -369,7 +369,7 @@ const App = () => {
       ),
       stepsByGroup,
     };
-    
+
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -394,12 +394,12 @@ const App = () => {
       reader.onload = (e) => {
         try {
           const data = JSON.parse(e.target?.result as string);
-          
+
           // Validate and set groups
           if (Array.isArray(data.groups)) {
             setGroups(data.groups);
           }
-          
+
           // Validate and set selectedByGroup (convert arrays back to Sets)
           if (data.selectedByGroup && typeof data.selectedByGroup === 'object') {
             const newSelectedByGroup: Record<string, Set<number>> = {};
@@ -410,12 +410,12 @@ const App = () => {
             });
             setSelectedByGroup(newSelectedByGroup);
           }
-          
+
           // Validate and set stepsByGroup
           if (data.stepsByGroup && typeof data.stepsByGroup === 'object') {
             setStepsByGroup(data.stepsByGroup);
           }
-          
+
           // Clear selection
           setSelectedId(null);
         } catch (error) {
@@ -531,6 +531,17 @@ const App = () => {
     URL.revokeObjectURL(url);
   };
 
+  const uploadIno = async () => {
+    const result = await fetch("http://localhost:3000/api/upload-sketch", {
+      method: "POST",
+      body: JSON.stringify({
+        sketch: "test",
+      }),
+    });
+    const json = await result.json();
+    console.log(json);
+  };
+
   return (
     <main className="min-h-screen bg-gray-50">
       <div className="mx-auto w-[1200px] p-6">
@@ -583,7 +594,7 @@ const App = () => {
             <div className="mb-3 flex items-center justify-between">
               <div className="text-lg font-semibold">Program Sequence</div>
             </div>
-            
+
             <div className="mb-4 flex flex-wrap gap-2">
               <button
                 type="button"
@@ -617,6 +628,14 @@ const App = () => {
                 title="Export Arduino sketch"
               >
                 Export .ino
+              </button>
+              <button
+                type="button"
+                onClick={uploadIno}
+                className="rounded-lg border px-3 py-1.5 text-sm hover:bg-gray-50"
+                title="Export Arduino sketch"
+              >
+                Upload .ino
               </button>
             </div>
 
