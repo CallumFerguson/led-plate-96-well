@@ -428,8 +428,7 @@ const App = () => {
     input.click();
   };
 
-  /** Build and download a concurrent, template-based Arduino sketch (.ino). */
-  const exportIno = () => {
+  const getInoText = (): string => {
     // Collect + normalize UI data (ms-based)
     const serialGroups = groups.map((g, gi) => {
       const wells = Array.from(selectedByGroup[g.id] ?? []).sort((a, b) => a - b);
@@ -518,9 +517,15 @@ const App = () => {
     }
 
     const ino = INO_TEMPLATE_PREFIX + lines.join("\n") + INO_TEMPLATE_SUFFIX;
+    return ino;
+  };
+
+  /** Build and download a concurrent, template-based Arduino sketch (.ino). */
+  const exportIno = () => {
+    const inoText = getInoText();
 
     // Download
-    const blob = new Blob([ino], { type: "text/x-arduino" });
+    const blob = new Blob([inoText], { type: "text/x-arduino" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
@@ -532,14 +537,24 @@ const App = () => {
   };
 
   const uploadIno = async () => {
+    const inoText = getInoText();
+
     const result = await fetch("http://localhost:3000/api/upload-sketch", {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify({
-        sketch: "test",
+        inoText,
       }),
     });
-    const json = await result.json();
-    console.log(json);
+    const resultJson = await result.json();
+    if (resultJson.success) {
+      alert("upload successful!");
+    } else {
+      alert("upload failed! check console.");
+      console.log(resultJson.error);
+    }
   };
 
   return (
