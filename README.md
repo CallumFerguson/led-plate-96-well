@@ -1,5 +1,7 @@
 # led-plate-96-well
 
+control genetically engineered cells with light
+
 ## Description
 
 PCB for running optogenetic experiments. Designed to shine light through the bottom of [clear bottom 96 well plates](https://www.thermofisher.com/order/catalog/product/152037) and activate light gated ion channels in genetically engineered cells.
